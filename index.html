@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>電子商務測驗</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #f9f9f9;
+      color: #333;
+    }
+    h2 { margin-bottom: 10px; }
+    .option { margin: 8px 0; }
+    .stats, .buttons {
+      margin-top: 20px;
+      padding: 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .correct { color: green; font-weight: bold; }
+    .wrong { color: red; font-weight: bold; }
+    button {
+      padding: 8px 16px;
+      margin: 6px 8px 0 0;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<h2 id="question-title">載入中...</h2>
+<div id="options"></div>
+<div class="stats">
+  <p id="progress"></p>
+  <p id="explanation"></p>
+  <p id="detail-stats"></p>
+</div>
+<div class="buttons">
+  <button onclick="submitAnswer()">提交</button>
+  <button onclick="nextQuestion()">下一題</button>
+  <button onclick="resetData()">清除紀錄並重新載入題庫</button>
+  <button onclick="toggleWrongOnly(this)">僅重練錯題</button>
+</div>
+
+<script>
+let questions = [];
+let currentIndex = 0;
+let shuffledOptions = [];
+let questionPool = [];
+let wrongOnly = false;
+const quizFile = "quiz_questions.json";
+
+function loadQuestions() {
+  const local = localStorage.getItem("quizData");
+  if (local) {
+    questions = JSON.parse(local);
+    generatePool();
+    nextQuestion();
+  } else {
+    fetchQuestionsFromFile();
+  }
+}
+
+function fetchQuestionsFromFile() {
+  const base = location.href.replace(/\/[^\/]*$/, '');
+  fetch(base + '/' + quizFile)
+    .then(res => res.json())
+    .then(data => {
+      questions = data;
+      localStorage.setItem("quizData", JSON.stringify(data));
+      generatePool();
+      nextQuestion();
+    })
+    .catch(err => {
+      alert("無法載入題庫資料：" + err);
+    });
+}
+
+function shuffle(array) {
+  return array.map(v => [Math.random(), v]).sort().map(v => v[1]);
+}
+
+function generatePool() {
+  const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
+  questionPool = questions.map((q, idx) => {
+    const rec = record[q.text];
+    const 未答 = !rec;
+    const 答錯 = rec && !rec.result;
+    let weight = 1;
+    if (未答) weight += 3;
+    if (答錯) weight += 2;
+    if (wrongOnly && !答錯) weight = 0;
+    return { index: idx, weight };
+  }).filter(q => q.weight > 0);
+}
+
+function weightedRandomIndex(pool) {
+  const total = pool.reduce((sum, q) => sum + q.weight, 0);
+  let r = Math.random() * total;
+  for (let q of pool) {
+    if (r < q.weight) return q.index;
+    r -= q.weight;
+  }
+  return pool[0].index;
+}
+
+function renderQuestion(q) {
+  document.getElementById("question-title").innerText = `${q.type}：${q.text}`;
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+  shuffledOptions = shuffle(Object.entries(q.options));
+  shuffledOptions.forEach(([key, text], i) => {
+    const type = q.type === '複選題' ? 'checkbox' : 'radio';
+    optionsDiv.innerHTML += `
+      <div class="option">
+        <label><input type="${type}" name="option" value="${key}"> ${key}. ${text}</label>
+      </div>
+    `;
+  });
+  document.getElementById("explanation").innerText = "";
+}
+
+function submitAnswer() {
+  const q = questions[currentIndex];
+  const selected = [...document.querySelectorAll('input[name=option]:checked')].map(e => e.value).sort();
+  const correct = q.answer.split(',').map(s => s.trim()).sort();
+  const result = JSON.stringify(selected) === JSON.stringify(correct);
+
+  const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
+  record[q.text] = { selected, correct, result };
+  localStorage.setItem("quizRecords", JSON.stringify(record));
+
+  document.getElementById("explanation").innerHTML = result
+    ? `<span class="correct">答對了！</span>`
+    : `<span class="wrong">答錯了，正確答案是：${q.answer}</span><br><br>${q.explanation}`;
+
+  updateStats();
+  generatePool();
+}
+
+function nextQuestion() {
+  if (questionPool.length === 0) {
+    alert("沒有可出題的內容了！");
+    return;
+  }
+  currentIndex = weightedRandomIndex(questionPool);
+  renderQuestion(questions[currentIndex]);
+  updateStats();
+}
+
+function updateStats() {
+  const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
+  const total = Object.keys(record).length;
+  const correct = Object.values(record).filter(r => r.result).length;
+  const wrong = total - correct;
+  const totalQ = questions.length;
+  const undone = totalQ - total;
+  const percent = total ? Math.round((correct / total) * 100) : 0;
+  document.getElementById("progress").innerText = `已作答：${total} 題，答對：${correct} 題`;
+  document.getElementById("detail-stats").innerText = `總題數：${totalQ}，未作答：${undone}，錯題：${wrong}，正確率：${percent}%`;
+}
+
+function resetData() {
+  localStorage.removeItem("quizData");
+  localStorage.removeItem("quizRecords");
+  alert("紀錄已清除，將重新載入題庫...");
+  fetchQuestionsFromFile();
+}
+
+function toggleWrongOnly(btn) {
+  wrongOnly = !wrongOnly;
+  btn.innerText = wrongOnly ? "返回全部題目" : "僅重練錯題";
+  generatePool();
+  nextQuestion();
+}
+
+loadQuestions();
+</script>
+</body>
+</html>
