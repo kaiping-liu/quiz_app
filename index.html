@@ -91,7 +91,7 @@
   </div>
 
   <div class="buttons">
-    <button onclick="clearData()">清除紀錄與題庫</button>
+    <button onclick="clearRecordsEvent()">清除紀錄</button>
     <button onclick="toggleWrongOnly(this)">僅重練錯題</button>
   </div>
 <script>
@@ -101,69 +101,11 @@ let shuffledOptions = [];
 let optionLabelMap = {};
 let questionPool = [];
 let wrongOnly = false;
-const quizFile = "quiz_questions.json";
+const onlineQuizFile = "quiz_questions.json";
 
-function loadQuestions() {
-  const local = localStorage.getItem("quizData");
-  if (local) {
-    questions = JSON.parse(local);
-    generatePool();
-    nextQuestion();
-  } else {
-    fetchQuestionsFromFile();
-  }
-}
 
-function fetchQuestionsFromFile() {
-  const base = location.href.replace(/\/[^\/]*$/, '');
-  fetch(base + '/' + quizFile)
-    .then(res => res.json())
-    .then(data => {
-      questions = data;
-      localStorage.setItem("quizData", JSON.stringify(data));
-      generatePool();
-      nextQuestion();
-    })
-    .catch(err => {
-      alert("無法載入預設題庫，請手動上傳 JSON 題庫檔");
-      document.getElementById("fileInput").style.display = "block";
-    });
-}
 
-window.addEventListener("DOMContentLoaded", () => {
-  const local = localStorage.getItem("quizData");
-  if (local) {
-    questions = JSON.parse(local);
-    generatePool();
-    nextQuestion();
-  } else {
-    if (confirm("本機尚無題庫資料，是否要從線上載入預設題庫？")) {
-      loadFromOnline();
-    } else {
-      alert("請點選下方按鈕從本地上傳題庫。");
-    }
-  }
 
-  document.getElementById("fileInput").addEventListener("change", function(event) {
-    const file = event.target.files[0];
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      try {
-        const parsed = JSON.parse(e.target.result);
-        if (!Array.isArray(parsed) || !parsed[0]?.text || !parsed[0]?.options || !parsed[0]?.answer) throw new Error("Invalid format");
-        questions = parsed;
-        localStorage.setItem("quizData", JSON.stringify(questions));
-        generatePool();
-        nextQuestion();
-        document.getElementById("submitBtn").style.display = "inline-block";
-        document.getElementById("nextBtn").style.display = "none";
-      } catch (e) {
-        alert("上傳的檔案不是有效的 JSON 格式題庫");
-      }
-    };
-    reader.readAsText(file);
-  });
-});
 
 function shuffle(array) {
   return array.map(v => [Math.random(), v]).sort().map(v => v[1]);
@@ -278,6 +220,10 @@ function nextQuestion() {
     generatePool();
   }
   const filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
+  if (filtered.length === 0) {
+    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
+    return;
+  }
   currentIndex = weightedRandomIndex(filtered);
   renderQuestion(questions[currentIndex]);
   updateStats();
@@ -309,13 +255,6 @@ function updateStats() {
   }
 }
 
-function resetData() {
-  localStorage.removeItem("quizData");
-  localStorage.removeItem("quizRecords");
-  alert("紀錄已清除，將重新載入題庫...");
-  fetchQuestionsFromFile();
-}
-
 function toggleWrongOnly(btn) {
   wrongOnly = !wrongOnly;
   btn.innerText = wrongOnly ? "返回全部題目" : "僅重練錯題";
@@ -323,31 +262,99 @@ function toggleWrongOnly(btn) {
   nextQuestion();
 }
 
+function clearRecords() {
+  localStorage.removeItem("quizRecords");
+}
+
 function clearData() {
   localStorage.removeItem("quizData");
   localStorage.removeItem("quizRecords");
-  alert("所有紀錄與題庫已清除，請重新載入題庫");
-  location.reload();
 }
 
 function loadFromOnline() {
-  fetch(quizFile)
-    .then(res => res.json())
-    .then(data => {
-      questions = data;
-      localStorage.setItem("quizData", JSON.stringify(data));
-      generatePool();
-      nextQuestion();
-    })
-    .catch(err => alert("無法載入預設題庫：" + err));
+  setTimeout(() => {
+    const base = location.href.replace(/\/[^/]*$/, '');
+    fetch(base + '/' + onlineQuizFile)
+      .then(res => res.json())
+      .then(data => {
+        updateQuestions(data);  
+      })
+      .catch(err => alert("無法載入預設題庫：" + err));
+  }, 100);
 }
+
+function loadFromLocal() {
+  const tempInput = document.createElement("input");
+  tempInput.type = "file";
+  tempInput.accept = ".json";
+  tempInput.style.display = "none";
+  document.body.appendChild(tempInput);
+
+  tempInput.addEventListener("change", function () {
+    const file = tempInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const parsed = JSON.parse(e.target.result);
+        if (!Array.isArray(parsed) || !parsed[0]?.text || !parsed[0]?.options || !parsed[0]?.answer) throw new Error("Invalid format");
+        if (!confirm("是否清除現有紀錄與題庫後載入此本地檔案？")) return;
+        updateQuestions(parsed);
+      } catch (e) {
+        alert("上傳的檔案不是有效的 JSON 格式題庫");
+      }
+    };
+    reader.readAsText(file);
+    document.body.removeChild(tempInput);
+  });
+
+  tempInput.click();
+}
+
+function clearRecordsEvent() {
+  if (!confirm("是否清除現有紀錄？")) return;
+  clearRecords()
+  location.reload();
+}
+
+function loadFromOnlineEvent() {
+  if (!confirm("是否清除現有紀錄與題庫後從線上載入預設題庫？")) return;
+  loadFromOnline();
+}
+
+function loadFromLocalEvent() {
+  loadFromLocal();
+}
+
+function updateQuestions(data) {
+  clearData();
+  questions = data;
+  localStorage.setItem("quizData", JSON.stringify(data));
+  generatePool();
+  nextQuestion();
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const local = localStorage.getItem("quizData");
+  if (local) {
+    questions = JSON.parse(local);
+    generatePool();
+    nextQuestion();
+  } else {
+    if (confirm("本機尚無題庫資料，是否要從線上載入預設題庫？")) {
+      loadFromOnline();
+    } else {
+      alert("請點選下方按鈕從本地上傳題庫。");
+    }
+  }
+});
 
 </script>
 
 <div class="buttons">
-  <button onclick="loadFromOnline()">從線上載入預設題庫</button>
-  <button onclick="document.getElementById('fileInput').click()">從本地上傳題庫</button>
+  <button onclick="loadFromOnlineEvent()">從線上載入預設題庫</button>
+  <button onclick="loadFromLocalEvent()">從本地上傳題庫</button>
 </div>
-<input type="file" id="fileInput" accept=".json" style="display: none" />
+
 </body>
 </html>
