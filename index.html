@@ -270,10 +270,14 @@ function nextQuestion() {
   if (questionPool.length === 0) {
     generatePool();
   }
-  const filtered = questionPool.length > 1
-    ? questionPool.filter(q => q.index !== currentIndex)
-    : questionPool;
-
+  if (wrongOnly && questionPool.length === 0) {
+    alert("錯題已全部完成，將切換回全部題目模式。");
+    wrongOnly = false;
+    const toggleBtn = document.querySelector('button[onclick="toggleWrongOnly(this)"]');
+    if (toggleBtn) toggleBtn.innerText = "僅重練錯題";
+    generatePool();
+  }
+  const filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
   currentIndex = weightedRandomIndex(filtered);
   renderQuestion(questions[currentIndex]);
   updateStats();
@@ -297,6 +301,12 @@ function updateStats() {
   const percent = total ? Math.round((correct / total) * 100) : 0;
   document.getElementById("progress").innerText = `已作答：${total} 題，答對：${correct} 題`;
   document.getElementById("detail-stats").innerText = `總題數：${totalQ}，未作答：${undone}，錯題：${wrong}，正確率：${percent}%`;
+
+  const wrongButton = document.querySelector('button[onclick="toggleWrongOnly(this)"]');
+  if (wrongButton) {
+    wrongButton.disabled = wrong === 0;
+    wrongButton.style.opacity = wrong === 0 ? 0.5 : 1;
+  }
 }
 
 function resetData() {
