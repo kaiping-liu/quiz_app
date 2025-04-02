@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <title>電子商務測驗</title>
+  <meta name="viewport" content="width=480">
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
@@ -13,26 +13,57 @@
       background: #f9f9f9;
       color: #333;
     }
-    h2 { margin-bottom: 10px; }
-    .option { margin: 8px 0; }
-    .stats, .buttons {
-      margin-top: 20px;
-      padding: 15px;
+    .card {
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin-bottom: 15px;
+      min-height: 100px;
+      box-sizing: border-box;
+    }
+    .question-type {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+    .question-text {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+    .option { margin: 8px 0; }
+    #options.card {
+      padding: 15px;
+      min-height: 140px;
+      box-sizing: border-box;
+    }
+    #explanation.card {
+      min-height: 100px;
+    }
+    .stats.card {
+      background: #f0f0f0;
+      font-size: 14px;
+      min-height: 60px;
+    }
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 15px;
+      min-height: 50px;
+      align-items: center;
     }
     .correct { color: green; font-weight: bold; }
     .wrong { color: red; font-weight: bold; }
     button {
-      padding: 8px 16px;
-      margin: 6px 8px 0 0;
+      padding: 10px 16px;
       border: none;
       border-radius: 5px;
       background: #007BFF;
       color: white;
       cursor: pointer;
       font-size: 14px;
+      transition: background 0.2s ease-in-out;
     }
     button:hover {
       background: #0056b3;
@@ -40,24 +71,34 @@
   </style>
 </head>
 <body>
-<h2 id="question-title">載入中...</h2>
-<div id="options"></div>
-<div class="stats">
-  <p id="progress"></p>
-  <p id="explanation"></p>
-  <p id="detail-stats"></p>
-</div>
-<div class="buttons">
-  <button onclick="submitAnswer()">提交</button>
-  <button onclick="nextQuestion()">下一題</button>
-  <button onclick="resetData()">清除紀錄並重新載入題庫</button>
-  <button onclick="toggleWrongOnly(this)">僅重練錯題</button>
+  <div class="card" style="min-height: auto;">
+  <div class="question-type" id="question-type" style="margin-bottom: 4px;"></div>
+  <div class="question-text" id="question-title" style="margin-bottom: 0;">載入中...</div>
 </div>
 
+  
+  <div id="options" class="card"></div>
+
+  
+  <div class="buttons">
+    <button id="submitBtn" onclick="submitAnswer()" style="background:#28a745;">提交</button>
+    <button id="nextBtn" onclick="nextQuestion()" style="display: none;">下一題</button>
+  </div>
+
+  <div class="stats card">
+    <p id="progress"></p>
+    <p id="detail-stats"></p>
+  </div>
+
+  <div class="buttons">
+    <button onclick="clearData()">清除紀錄與題庫</button>
+    <button onclick="toggleWrongOnly(this)">僅重練錯題</button>
+  </div>
 <script>
 let questions = [];
 let currentIndex = 0;
 let shuffledOptions = [];
+let optionLabelMap = {};
 let questionPool = [];
 let wrongOnly = false;
 const quizFile = "quiz_questions.json";
@@ -84,9 +125,45 @@ function fetchQuestionsFromFile() {
       nextQuestion();
     })
     .catch(err => {
-      alert("無法載入題庫資料：" + err);
+      alert("無法載入預設題庫，請手動上傳 JSON 題庫檔");
+      document.getElementById("fileInput").style.display = "block";
     });
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+  const local = localStorage.getItem("quizData");
+  if (local) {
+    questions = JSON.parse(local);
+    generatePool();
+    nextQuestion();
+  } else {
+    if (confirm("本機尚無題庫資料，是否要從線上載入預設題庫？")) {
+      loadFromOnline();
+    } else {
+      alert("請點選下方按鈕從本地上傳題庫。");
+    }
+  }
+
+  document.getElementById("fileInput").addEventListener("change", function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      try {
+        const parsed = JSON.parse(e.target.result);
+        if (!Array.isArray(parsed) || !parsed[0]?.text || !parsed[0]?.options || !parsed[0]?.answer) throw new Error("Invalid format");
+        questions = parsed;
+        localStorage.setItem("quizData", JSON.stringify(questions));
+        generatePool();
+        nextQuestion();
+        document.getElementById("submitBtn").style.display = "inline-block";
+        document.getElementById("nextBtn").style.display = "none";
+      } catch (e) {
+        alert("上傳的檔案不是有效的 JSON 格式題庫");
+      }
+    };
+    reader.readAsText(file);
+  });
+});
 
 function shuffle(array) {
   return array.map(v => [Math.random(), v]).sort().map(v => v[1]);
@@ -120,31 +197,70 @@ function renderQuestion(q) {
   document.getElementById("question-title").innerText = `${q.type}：${q.text}`;
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
-  shuffledOptions = shuffle(Object.entries(q.options));
-  shuffledOptions.forEach(([key, text], i) => {
+
+  const originalOptions = Object.entries(q.options);
+  const shuffled = shuffle(originalOptions);
+  const labels = ['A', 'B', 'C', 'D'];
+  shuffledOptions = labels.map((label, i) => [label, shuffled[i]?.[1]]);
+  optionLabelMap = {};
+  shuffledOptions.forEach(([label, text], i) => {
+    if (shuffled[i]) optionLabelMap[label] = shuffled[i][0];
+  });
+
+  shuffledOptions.forEach(([label, text]) => {
     const type = q.type === '複選題' ? 'checkbox' : 'radio';
     optionsDiv.innerHTML += `
       <div class="option">
-        <label><input type="${type}" name="option" value="${key}"> ${key}. ${text}</label>
+        <label><input type="${type}" name="option" value="${label}"> ${label}. ${text}</label>
       </div>
     `;
   });
-  document.getElementById("explanation").innerText = "";
+
+  const oldResult = document.getElementById("resultNote");
+  if (oldResult) oldResult.remove();
+
+  document.getElementById("submitBtn").style.display = "inline-block";
+  document.getElementById("nextBtn").style.display = "none";
 }
 
 function submitAnswer() {
   const q = questions[currentIndex];
   const selected = [...document.querySelectorAll('input[name=option]:checked')].map(e => e.value).sort();
   const correct = q.answer.split(',').map(s => s.trim()).sort();
-  const result = JSON.stringify(selected) === JSON.stringify(correct);
+  const result = selected.length === correct.length && selected.every(label => correct.includes(optionLabelMap[label]));
 
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
   record[q.text] = { selected, correct, result };
   localStorage.setItem("quizRecords", JSON.stringify(record));
 
-  document.getElementById("explanation").innerHTML = result
-    ? `<span class="correct">答對了！</span>`
-    : `<span class="wrong">答錯了，正確答案是：${q.answer}</span><br><br>${q.explanation}`;
+  const correctLabels = Object.entries(optionLabelMap)
+    .filter(([label, orig]) => correct.includes(orig))
+    .map(([label]) => label);
+
+  document.getElementById("submitBtn").style.display = "none";
+  document.getElementById("nextBtn").style.display = "inline-block";
+
+  const resultNote = document.createElement("span");
+  resultNote.innerText = result ? "✅ 答對" : "❌ 答錯";
+  resultNote.style.fontWeight = "bold";
+  resultNote.style.color = result ? "green" : "red";
+  resultNote.id = "resultNote";
+  document.getElementById("nextBtn").after(resultNote);
+
+  const inputs = document.querySelectorAll('input[name=option]');
+  inputs.forEach(input => input.disabled = true);
+
+  shuffledOptions.forEach(([label]) => {
+    const input = document.querySelector(`input[name='option'][value='${label}']`);
+    if (!input) return;
+    const wrapper = input.closest(".option");
+    if (result && selected.includes(label)) {
+      wrapper.style.backgroundColor = "#d4edda"; // 綠色
+    } else if (!result && correctLabels.includes(label)) {
+      wrapper.style.backgroundColor = "#f8d7da"; // 紅色
+    }
+    wrapper.style.borderRadius = "5px";
+  });
 
   updateStats();
   generatePool();
@@ -152,10 +268,21 @@ function submitAnswer() {
 
 function nextQuestion() {
   if (questionPool.length === 0) {
-    alert("沒有可出題的內容了！");
+    generatePool();
+  }
+  const filtered = questionPool.length > 1
+    ? questionPool.filter(q => q.index !== currentIndex)
+    : questionPool;
+
+  currentIndex = weightedRandomIndex(filtered);
+  renderQuestion(questions[currentIndex]);
+  updateStats();
+
+  if (filtered.length === 0) {
+    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
     return;
   }
-  currentIndex = weightedRandomIndex(questionPool);
+  currentIndex = weightedRandomIndex(filtered);
   renderQuestion(questions[currentIndex]);
   updateStats();
 }
@@ -186,7 +313,41 @@ function toggleWrongOnly(btn) {
   nextQuestion();
 }
 
-loadQuestions();
+window.addEventListener("DOMContentLoaded", () => {
+  const local = localStorage.getItem("quizData");
+  if (local) {
+    questions = JSON.parse(local);
+    generatePool();
+    nextQuestion();
+  } else {
+    alert("請先從線上或本地載入題庫後再開始作答。")
+  }
+});
+function clearData() {
+  localStorage.removeItem("quizData");
+  localStorage.removeItem("quizRecords");
+  alert("所有紀錄與題庫已清除，請重新載入題庫");
+  location.reload();
+}
+
+function loadFromOnline() {
+  fetch(quizFile)
+    .then(res => res.json())
+    .then(data => {
+      questions = data;
+      localStorage.setItem("quizData", JSON.stringify(data));
+      generatePool();
+      nextQuestion();
+    })
+    .catch(err => alert("無法載入預設題庫：" + err));
+}
+
 </script>
+
+<div class="buttons">
+  <button onclick="loadFromOnline()">從線上載入預設題庫</button>
+  <button onclick="document.getElementById('fileInput').click()">從本地上傳題庫</button>
+</div>
+<input type="file" id="fileInput" accept=".json" style="display: none" />
 </body>
 </html>
