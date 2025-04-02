@@ -314,7 +314,8 @@ function loadFromLocal() {
 function clearRecordsEvent() {
   if (!confirm("是否清除現有紀錄？")) return;
   clearRecords()
-  location.reload();
+  generatePool();
+  nextQuestion();
 }
 
 function loadFromOnlineEvent() {
