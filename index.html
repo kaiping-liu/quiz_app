@@ -323,16 +323,6 @@ function toggleWrongOnly(btn) {
   nextQuestion();
 }
 
-window.addEventListener("DOMContentLoaded", () => {
-  const local = localStorage.getItem("quizData");
-  if (local) {
-    questions = JSON.parse(local);
-    generatePool();
-    nextQuestion();
-  } else {
-    alert("請先從線上或本地載入題庫後再開始作答。")
-  }
-});
 function clearData() {
   localStorage.removeItem("quizData");
   localStorage.removeItem("quizRecords");
