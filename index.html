@@ -76,10 +76,10 @@
   <div class="question-text" id="question-title" style="margin-bottom: 0;">載入中...</div>
 </div>
 
-  
+
   <div id="options" class="card"></div>
 
-  
+
   <div class="buttons">
     <button id="submitBtn" onclick="submitAnswer()" style="background:#28a745;">提交</button>
     <button id="nextBtn" onclick="nextQuestion()" style="display: none;">下一題</button>
@@ -140,13 +140,12 @@ function renderQuestion(q) {
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
 
-  const originalOptions = Object.entries(q.options);
-  const shuffled = shuffle(originalOptions);
+  const originalOptions = Object.entries(q.options); // Keep the original order
   const labels = ['A', 'B', 'C', 'D'];
-  shuffledOptions = labels.map((label, i) => [label, shuffled[i]?.[1]]);
+  shuffledOptions = labels.map((label, i) => [label, originalOptions[i]?.[1]]);
   optionLabelMap = {};
   shuffledOptions.forEach(([label, text], i) => {
-    if (shuffled[i]) optionLabelMap[label] = shuffled[i][0];
+    if (originalOptions[i]) optionLabelMap[label] = originalOptions[i][0];
   });
 
   shuffledOptions.forEach(([label, text]) => {
@@ -277,7 +276,7 @@ function loadFromOnline() {
     fetch(base + '/' + onlineQuizFile, { cache: 'no-cache' })
       .then(res => res.json())
       .then(data => {
-        updateQuestions(data);  
+        updateQuestions(data);
       })
       .catch(err => alert("無法載入預設題庫：" + err));
   }, 100);
