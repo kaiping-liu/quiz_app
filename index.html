@@ -274,7 +274,7 @@ function clearData() {
 function loadFromOnline() {
   setTimeout(() => {
     const base = location.href.replace(/\/[^/]*$/, '');
-    fetch(base + '/' + onlineQuizFile)
+    fetch(base + '/' + onlineQuizFile, { cache: 'no-cache' })
       .then(res => res.json())
       .then(data => {
         updateQuestions(data);  
