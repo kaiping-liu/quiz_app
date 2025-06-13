@@ -147,9 +147,7 @@ function generatePool() {
   if (N0 === 0) {
     P0 = 0;
   } else {
-    P0 = pMin + (1 - N0 / Q) * (pMax - pMin);
-    if (P0 < pMin) P0 = pMin;
-    if (P0 > pMax) P0 = pMax;
+    P0 = pMin + (N0 / Q) * (pMax - pMin);
   }
   const avgWrong = totalAns ? totalWrong / totalAns : 0;
   let P1 = (1 - P0) * avgWrong;
