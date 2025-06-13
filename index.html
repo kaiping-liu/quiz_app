@@ -115,72 +115,82 @@ function shuffle(array) {
 function generatePool() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
 
-  const newQ = [];
-  const wrongQ = [];
-  const familiarQ = [];
+  const newIds = [];
+  const wrong = [];
+  const correct = [];
+  let totalAns = 0;
+  let totalWrong = 0;
 
   questions.forEach((q, idx) => {
     const rec = record[q.text];
-    if (!rec || !(rec.answered > 0)) {
-      newQ.push(idx);
+    if (!rec || !rec.answered) {
+      newIds.push(idx);
       return;
     }
-    const answered = rec.answered || 0;
-    const wrongTimes = rec.wrongTimes ?? (rec.result ? 0 : 1);
-    const rate = answered ? wrongTimes / answered : 0;
-    if (rate >= 0.3) {
-      wrongQ.push({ index: idx, rate });
+    totalAns += rec.answered;
+    totalWrong += rec.wrongTimes || 0;
+    if (rec.wrongTimes && rec.wrongTimes > 0) {
+      wrong.push({ index: idx, rec });
     } else {
-      familiarQ.push({ index: idx, rate });
+      correct.push({ index: idx, rec });
     }
   });
 
-  const total = questions.length;
-  const newCount = newQ.length;
-  const wrongCount = wrongQ.length;
-  const famCount = familiarQ.length;
+  const Q = questions.length;
+  const N0 = newIds.length;
+  const N1 = wrong.length;
+  const N2 = correct.length;
 
-  let pNew = 0, pWrong = 0, pFam = 0;
-  if (newCount > 0) {
-    pNew = 0.4 + 0.6 * (1 - newCount / total);
-    if (pNew > 0.95) pNew = 0.95;
-    const rest = 1 - pNew;
-    if (wrongCount + famCount > 0) {
-      pWrong = rest * (wrongCount / (wrongCount + famCount));
-      pFam = rest - pWrong;
-    }
+  const pMin = 0.3;
+  const pMax = 0.7;
+  let P0;
+  if (N0 === 0) {
+    P0 = 0;
   } else {
-    pWrong = wrongCount > 0 ? 0.6 : 0;
-    pFam = 1 - pWrong;
+    P0 = pMin + (1 - N0 / Q) * (pMax - pMin);
+    if (P0 < pMin) P0 = pMin;
+    if (P0 > pMax) P0 = pMax;
+  }
+  const avgWrong = totalAns ? totalWrong / totalAns : 0;
+  let P1 = (1 - P0) * avgWrong;
+  let P2 = 1 - P0 - P1;
+
+  let extras = 0;
+  if (N1 === 0) { extras += P1; P1 = 0; }
+  if (N2 === 0) { extras += P2; P2 = 0; }
+  const active = (N0>0 && P0>0 ?1:0) + (N1>0?1:0) + (N2>0?1:0);
+  if (active > 0 && extras > 0) {
+    const add = extras / active;
+    if (N0>0 && P0>0) P0 += add;
+    if (N1>0) P1 += add;
+    if (N2>0) P2 += add;
   }
 
   questionPool = [];
 
-  if (newCount > 0) {
-    const w = pNew / newCount;
-    newQ.forEach(idx => questionPool.push({ index: idx, weight: w }));
+  if (N0 > 0) {
+    const w = P0 / N0;
+    newIds.forEach(i => questionPool.push({ index: i, weight: w }));
   }
 
-  if (wrongCount > 0) {
-    const base = wrongQ.map(q => Math.max(q.rate, 0.05));
-    const sum = base.reduce((a, b) => a + b, 0);
-    wrongQ.forEach((q, i) => {
-      const w = pWrong * base[i] / sum;
-      questionPool.push({ index: q.index, weight: w });
+  if (N1 > 0) {
+    const base = wrong.map(q => (q.rec.wrongTimes / q.rec.answered) + 0.05);
+    const sum = base.reduce((a,b)=>a+b,0);
+    wrong.forEach((q,idx)=>{
+      questionPool.push({ index: q.index, weight: P1 * base[idx] / sum });
     });
   }
 
-  if (famCount > 0) {
-    const base = familiarQ.map(q => Math.max(q.rate, 0.05));
-    const sum = base.reduce((a, b) => a + b, 0);
-    familiarQ.forEach((q, i) => {
-      const w = pFam * base[i] / sum;
-      questionPool.push({ index: q.index, weight: w });
+  if (N2 > 0) {
+    const base = correct.map(q => (1 - q.rec.correctTimes / q.rec.answered) + 0.05);
+    const sum = base.reduce((a,b)=>a+b,0);
+    correct.forEach((q,idx)=>{
+      questionPool.push({ index: q.index, weight: P2 * base[idx] / sum });
     });
   }
 
   if (wrongOnly) {
-    questionPool = questionPool.filter(q => wrongQ.some(w => w.index === q.index));
+    questionPool = questionPool.filter(q => wrong.some(w => w.index === q.index));
   }
 }
 
@@ -281,18 +291,9 @@ function nextQuestion() {
     if (toggleBtn) toggleBtn.innerText = "僅重練錯題";
     generatePool();
   }
-  const filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
+  let filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
   if (filtered.length === 0) {
-    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
-    return;
-  }
-  currentIndex = weightedRandomIndex(filtered);
-  renderQuestion(questions[currentIndex]);
-  updateStats();
-
-  if (filtered.length === 0) {
-    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
-    return;
+    filtered = questionPool;
   }
   currentIndex = weightedRandomIndex(filtered);
   renderQuestion(questions[currentIndex]);
