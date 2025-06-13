@@ -118,8 +118,6 @@ function generatePool() {
   const newIds = [];
   const wrong = [];
   const correct = [];
-  let totalAns = 0;
-  let totalWrong = 0;
 
   questions.forEach((q, idx) => {
     const rec = record[q.text];
@@ -127,8 +125,6 @@ function generatePool() {
       newIds.push(idx);
       return;
     }
-    totalAns += rec.answered;
-    totalWrong += rec.wrongTimes || 0;
     if (rec.wrongTimes && rec.wrongTimes > 0) {
       wrong.push({ index: idx, rec });
     } else {
@@ -136,33 +132,19 @@ function generatePool() {
     }
   });
 
-  const Q = questions.length;
   const N0 = newIds.length;
   const N1 = wrong.length;
   const N2 = correct.length;
 
-  const pMin = 0.3;
-  const pMax = 0.7;
-  let P0;
-  if (N0 === 0) {
-    P0 = 0;
-  } else {
-    P0 = pMin + (N0 / Q) * (pMax - pMin);
-  }
-  const avgWrong = totalAns ? totalWrong / totalAns : 0;
-  let P1 = (1 - P0) * avgWrong;
-  let P2 = 1 - P0 - P1;
+  const base = [0.7, 0.2, 0.1];
+  let r0 = N0 > 0 ? base[0] : 0;
+  let r1 = N1 > 0 ? base[1] : 0;
+  let r2 = N2 > 0 ? base[2] : 0;
+  const rSum = r0 + r1 + r2;
+  let P0 = rSum ? r0 / rSum : 0;
+  let P1 = rSum ? r1 / rSum : 0;
+  let P2 = rSum ? r2 / rSum : 0;
 
-  let extras = 0;
-  if (N1 === 0) { extras += P1; P1 = 0; }
-  if (N2 === 0) { extras += P2; P2 = 0; }
-  const active = (N0>0 && P0>0 ?1:0) + (N1>0?1:0) + (N2>0?1:0);
-  if (active > 0 && extras > 0) {
-    const add = extras / active;
-    if (N0>0 && P0>0) P0 += add;
-    if (N1>0) P1 += add;
-    if (N2>0) P2 += add;
-  }
 
   questionPool = [];
 
