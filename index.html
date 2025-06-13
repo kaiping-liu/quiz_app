@@ -118,8 +118,6 @@ function generatePool() {
   const newIds = [];
   const wrong = [];
   const correct = [];
-  let totalAns = 0;
-  let totalWrong = 0;
 
   questions.forEach((q, idx) => {
     const rec = record[q.text];
@@ -127,8 +125,6 @@ function generatePool() {
       newIds.push(idx);
       return;
     }
-    totalAns += rec.answered;
-    totalWrong += rec.wrongTimes || 0;
     if (rec.wrongTimes && rec.wrongTimes > 0) {
       wrong.push({ index: idx, rec });
     } else {
@@ -136,35 +132,18 @@ function generatePool() {
     }
   });
 
-  const Q = questions.length;
   const N0 = newIds.length;
   const N1 = wrong.length;
   const N2 = correct.length;
 
-  const pMin = 0.3;
-  const pMax = 0.7;
-  let P0;
-  if (N0 === 0) {
-    P0 = 0;
-  } else {
-    P0 = pMin + (1 - N0 / Q) * (pMax - pMin);
-    if (P0 < pMin) P0 = pMin;
-    if (P0 > pMax) P0 = pMax;
-  }
-  const avgWrong = totalAns ? totalWrong / totalAns : 0;
-  let P1 = (1 - P0) * avgWrong;
-  let P2 = 1 - P0 - P1;
-
-  let extras = 0;
-  if (N1 === 0) { extras += P1; P1 = 0; }
-  if (N2 === 0) { extras += P2; P2 = 0; }
-  const active = (N0>0 && P0>0 ?1:0) + (N1>0?1:0) + (N2>0?1:0);
-  if (active > 0 && extras > 0) {
-    const add = extras / active;
-    if (N0>0 && P0>0) P0 += add;
-    if (N1>0) P1 += add;
-    if (N2>0) P2 += add;
-  }
+  const base = [0.7, 0.2, 0.1];
+  let r0 = N0 > 0 ? base[0] : 0;
+  let r1 = N1 > 0 ? base[1] : 0;
+  let r2 = N2 > 0 ? base[2] : 0;
+  const rSum = r0 + r1 + r2;
+  let P0 = rSum ? r0 / rSum : 0;
+  let P1 = rSum ? r1 / rSum : 0;
+  let P2 = rSum ? r2 / rSum : 0;
 
   questionPool = [];
 
@@ -403,20 +382,51 @@ function openWrongQuestions() {
     alert("目前沒有錯題");
     return;
   }
+
   const win = window.open("", "_blank");
-  let html = `<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><title>錯題列表</title><style>body{font-family:'Segoe UI',sans-serif;padding:20px;}h2{margin-top:0;}.question{margin-bottom:20px;}.answer{color:green;}</style></head><body><h2>答錯題目 (${wrong.length})</h2>`;
+  const doc = win.document;
+  doc.open();
+  doc.write(
+    `<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><title>錯題列表</title><style>body{font-family:'Segoe UI',sans-serif;padding:20px;}h2{margin-top:0;}.question{margin-bottom:20px;}.answer{color:green;}</style></head><body></body></html>`
+  );
+  doc.close();
+
+  const title = doc.createElement("h2");
+  title.textContent = `答錯題目 (${wrong.length})`;
+  doc.body.appendChild(title);
+
   wrong.forEach(q => {
-    html += `<div class="question"><div>${q.type}：${q.text}</div><ul>`;
+    const qDiv = doc.createElement("div");
+    qDiv.className = "question";
+
+    const qTitle = doc.createElement("div");
+    qTitle.textContent = `${q.type}：${q.text}`;
+    qDiv.appendChild(qTitle);
+
+    const ul = doc.createElement("ul");
     Object.entries(q.options).forEach(([label, text]) => {
       const isCorrect = q.answer.split(',').map(s => s.trim()).includes(label);
-      html += `<li>${label}. ${text}${isCorrect ? ' <span class="answer">✓</span>' : ''}</li>`;
+      const li = doc.createElement("li");
+      li.textContent = `${label}. ${text}`;
+      if (isCorrect) {
+        li.appendChild(doc.createTextNode(' '));
+        const span = doc.createElement("span");
+        span.className = "answer";
+        span.textContent = "✓";
+        li.appendChild(span);
+      }
+      ul.appendChild(li);
     });
-    if (q.explanation) html += `<div>解析：${q.explanation}</div>`;
-    html += `</ul></div>`;
+    qDiv.appendChild(ul);
+
+    if (q.explanation) {
+      const expDiv = doc.createElement("div");
+      expDiv.textContent = `解析：${q.explanation}`;
+      qDiv.appendChild(expDiv);
+    }
+
+    doc.body.appendChild(qDiv);
   });
-  html += `</body></html>`;
-  win.document.write(html);
-  win.document.close();
 }
 
 function updateQuestions(data) {
