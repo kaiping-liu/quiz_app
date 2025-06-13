@@ -117,9 +117,11 @@ function generatePool() {
     const rec = record[q.text];
     const 未答 = !rec;
     const 答錯 = rec && !rec.result;
+    const 答對 = rec && rec.result;
     let weight = 1;
-    if (未答) weight += 3;
-    if (答錯) weight += 2;
+    if (未答) weight += 3;       // 未作答題目維持較高權重
+    if (答錯) weight += 5;       // 答錯題目大幅提升權重
+    if (答對) weight *= 0.5;     // 答對題目降低權重
     if (wrongOnly && !答錯) weight = 0;
     return { index: idx, weight };
   }).filter(q => q.weight > 0);
