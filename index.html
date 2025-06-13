@@ -93,6 +93,7 @@
   <div class="buttons">
     <button onclick="clearRecordsEvent()">清除紀錄</button>
     <button onclick="toggleWrongOnly(this)">僅重練錯題</button>
+    <button onclick="openWrongQuestions()">檢視錯題</button>
   </div>
 <script>
 let questions = [];
@@ -326,6 +327,29 @@ function loadFromOnlineEvent() {
 
 function loadFromLocalEvent() {
   loadFromLocal();
+}
+
+function openWrongQuestions() {
+  const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
+  const wrong = questions.filter(q => record[q.text] && !record[q.text].result);
+  if (wrong.length === 0) {
+    alert("目前沒有錯題");
+    return;
+  }
+  const win = window.open("", "_blank");
+  let html = `<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><title>錯題列表</title><style>body{font-family:'Segoe UI',sans-serif;padding:20px;}h2{margin-top:0;}.question{margin-bottom:20px;}.answer{color:green;}</style></head><body><h2>答錯題目 (${wrong.length})</h2>`;
+  wrong.forEach(q => {
+    html += `<div class="question"><div>${q.type}：${q.text}</div><ul>`;
+    Object.entries(q.options).forEach(([label, text]) => {
+      const isCorrect = q.answer.split(',').map(s => s.trim()).includes(label);
+      html += `<li>${label}. ${text}${isCorrect ? ' <span class="answer">✓</span>' : ''}</li>`;
+    });
+    if (q.explanation) html += `<div>解析：${q.explanation}</div>`;
+    html += `</ul></div>`;
+  });
+  html += `</body></html>`;
+  win.document.write(html);
+  win.document.close();
 }
 
 function updateQuestions(data) {
