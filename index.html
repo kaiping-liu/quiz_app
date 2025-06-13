@@ -114,18 +114,84 @@ function shuffle(array) {
 
 function generatePool() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  questionPool = questions.map((q, idx) => {
+
+  const newIds = [];
+  const wrong = [];
+  const correct = [];
+  let totalAns = 0;
+  let totalWrong = 0;
+
+  questions.forEach((q, idx) => {
     const rec = record[q.text];
-    const 未答 = !rec;
-    const 答錯 = rec && !rec.result;
-    const 答對 = rec && rec.result;
-    let weight = 1;
-    if (未答) weight += 3;       // 未作答題目維持較高權重
-    if (答錯) weight += 5;       // 答錯題目大幅提升權重
-    if (答對) weight *= 0.5;     // 答對題目降低權重
-    if (wrongOnly && !答錯) weight = 0;
-    return { index: idx, weight };
-  }).filter(q => q.weight > 0);
+    if (!rec || !rec.answered) {
+      newIds.push(idx);
+      return;
+    }
+    totalAns += rec.answered;
+    totalWrong += rec.wrongTimes || 0;
+    if (rec.wrongTimes && rec.wrongTimes > 0) {
+      wrong.push({ index: idx, rec });
+    } else {
+      correct.push({ index: idx, rec });
+    }
+  });
+
+  const Q = questions.length;
+  const N0 = newIds.length;
+  const N1 = wrong.length;
+  const N2 = correct.length;
+
+  const pMin = 0.3;
+  const pMax = 0.7;
+  let P0;
+  if (N0 === 0) {
+    P0 = 0;
+  } else {
+    P0 = pMin + (1 - N0 / Q) * (pMax - pMin);
+    if (P0 < pMin) P0 = pMin;
+    if (P0 > pMax) P0 = pMax;
+  }
+  const avgWrong = totalAns ? totalWrong / totalAns : 0;
+  let P1 = (1 - P0) * avgWrong;
+  let P2 = 1 - P0 - P1;
+
+  let extras = 0;
+  if (N1 === 0) { extras += P1; P1 = 0; }
+  if (N2 === 0) { extras += P2; P2 = 0; }
+  const active = (N0>0 && P0>0 ?1:0) + (N1>0?1:0) + (N2>0?1:0);
+  if (active > 0 && extras > 0) {
+    const add = extras / active;
+    if (N0>0 && P0>0) P0 += add;
+    if (N1>0) P1 += add;
+    if (N2>0) P2 += add;
+  }
+
+  questionPool = [];
+
+  if (N0 > 0) {
+    const w = P0 / N0;
+    newIds.forEach(i => questionPool.push({ index: i, weight: w }));
+  }
+
+  if (N1 > 0) {
+    const base = wrong.map(q => (q.rec.wrongTimes / q.rec.answered) + 0.05);
+    const sum = base.reduce((a,b)=>a+b,0);
+    wrong.forEach((q,idx)=>{
+      questionPool.push({ index: q.index, weight: P1 * base[idx] / sum });
+    });
+  }
+
+  if (N2 > 0) {
+    const base = correct.map(q => (1 - q.rec.correctTimes / q.rec.answered) + 0.05);
+    const sum = base.reduce((a,b)=>a+b,0);
+    correct.forEach((q,idx)=>{
+      questionPool.push({ index: q.index, weight: P2 * base[idx] / sum });
+    });
+  }
+
+  if (wrongOnly) {
+    questionPool = questionPool.filter(q => wrong.some(w => w.index === q.index));
+  }
 }
 
 function weightedRandomIndex(pool) {
@@ -174,7 +240,11 @@ function submitAnswer() {
   const result = selected.length === correct.length && selected.every(label => correct.includes(optionLabelMap[label]));
 
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  record[q.text] = { selected, correct, result };
+  const prev = record[q.text] || { answered: 0, correctTimes: 0, wrongTimes: 0 };
+  const answered = prev.answered + 1;
+  const correctTimes = prev.correctTimes + (result ? 1 : 0);
+  const wrongTimes = prev.wrongTimes + (result ? 0 : 1);
+  record[q.text] = { selected, correct, result, answered, correctTimes, wrongTimes };
   localStorage.setItem("quizRecords", JSON.stringify(record));
 
   const correctLabels = Object.entries(optionLabelMap)
@@ -221,18 +291,9 @@ function nextQuestion() {
     if (toggleBtn) toggleBtn.innerText = "僅重練錯題";
     generatePool();
   }
-  const filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
+  let filtered = questionPool.length > 1 ? questionPool.filter(q => q.index !== currentIndex) : questionPool;
   if (filtered.length === 0) {
-    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
-    return;
-  }
-  currentIndex = weightedRandomIndex(filtered);
-  renderQuestion(questions[currentIndex]);
-  updateStats();
-
-  if (filtered.length === 0) {
-    alert("題庫中僅剩此題，請清除紀錄以重新開始。");
-    return;
+    filtered = questionPool;
   }
   currentIndex = weightedRandomIndex(filtered);
   renderQuestion(questions[currentIndex]);
@@ -241,14 +302,20 @@ function nextQuestion() {
 
 function updateStats() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  const total = Object.keys(record).length;
-  const correct = Object.values(record).filter(r => r.result).length;
-  const wrong = total - correct;
+  const stats = Object.values(record);
+  const totalAttempts = stats.reduce((sum, r) => sum + (r.answered || 0), 0);
+  const totalCorrect = stats.reduce((sum, r) => sum + (r.correctTimes || (r.result ? 1 : 0)), 0);
+  const totalWrong = stats.reduce((sum, r) => sum + (r.wrongTimes || (r.result ? 0 : 1)), 0);
+  const percent = totalAttempts ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+
   const totalQ = questions.length;
-  const undone = totalQ - total;
-  const percent = total ? Math.round((correct / total) * 100) : 0;
-  document.getElementById("progress").innerText = `已作答：${total} 題，答對：${correct} 題`;
-  document.getElementById("detail-stats").innerText = `總題數：${totalQ}，未作答：${undone}，錯題：${wrong}，正確率：${percent}%`;
+  const answeredQ = stats.filter(r => (r.answered || 0) > 0).length;
+  const undoneQ = totalQ - answeredQ;
+
+  document.getElementById("progress").innerText =`作答次數：${totalAttempts}，答對次數：${totalCorrect}，答錯次數：${totalWrong}，正確率：${percent}%`;
+  document.getElementById("detail-stats").innerText =`總題數：${totalQ}，已作答：${answeredQ}，未作答：${undoneQ}`;
+
+  const wrong = totalWrong;
 
   const wrongButton = document.querySelector('button[onclick="toggleWrongOnly(this)"]');
   if (wrongButton) {
