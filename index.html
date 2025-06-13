@@ -114,18 +114,74 @@ function shuffle(array) {
 
 function generatePool() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  questionPool = questions.map((q, idx) => {
+
+  const newQ = [];
+  const wrongQ = [];
+  const familiarQ = [];
+
+  questions.forEach((q, idx) => {
     const rec = record[q.text];
-    const 未答 = !rec;
-    const 答錯 = rec && !rec.result;
-    const 答對 = rec && rec.result;
-    let weight = 1;
-    if (未答) weight += 3;       // 未作答題目維持較高權重
-    if (答錯) weight += 5;       // 答錯題目大幅提升權重
-    if (答對) weight *= 0.5;     // 答對題目降低權重
-    if (wrongOnly && !答錯) weight = 0;
-    return { index: idx, weight };
-  }).filter(q => q.weight > 0);
+    if (!rec || !(rec.answered > 0)) {
+      newQ.push(idx);
+      return;
+    }
+    const answered = rec.answered || 0;
+    const wrongTimes = rec.wrongTimes ?? (rec.result ? 0 : 1);
+    const rate = answered ? wrongTimes / answered : 0;
+    if (rate >= 0.3) {
+      wrongQ.push({ index: idx, rate });
+    } else {
+      familiarQ.push({ index: idx, rate });
+    }
+  });
+
+  const total = questions.length;
+  const newCount = newQ.length;
+  const wrongCount = wrongQ.length;
+  const famCount = familiarQ.length;
+
+  let pNew = 0, pWrong = 0, pFam = 0;
+  if (newCount > 0) {
+    pNew = 0.4 + 0.6 * (1 - newCount / total);
+    if (pNew > 0.95) pNew = 0.95;
+    const rest = 1 - pNew;
+    if (wrongCount + famCount > 0) {
+      pWrong = rest * (wrongCount / (wrongCount + famCount));
+      pFam = rest - pWrong;
+    }
+  } else {
+    pWrong = wrongCount > 0 ? 0.6 : 0;
+    pFam = 1 - pWrong;
+  }
+
+  questionPool = [];
+
+  if (newCount > 0) {
+    const w = pNew / newCount;
+    newQ.forEach(idx => questionPool.push({ index: idx, weight: w }));
+  }
+
+  if (wrongCount > 0) {
+    const base = wrongQ.map(q => Math.max(q.rate, 0.05));
+    const sum = base.reduce((a, b) => a + b, 0);
+    wrongQ.forEach((q, i) => {
+      const w = pWrong * base[i] / sum;
+      questionPool.push({ index: q.index, weight: w });
+    });
+  }
+
+  if (famCount > 0) {
+    const base = familiarQ.map(q => Math.max(q.rate, 0.05));
+    const sum = base.reduce((a, b) => a + b, 0);
+    familiarQ.forEach((q, i) => {
+      const w = pFam * base[i] / sum;
+      questionPool.push({ index: q.index, weight: w });
+    });
+  }
+
+  if (wrongOnly) {
+    questionPool = questionPool.filter(q => wrongQ.some(w => w.index === q.index));
+  }
 }
 
 function weightedRandomIndex(pool) {
@@ -174,7 +230,11 @@ function submitAnswer() {
   const result = selected.length === correct.length && selected.every(label => correct.includes(optionLabelMap[label]));
 
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  record[q.text] = { selected, correct, result };
+  const prev = record[q.text] || { answered: 0, correctTimes: 0, wrongTimes: 0 };
+  const answered = prev.answered + 1;
+  const correctTimes = prev.correctTimes + (result ? 1 : 0);
+  const wrongTimes = prev.wrongTimes + (result ? 0 : 1);
+  record[q.text] = { selected, correct, result, answered, correctTimes, wrongTimes };
   localStorage.setItem("quizRecords", JSON.stringify(record));
 
   const correctLabels = Object.entries(optionLabelMap)
@@ -241,14 +301,20 @@ function nextQuestion() {
 
 function updateStats() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  const total = Object.keys(record).length;
-  const correct = Object.values(record).filter(r => r.result).length;
-  const wrong = total - correct;
+  const stats = Object.values(record);
+  const totalAttempts = stats.reduce((sum, r) => sum + (r.answered || 0), 0);
+  const totalCorrect = stats.reduce((sum, r) => sum + (r.correctTimes || (r.result ? 1 : 0)), 0);
+  const totalWrong = stats.reduce((sum, r) => sum + (r.wrongTimes || (r.result ? 0 : 1)), 0);
+  const percent = totalAttempts ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+
   const totalQ = questions.length;
-  const undone = totalQ - total;
-  const percent = total ? Math.round((correct / total) * 100) : 0;
-  document.getElementById("progress").innerText = `已作答：${total} 題，答對：${correct} 題`;
-  document.getElementById("detail-stats").innerText = `總題數：${totalQ}，未作答：${undone}，錯題：${wrong}，正確率：${percent}%`;
+  const answeredQ = stats.filter(r => (r.answered || 0) > 0).length;
+  const undoneQ = totalQ - answeredQ;
+
+  document.getElementById("progress").innerText =`作答次數：${totalAttempts}，答對次數：${totalCorrect}，答錯次數：${totalWrong}，正確率：${percent}%`;
+  document.getElementById("detail-stats").innerText =`總題數：${totalQ}，已作答：${answeredQ}，未作答：${undoneQ}`;
+
+  const wrong = totalWrong;
 
   const wrongButton = document.querySelector('button[onclick="toggleWrongOnly(this)"]');
   if (wrongButton) {
