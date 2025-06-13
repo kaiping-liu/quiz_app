@@ -174,7 +174,11 @@ function submitAnswer() {
   const result = selected.length === correct.length && selected.every(label => correct.includes(optionLabelMap[label]));
 
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  record[q.text] = { selected, correct, result };
+  const prev = record[q.text] || { answered: 0, correctTimes: 0, wrongTimes: 0 };
+  const answered = prev.answered + 1;
+  const correctTimes = prev.correctTimes + (result ? 1 : 0);
+  const wrongTimes = prev.wrongTimes + (result ? 0 : 1);
+  record[q.text] = { selected, correct, result, answered, correctTimes, wrongTimes };
   localStorage.setItem("quizRecords", JSON.stringify(record));
 
   const correctLabels = Object.entries(optionLabelMap)
@@ -241,14 +245,20 @@ function nextQuestion() {
 
 function updateStats() {
   const record = JSON.parse(localStorage.getItem("quizRecords") || "{}");
-  const total = Object.keys(record).length;
-  const correct = Object.values(record).filter(r => r.result).length;
-  const wrong = total - correct;
+  const stats = Object.values(record);
+  const totalAttempts = stats.reduce((sum, r) => sum + (r.answered || 0), 0);
+  const totalCorrect = stats.reduce((sum, r) => sum + (r.correctTimes || (r.result ? 1 : 0)), 0);
+  const totalWrong = stats.reduce((sum, r) => sum + (r.wrongTimes || (r.result ? 0 : 1)), 0);
+  const percent = totalAttempts ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
+
   const totalQ = questions.length;
-  const undone = totalQ - total;
-  const percent = total ? Math.round((correct / total) * 100) : 0;
-  document.getElementById("progress").innerText = `已作答：${total} 題，答對：${correct} 題`;
-  document.getElementById("detail-stats").innerText = `總題數：${totalQ}，未作答：${undone}，錯題：${wrong}，正確率：${percent}%`;
+  const answeredQ = stats.filter(r => (r.answered || 0) > 0).length;
+  const undoneQ = totalQ - answeredQ;
+
+  document.getElementById("progress").innerText =`作答次數：${totalAttempts}，答對次數：${totalCorrect}，答錯次數：${totalWrong}，正確率：${percent}%`;
+  document.getElementById("detail-stats").innerText =`總題數：${totalQ}，已作答：${answeredQ}，未作答：${undoneQ}`;
+
+  const wrong = totalWrong;
 
   const wrongButton = document.querySelector('button[onclick="toggleWrongOnly(this)"]');
   if (wrongButton) {
