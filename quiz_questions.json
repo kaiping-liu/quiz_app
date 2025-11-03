@@ -512,7 +512,7 @@
       "C": "broadcast",
       "D": "anycast"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -956,7 +956,7 @@
       "C": "110",
       "D": "1110"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -1124,7 +1124,7 @@
       "C": "4個子網路",
       "D": "8 個子網路"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -1184,7 +1184,7 @@
       "C": "24個 0",
       "D": "24部伺服器"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -2240,7 +2240,7 @@
       "C": "電話線",
       "D": "電力線"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": ""
   },
   {
@@ -2564,7 +2564,7 @@
       "C": "route",
       "D": "telnet。"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": ""
   },
   {
@@ -3296,7 +3296,7 @@
       "C": "多條通路和一條頻道",
       "D": "多條通路和多條頻道"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -4205,7 +4205,7 @@
       "C": "300-600 Mbps",
       "D": "不需要變更"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -4385,7 +4385,7 @@
       "C": "(3) 5週",
       "D": "(4)以上皆非"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": ""
   },
   {
