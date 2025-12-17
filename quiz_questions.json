@@ -13,194 +13,14 @@
   },
   {
     "type": "單選題",
-    "text": "TCP 和 UDP 都會將資料分隔成什麼進行傳輸？",
+    "text": "Mail Server使用SMTP時，可由哪個埠號識別出來？",
     "options": {
-      "A": "頻率",
-      "B": "包裹",
-      "C": "錯誤",
-      "D": "封包"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 通常用於以下哪種通訊？",
-    "options": {
-      "A": "電子郵件",
-      "B": "網際網路電話",
-      "C": "瀏覽網頁",
-      "D": "打印文件"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "當TCP/IP網路連線時，可以透過哪個指令進行檢視目前主機上連線狀態與封包的統計資訊等？",
-    "options": {
-      "A": "ping",
-      "B": "cd",
-      "C": "arp",
-      "D": "netstat"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "當需要可靠的資料傳輸時，應該使用哪一種協定？",
-    "options": {
-      "A": "ICMP",
-      "B": "IP",
-      "C": "UDP",
-      "D": "TCP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 的主要差異在於什麼？",
-    "options": {
-      "A": "連線導向性",
-      "B": "傳輸速度",
-      "C": "封包大小限制",
-      "D": "可靠性和順序性"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "什麼應用程式通常使用UDP協定？",
-    "options": {
-      "A": "串流媒體、即時多人遊戲、IP語音（VoIP）",
-      "B": "電子郵件服務",
-      "C": "網頁瀏覽器",
-      "D": "檔案傳輸軟體"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 協定之間最大的不同在於什麼？",
-    "options": {
-      "A": "提供的服務類型",
-      "B": "使用的端口數量",
-      "C": "協定標頭的長度",
-      "D": "封包的傳輸速度"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 如何運作？",
-    "options": {
-      "A": "TCP 需要唯一識別碼和序號，而 UDP 不需要",
-      "B": "UDP 需要唯一識別碼和序號，而 TCP 不需要",
-      "C": "TCP 和 UDP 都不需要唯一識別碼和序號",
-      "D": "TCP 和 UDP 都需要唯一識別碼和序號"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 最大的區別是什麼？",
-    "options": {
-      "A": "協定標頭的格式",
-      "B": "傳輸速度",
-      "C": "連線導向性",
-      "D": "使用的端口範圍"
+      "A": "80",
+      "B": "110",
+      "C": "25",
+      "D": "53"
     },
     "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP連線建立的過程中，哪個順序是正確的？",
-    "options": {
-      "A": "SYN，SYN-ACK， ACK",
-      "B": "SYN-ACK，SYN，ACK",
-      "C": "SYN，ACK，SYN-ACK",
-      "D": "ACK，SYN-ACK，SYN"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 屬於 OSI 模型中的哪一層？",
-    "options": {
-      "A": "物理層",
-      "B": "數據鏈路層",
-      "C": "網路層",
-      "D": "傳輸層"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列有關 TCP 通訊協定的描述何者錯誤？",
-    "options": {
-      "A": "TCP 提供全雙工( Full-Duplex) 的傳輸服務",
-      "B": "TCP 有做到流量控制( Flow Control) 與壅塞控制(Congestion Control)",
-      "C": "TCP 使用管線技術( Pipelining) 來傳送封包",
-      "D": "TCP中每個封包有自己專屬等待確認的計時器 。"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在 TCP 和 UDP 中，哪一個提供可靠的資料傳輸？",
-    "options": {
-      "A": "TCP",
-      "B": "UDP",
-      "C": "兩者都是",
-      "D": "都不是"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列敘述那些為正確？",
-    "options": {
-      "A": "TCP 為無連接式(Connectionless) 協定",
-      "B": "UDP為無連接式協定",
-      "C": "IP 為連接式協定",
-      "D": "無連接式協定為不可靠傳輸(Unreliable Transmission)"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列有關網路傳輸層( Transport Layer) 的敘述，那一項有誤？",
-    "options": {
-      "A": "TCP 為可靠(Reliable)、連接導向(Connection-oriented)的通訊協定(Protocol)",
-      "B": "TCP 使用 IP",
-      "C": "UDP(User Datagram Protocol) 為不可靠、非連接(Connectionless)的通訊協定",
-      "D": "UDP 不使用 IP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列那些是屬於 OSI 參考模型(OSI Reference Model) 的應用層 (Application Layer)？",
-    "options": {
-      "A": "TCP",
-      "B": "UDP",
-      "C": "TNELENT",
-      "D": "FTP"
-    },
-    "answer": "D",
     "explanation": ""
   },
   {
@@ -211,102 +31,6 @@
       "B": "更慢",
       "C": "相同",
       "D": "取決於網路狀況"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "埠號數目783是屬於哪一種類型的埠號？",
-    "options": {
-      "A": "動態與私有埠號",
-      "B": "註冊埠號",
-      "C": "公認埠號(well-known ports)",
-      "D": "上述任何一種均可"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP封包是同步封包，那一位元會被設定為1？",
-    "options": {
-      "A": "FIN",
-      "B": "FO",
-      "C": "ACK",
-      "D": "SYN"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列 TCP 通訊協定的敘述，何者正確？",
-    "options": {
-      "A": "TCP 封包標頭的長度是固定的",
-      "B": "TCP 可提供連線最小頻寬的保證",
-      "C": "TCP 封包標頭中有錯誤檢查碼(Checksum) 的欄位，其只針對封包標頭的部分來計算",
-      "D": "TCP 的封包標頭中有 ReceiveWindow 欄位，可用來做流量控制 。"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "埠號80代表的應用程式是什麼？",
-    "options": {
-      "A": "TCP",
-      "B": "IP",
-      "C": "DNS",
-      "D": "HTTP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列關於 TCP 的敘述何者正確？",
-    "options": {
-      "A": "TCP 沒有流量控制功能",
-      "B": "TCP 封包可能會在傳輸過程中遺失，但不會影響資料完整性",
-      "C": "TCP 較 UDP 快速，因為不需要等待確認信號",
-      "D": "TCP 提供可靠性傳輸和流量控制"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列何者提供一個連接導向的可靠傳輸服務？",
-    "options": {
-      "A": "IP",
-      "B": "TCP",
-      "C": "UDP",
-      "D": "MAC"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP在接收到應用層訊息後，再將傳輸層相關資訊的標頭與這些訊息結合起來形成什麼？",
-    "options": {
-      "A": "Message",
-      "B": "Segment",
-      "C": "Datagram",
-      "D": "Frame"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列敘述那些為正確？",
-    "options": {
-      "A": "TCP 為連接導向(Connection-oriented) 協定",
-      "B": "UDP 為連接導向協定",
-      "C": "IP 為連接導向協定",
-      "D": "非連接導向協定為可靠傳輸(Reliable Transmission)"
     },
     "answer": "A",
     "explanation": ""
@@ -325,36 +49,12 @@
   },
   {
     "type": "單選題",
-    "text": "UDP 主要用於哪些應用？",
+    "text": "下列何種網路應用使用 UDP 為傳輸層通訊協定？",
     "options": {
-      "A": "檔案傳輸",
-      "B": "網路遊戲、串流媒體、VoIP 語音",
-      "C": "電子郵件",
-      "D": "瀏覽網頁"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列的資料類型，何者比較適合使用 UDP 來傳送？",
-    "options": {
-      "A": "文書報告",
-      "B": "音訊",
-      "C": "電子郵件",
-      "D": "以上皆是"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 協定的主要區別在於它們提供的什麼不同的特性？",
-    "options": {
-      "A": "效率和速度",
-      "B": "可靠性和連線導向性",
-      "C": "封包大小和格式",
-      "D": "跨越的網路範圍"
+      "A": "HTTP",
+      "B": "DNS",
+      "C": "FTP",
+      "D": "SMTP"
     },
     "answer": "B",
     "explanation": ""
@@ -373,79 +73,43 @@
   },
   {
     "type": "單選題",
-    "text": "下列有關 UDP 通訊協定的敘述何者正確？",
+    "text": "關於 UDP(User Datagram Protocol) 通訊協定，下列敘述那一項錯誤？ 回答錯誤",
     "options": {
-      "A": "UDP 封包標頭的長度是固定的",
-      "B": "UDP 封包標頭中有來源端的 IP 位址與目的地的 IP 位址",
-      "C": "UDP 封包標頭中有錯誤檢查碼(Checksum) 的欄位，其只針對封包標頭的部分來計算",
-      "D": "UDP 封包標頭中有封包序號( Sequence) 的欄位 。"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列何種網路應用使用 UDP 為傳輸層通訊協定？",
-    "options": {
-      "A": "HTTP",
-      "B": "DNS",
-      "C": "FTP",
-      "D": "SMTP"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "UDP標頭的長度是多少bytes？",
-    "options": {
-      "A": "20",
-      "B": "32",
-      "C": "8",
-      "D": "24"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "Mail Server使用SMTP時，可由哪個埠號識別出來？",
-    "options": {
-      "A": "80",
-      "B": "110",
-      "C": "25",
-      "D": "53"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "為什麼一些應用程式選擇使用UDP而不是TCP？",
-    "options": {
-      "A": "因為UDP提供更高的安全性",
-      "B": "因為UDP具有更快的傳輸速度",
-      "C": "因為UDP缺乏可靠性，丟包通常不是重大問題",
-      "D": "因為UDP能提供更好的錯誤修正功能"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列那些是屬於 OSI 參考模型(OSI Reference Model) 的傳輸層( Network Layer)？",
-    "options": {
-      "A": "ATM",
-      "B": "IP",
-      "C": "ARP",
-      "D": "UDP"
+      "A": "UDP 的發送端不重送遺失的封包資料",
+      "B": "UDP 的發送端不做流量控制(Flow Control)",
+      "C": "UDP 的標頭不包括序號( Sequence Number)",
+      "D": "UDP 的標頭不包括埠號( Port Number)"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "UDP 使用 1 的補數來計算錯誤檢查碼(Checksum)，假設有下列三個 8 位元的資料： 01001110 、10101111、01011100，則 UDP 封包標頭中，錯誤檢查碼的資料為何？",
+    "text": "TCP 和 UDP 都會將資料分隔成什麼進行傳輸？",
+    "options": {
+      "A": "頻率",
+      "B": "包裹",
+      "C": "錯誤",
+      "D": "封包"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列有關網路傳輸層( Transport Layer) 的敘述，那一項有誤？",
+    "options": {
+      "A": "TCP 為可靠(Reliable)、連接導向(Connection-oriented)的通訊協定(Protocol)",
+      "B": "TCP 使用 IP",
+      "C": "UDP(User Datagram Protocol) 為不可靠、非連接(Connectionless)的通訊協定",
+      "D": "UDP 不使用 IP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "UDP 使用 1 的補數來計算錯誤檢查碼(Checksum)，假設有下列三個 8 位元的資料： 01001110 、10101111、01011100，則 UDP 封包標頭中，錯誤檢查碼的資料為何？ 回答錯誤",
     "options": {
       "A": "1011010",
       "B": "10100101",
@@ -457,48 +121,24 @@
   },
   {
     "type": "單選題",
-    "text": "TCP 和 UDP 之間的最大不同是哪一個方面？",
+    "text": "TCP在接收到應用層訊息後，再將傳輸層相關資訊的標頭與這些訊息結合起來形成什麼？",
     "options": {
-      "A": "協定標頭的格式",
-      "B": "傳輸速度",
-      "C": "連線導向性",
-      "D": "使用的端口範圍"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP ( Transmission Control Protocol) 不提供下列那一項服務？",
-    "options": {
-      "A": "最小頻寬保證( Minimum Bandwidth Guarantee)",
-      "B": "可靠傳輸(Reliable Transport)",
-      "C": "壅塞控制(Congestion Control)",
-      "D": "流量控制( Flow Control) 。"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 在傳輸資料前會將資料分割成較小的封包，並將每個封包加上什麼？",
-    "options": {
-      "A": "校驗和確認碼",
-      "B": "編號",
-      "C": "IP 地址",
-      "D": "加密金鑰"
+      "A": "Message",
+      "B": "Segment",
+      "C": "Datagram",
+      "D": "Frame"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "TCP標頭的長度是多少bytes？",
+    "text": "TCP連線建立的過程中，哪個順序是正確的？",
     "options": {
-      "A": "20",
-      "B": "32",
-      "C": "8",
-      "D": "24"
+      "A": "SYN，SYN-ACK， ACK",
+      "B": "SYN-ACK，SYN，ACK",
+      "C": "SYN，ACK，SYN-ACK",
+      "D": "ACK，SYN-ACK，SYN"
     },
     "answer": "A",
     "explanation": ""
@@ -517,72 +157,60 @@
   },
   {
     "type": "單選題",
-    "text": "關於網路通訊協定TCP與UDP的敘述何者正確？",
+    "text": "下列何者提供一個連接導向的可靠傳輸服務？",
     "options": {
-      "A": "TCP的傳送速度較UDP快",
-      "B": "UDP的訊息無法保證一定被傳送到目 的位置",
-      "C": "UDP是一種連線導向（Connection-oriented)的可靠性傳 輸方式",
-      "D": "TCP屬於網路模型中的傳輸層，UDP則否"
+      "A": "IP",
+      "B": "TCP",
+      "C": "UDP",
+      "D": "MAC"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "TCP 和 UDP 的應用受到什麼因素的影響？",
+    "text": "TCP 和 UDP 的主要差異在於什麼？",
     "options": {
-      "A": "封包大小",
-      "B": "網路速度",
-      "C": "資料特性和要求",
-      "D": "電腦硬件"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 的主要差別在哪裡？",
-    "options": {
-      "A": "TCP 和 UDP 使用不同的硬體設備",
-      "B": "TCP 和 UDP 使用不同的通訊協定",
-      "C": "TCP 提供可靠性傳輸，而 UDP 不提供",
-      "D": "TCP 提供較快的傳輸速度，而 UDP 較慢"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "TCP 和 UDP 主要在哪些方面有所不同？",
-    "options": {
-      "A": "協定標頭的格式",
-      "B": "封包傳輸速度",
-      "C": "可靠性和效率",
-      "D": "支援的網路技術"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "關於 UDP(User Datagram Protocol) 通訊協定，下列敘述那一項錯誤？",
-    "options": {
-      "A": "UDP 的發送端不重送遺失的封包資料",
-      "B": "UDP 的發送端不做流量控制(Flow Control)",
-      "C": "UDP 的標頭不包括序號( Sequence Number)",
-      "D": "UDP 的標頭不包括埠號( Port Number)"
+      "A": "連線導向性",
+      "B": "傳輸速度",
+      "C": "封包大小限制",
+      "D": "可靠性和順序性"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "以下哪一個協定提供了錯誤檢查和壅塞控制？",
+    "text": "TCP ( Transmission Control Protocol) 不提供下列那一項服務？",
     "options": {
-      "A": "TCP",
-      "B": "UDP",
-      "C": "IP",
-      "D": "ICMP"
+      "A": "最小頻寬保證( Minimum Bandwidth Guarantee)",
+      "B": "可靠傳輸(Reliable Transport)",
+      "C": "壅塞控制(Congestion Control)",
+      "D": "流量控制( Flow Control) 。"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP標頭的長度是多少bytes？",
+    "options": {
+      "A": "20",
+      "B": "32",
+      "C": "8",
+      "D": "24"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列有關 UDP 通訊協定的敘述何者正確？",
+    "options": {
+      "A": "UDP 封包標頭的長度是固定的",
+      "B": "UDP 封包標頭中有來源端的 IP 位址與目的地的 IP 位址",
+      "C": "UDP 封包標頭中有錯誤檢查碼(Checksum) 的欄位，其只針對封包標頭的部分來計算",
+      "D": "UDP 封包標頭中有封包序號( Sequence) 的欄位 。"
     },
     "answer": "A",
     "explanation": ""
@@ -601,144 +229,372 @@
   },
   {
     "type": "單選題",
-    "text": "17.DNS 可以將主機名稱管理分配到哪裡？",
+    "text": "當需要可靠的資料傳輸時，應該使用哪一種協定？",
     "options": {
-      "A": "不同層級的 DNS 伺服器",
-      "B": "使用者的電腦",
-      "C": "瀏覽器",
-      "D": "互聯網提供商的伺服器"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "26. DNS 協定的作用是什麼？",
-    "options": {
-      "A": "控制網路流量",
-      "B": "將 IP 解析為主機名稱",
-      "C": "加密網路通信",
-      "D": "提供電子郵件服務"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "58.DNS 的三個層次結構的 4 個級別是什麼？",
-    "options": {
-      "A": "遞歸解析器、根名稱伺服器、主要名稱伺服器、權威名稱伺服器",
-      "B": "根名稱伺服器、TLD 名稱伺服器、授權 DNS 伺服器、遞迴 DNS 伺服器",
-      "C": "應用層、傳輸層、網路層、數據鏈路層",
-      "D": "遞歸解析器、緩存伺服器、主名稱伺服器、次名稱伺服器"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "4.頂層網域是以組織性質來區分稱為",
-    "options": {
-      "A": "gTLD",
-      "B": "ccTLD",
-      "C": "sTLD",
-      "D": "bTLD"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "32. 哪一種服務可將 DomainName(FQDN)對應為 IPaddress?",
-    "options": {
-      "A": "WINS",
-      "B": "DNS",
-      "C": "DHCP",
-      "D": "Proxy"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "19.DNS 可以解析哪種類型的 IP 地址？",
-    "options": {
-      "A": "IPv4",
-      "B": "IPv6",
-      "C": "IPv4 和 IPv6",
-      "D": "IPv6 和 IPv7"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "22.DNS 查詢流程中，正解查詢是指什麼？",
-    "options": {
-      "A": "根據 IP 尋找主機名稱",
-      "B": "根據主機名稱尋找 IP",
-      "C": "查找反向 DNS 記錄",
-      "D": "查找 DNS 資料庫中的所有記錄"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "20.在中國設置電腦的 DNS 伺服器時，為什麼建議使用 Google 提供的 DNS 伺服器而不是本地的電信機房提供的 DNS 伺服器？",
-    "options": {
-      "A": "Google 提供的 DNS 伺服器速度更快",
-      "B": "Google 提供的 DNS 伺服器位址更容易記憶",
-      "C": "本地電信機房提供的 DNS 伺服器可能設定錯誤",
-      "D": "本地電信機房提供的 DNS 伺服器受到政府管制"
+      "A": "ICMP",
+      "B": "IP",
+      "C": "UDP",
+      "D": "TCP"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "15..DNS 系統的分層管理有什麼好處？",
+    "text": "TCP 和 UDP 主要在哪些方面有所不同？",
     "options": {
-      "A": "提高安全性",
-      "B": "減少資訊儲存量",
-      "C": "容易進行維護",
-      "D": "減少網路延遲"
+      "A": "協定標頭的格式",
+      "B": "封包傳輸速度",
+      "C": "可靠性和效率",
+      "D": "支援的網路技術"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "23.DNS 查詢流程中，反解查詢是指什麼？",
+    "text": "TCP 和 UDP 協定的主要區別在於它們提供的什麼不同的特性？",
     "options": {
-      "A": "根據 IP 尋找主機名稱",
-      "B": "根據主機名稱尋找 IP",
-      "C": "查找反向 DNS 記錄",
-      "D": "查找 DNS 資料庫中的所有記錄"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "46.DNS 的全稱是什麼？",
-    "options": {
-      "A": "Digital Network Service",
-      "B": "Domain Name System",
-      "C": "Data Naming System",
-      "D": "Distributed Network Server"
+      "A": "效率和速度",
+      "B": "可靠性和連線導向性",
+      "C": "封包大小和格式",
+      "D": "跨越的網路範圍"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "42.DNS 可以將什麼轉換為 IP 地址？",
+    "text": "TCP 和 UDP 協定之間最大的不同在於什麼？",
     "options": {
-      "A": "網站名稱",
-      "B": "人名",
-      "C": "郵件地址",
-      "D": "電話號碼"
+      "A": "提供的服務類型",
+      "B": "使用的端口數量",
+      "C": "協定標頭的長度",
+      "D": "封包的傳輸速度"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列那些是屬於 OSI 參考模型(OSI Reference Model) 的應用層 (Application Layer)？",
+    "options": {
+      "A": "TCP",
+      "B": "UDP",
+      "C": "TNELENT",
+      "D": "FTP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 如何運作？",
+    "options": {
+      "A": "TCP 需要唯一識別碼和序號，而 UDP 不需要",
+      "B": "UDP 需要唯一識別碼和序號，而 TCP 不需要",
+      "C": "TCP 和 UDP 都不需要唯一識別碼和序號",
+      "D": "TCP 和 UDP 都需要唯一識別碼和序號"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 的主要差別在哪裡？",
+    "options": {
+      "A": "TCP 和 UDP 使用不同的硬體設備",
+      "B": "TCP 和 UDP 使用不同的通訊協定",
+      "C": "TCP 提供可靠性傳輸，而 UDP 不提供",
+      "D": "TCP 提供較快的傳輸速度，而 UDP 較慢"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "UDP 主要用於哪些應用？",
+    "options": {
+      "A": "檔案傳輸",
+      "B": "網路遊戲、串流媒體、VoIP 語音",
+      "C": "電子郵件",
+      "D": "瀏覽網頁"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "埠號數目783是屬於哪一種類型的埠號？",
+    "options": {
+      "A": "動態與私有埠號",
+      "B": "註冊埠號",
+      "C": "公認埠號(well-known ports)",
+      "D": "上述任何一種均可"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列有關 TCP 通訊協定的描述何者錯誤？",
+    "options": {
+      "A": "TCP 提供全雙工( Full-Duplex) 的傳輸服務",
+      "B": "TCP 有做到流量控制( Flow Control) 與壅塞控制(Congestion Control)",
+      "C": "TCP 使用管線技術( Pipelining) 來傳送封包",
+      "D": "TCP中每個封包有自己專屬等待確認的計時器 。"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列敘述那些為正確？",
+    "options": {
+      "A": "TCP 為無連接式(Connectionless) 協定",
+      "B": "UDP為無連接式協定",
+      "C": "IP 為連接式協定",
+      "D": "無連接式協定為不可靠傳輸(Unreliable Transmission)"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 在傳輸資料前會將資料分割成較小的封包，並將每個封包加上什麼？",
+    "options": {
+      "A": "校驗和確認碼",
+      "B": "編號",
+      "C": "IP 地址",
+      "D": "加密金鑰"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 之間的最大不同是哪一個方面？",
+    "options": {
+      "A": "協定標頭的格式",
+      "B": "傳輸速度",
+      "C": "連線導向性",
+      "D": "使用的端口範圍"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 最大的區別是什麼？",
+    "options": {
+      "A": "協定標頭的格式",
+      "B": "傳輸速度",
+      "C": "連線導向性",
+      "D": "使用的端口範圍"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列那些是屬於 OSI 參考模型(OSI Reference Model) 的傳輸層( Network Layer)？",
+    "options": {
+      "A": "ATM",
+      "B": "IP",
+      "C": "ARP",
+      "D": "UDP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "關於網路通訊協定TCP與UDP的敘述何者正確？",
+    "options": {
+      "A": "TCP的傳送速度較UDP快",
+      "B": "UDP的訊息無法保證一定被傳送到目 的位置",
+      "C": "UDP是一種連線導向（Connection-oriented)的可靠性傳 輸方式",
+      "D": "TCP屬於網路模型中的傳輸層，UDP則否"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列資料類型中，何者比較適合使用 UDP 來傳送？",
+    "options": {
+      "A": "文書報告",
+      "B": "音訊",
+      "C": "電子郵件",
+      "D": "以上皆是"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "當TCP/IP網路連線時，可以透過哪個指令進行檢視目前主機上連線狀態與封包的統計資訊等？",
+    "options": {
+      "A": "ping",
+      "B": "cd",
+      "C": "arp",
+      "D": "netstat"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "為什麼一些應用程式選擇使用UDP而不是TCP？",
+    "options": {
+      "A": "因為UDP提供更高的安全性",
+      "B": "因為UDP具有更快的傳輸速度",
+      "C": "因為UDP缺乏可靠性，丟包通常不是重大問題",
+      "D": "因為UDP能提供更好的錯誤修正功能"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "UDP標頭的長度是多少bytes？",
+    "options": {
+      "A": "20",
+      "B": "32",
+      "C": "8",
+      "D": "24"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 通常用於以下哪種通訊？",
+    "options": {
+      "A": "電子郵件",
+      "B": "網際網路電話",
+      "C": "瀏覽網頁",
+      "D": "打印文件"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "埠號80代表的應用程式是什麼？",
+    "options": {
+      "A": "TCP",
+      "B": "IP",
+      "C": "DNS",
+      "D": "HTTP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列 TCP 通訊協定的敘述，何者正確？",
+    "options": {
+      "A": "TCP 封包標頭的長度是固定的",
+      "B": "TCP 可提供連線最小頻寬的保證",
+      "C": "TCP 封包標頭中有錯誤檢查碼(Checksum) 的欄位，其只針對封包標頭的部分來計算",
+      "D": "TCP 的封包標頭中有 ReceiveWindow 欄位，可用來做流量控制 。"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列關於 TCP 的敘述何者正確？",
+    "options": {
+      "A": "TCP 沒有流量控制功能",
+      "B": "TCP 封包可能會在傳輸過程中遺失，但不會影響資料完整性",
+      "C": "TCP 較 UDP 快速，因為不需要等待確認信號",
+      "D": "TCP 提供可靠性傳輸和流量控制"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪一個協定提供了錯誤檢查和壅塞控制？",
+    "options": {
+      "A": "TCP",
+      "B": "UDP",
+      "C": "IP",
+      "D": "ICMP"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼應用程式通常使用UDP協定？",
+    "options": {
+      "A": "串流媒體、即時多人遊戲、IP語音（VoIP）",
+      "B": "電子郵件服務",
+      "C": "網頁瀏覽器",
+      "D": "檔案傳輸軟體"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 的應用受到什麼因素的影響？",
+    "options": {
+      "A": "封包大小",
+      "B": "網路速度",
+      "C": "資料特性和要求",
+      "D": "電腦硬件"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP封包是同步封包，那一位元會被設定為1？",
+    "options": {
+      "A": "FIN",
+      "B": "FO",
+      "C": "ACK",
+      "D": "SYN"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "TCP 和 UDP 屬於 OSI 模型中的哪一層？",
+    "options": {
+      "A": "物理層",
+      "B": "數據鏈路層",
+      "C": "網路層",
+      "D": "傳輸層"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列敘述那些為正確？",
+    "options": {
+      "A": "TCP 為連接導向(Connection-oriented) 協定",
+      "B": "UDP 為連接導向協定",
+      "C": "IP 為連接導向協定",
+      "D": "非連接導向協定為可靠傳輸(Reliable Transmission)"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在 TCP 和 UDP 中，哪一個提供可靠的資料傳輸？",
+    "options": {
+      "A": "TCP",
+      "B": "UDP",
+      "C": "兩者都是",
+      "D": "都不是"
     },
     "answer": "A",
     "explanation": ""
@@ -746,162 +602,6 @@
   {
     "type": "單選題",
     "text": "41.以下哪個選項最好地描述了 DNS 的功能？",
-    "options": {
-      "A": "將檔案傳輸到遠端伺服器",
-      "B": "將網域名稱轉換為 IP 地址",
-      "C": "加密網路通訊",
-      "D": "提供網頁設計服務"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "49.DNS 可以將以下哪個轉換為 IP 地址？",
-    "options": {
-      "A": "電子郵件地址",
-      "B": "身分證字號",
-      "C": "網站名稱",
-      "D": "電話號碼"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "10.當客戶端主機送出DNS查詢訊息時，就會先送至",
-    "options": {
-      "A": "根DNS伺服器",
-      "B": "頂層網域DNS伺服器",
-      "C": "官方DNS伺服器",
-      "D": "本地DNS伺服器"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "27. DNS 系統採用哪種結構來管理主機名稱？",
-    "options": {
-      "A": "線性結構",
-      "B": "樹狀結構",
-      "C": "圓形結構",
-      "D": "網格結構"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "51.DNS 的作用類似於以下哪種工具？",
-    "options": {
-      "A": "網路火牆",
-      "B": "GPS 導航系統",
-      "C": "電子郵件客戶端",
-      "D": "文件壓縮工具"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "5.acc.topic.com其中的com稱為",
-    "options": {
-      "A": "根網域",
-      "B": "頂層網域",
-      "C": "第二層網域",
-      "D": "主機名稱"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "1.當客戶輸入一個 FQDN後，會向DNS伺服器送出要求查詢此FQDN的IP位址稱為",
-    "options": {
-      "A": "NAT",
-      "B": "前向名稱查詢",
-      "C": "反向名稱查詢",
-      "D": "DHCP"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "47.DNS 協定通常使用哪個端口進行查詢？",
-    "options": {
-      "A": "21",
-      "B": "53",
-      "C": "80",
-      "D": "443"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "56.nslookup 位於 OSI 的哪一層？",
-    "options": {
-      "A": "第 3 層",
-      "B": "第 4 層",
-      "C": "第 5 層",
-      "D": "第 7 層"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "13.DNS 系統是針對什麼構建的？",
-    "options": {
-      "A": "傳輸協議",
-      "B": "網路安全",
-      "C": "域名解析",
-      "D": "電子郵件服務"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "18.DNS 的階層式管理使得每一部 DNS 伺服器記憶的資訊是什麼？",
-    "options": {
-      "A": "非常多",
-      "B": "極少",
-      "C": "中等數量",
-      "D": "無法預測"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "36.以下哪個服務將人們可讀取的網域名稱轉換為數字 IP 地址？",
-    "options": {
-      "A": "SMTP",
-      "B": "FTP",
-      "C": "DNS",
-      "D": "DHCP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "50.以下哪個選項最能描述遞迴 DNS 的功能？",
-    "options": {
-      "A": "提供網站主機的 IP 地址",
-      "B": "提供電子郵件伺服器的位置",
-      "C": "擁有網域的最終授權",
-      "D": "作為媒介向授權 DNS 伺服器發出查詢"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "48.以下哪個描述最能描述 DNS 的功能？",
     "options": {
       "A": "將檔案傳輸到遠端伺服器",
       "B": "將網域名稱轉換為 IP 地址",
@@ -925,23 +625,47 @@
   },
   {
     "type": "單選題",
-    "text": "59.DNS 的三個層次是什麼？",
+    "text": "33. 下列何種協定可配合 DNS 及 Active Directory 在 IP 網路上使用，讓使用者免於指定及追蹤靜態的 IP 位址？",
     "options": {
-      "A": "遞歸解析器、根名稱伺服器、TLD 名稱伺服器",
-      "B": "用戶層、核心層、邊界層",
-      "C": "應用層、傳輸層、網路層",
-      "D": "本地層、中間層、全球層"
+      "A": "BOOTP",
+      "B": "TCP/IP",
+      "C": "DHCP",
+      "D": "PPP"
     },
-    "answer": "A",
+    "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "35.DNS 的作用是什麼？",
+    "text": "32. 哪一種服務可將 DomainName(FQDN)對應為 IPaddress?",
     "options": {
-      "A": "將 IP 地址轉換為網域名稱",
-      "B": "將網域名稱轉換為 IP 地址",
-      "C": "加密網路流量",
+      "A": "WINS",
+      "B": "DNS",
+      "C": "DHCP",
+      "D": "Proxy"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "50.以下哪個選項最能描述遞迴 DNS 的功能？",
+    "options": {
+      "A": "提供網站主機的 IP 地址",
+      "B": "提供電子郵件伺服器的位置",
+      "C": "擁有網域的最終授權",
+      "D": "作為媒介向授權 DNS 伺服器發出查詢"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "26. DNS 協定的作用是什麼？",
+    "options": {
+      "A": "控制網路流量",
+      "B": "將 IP 解析為主機名稱",
+      "C": "加密網路通信",
       "D": "提供電子郵件服務"
     },
     "answer": "B",
@@ -949,96 +673,48 @@
   },
   {
     "type": "單選題",
-    "text": "60.DNS 是通過 TCP 還是 UDP 傳輸？",
+    "text": "18.DNS 的階層式管理使得每一部 DNS 伺服器記憶的資訊是什麼？",
     "options": {
-      "A": "TCP",
-      "B": "UDP",
-      "C": "PPD",
-      "D": "UCP"
+      "A": "非常多",
+      "B": "極少",
+      "C": "中等數量",
+      "D": "無法預測"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "25.DNS 查詢流程中，Zone 是指什麼？",
+    "text": "15..DNS 系統的分層管理有什麼好處？",
     "options": {
-      "A": "處於特定地理區域的 DNS 伺服器",
-      "B": "DNS 資料庫的特定區域",
-      "C": "DNS 查詢的區域",
-      "D": "DNS 查詢的層級"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "29. DNS 查詢流程中，正解查詢是指什麼？",
-    "options": {
-      "A": "根據 IP 尋找主機名稱",
-      "B": "根據主機名稱尋找 IP",
-      "C": "查找反向 DNS 記錄",
-      "D": "查找 DNS 資料庫中的所有記錄"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "8.網域『.yahoo.com.tw.』、『.google.com.tw.』均同屬於",
-    "options": {
-      "A": "根網域",
-      "B": "頂層網域",
-      "C": "第二層網域",
-      "D": "主機名稱"
+      "A": "提高安全性",
+      "B": "減少資訊儲存量",
+      "C": "容易進行維護",
+      "D": "減少網路延遲"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "53.DNS 可以將 IP 地址轉換為哪個？",
+    "text": "5.acc.topic.com其中的com稱為",
     "options": {
-      "A": "郵件地址",
-      "B": "網站名稱",
-      "C": "電話號碼",
-      "D": "身分證字號"
+      "A": "根網域",
+      "B": "頂層網域",
+      "C": "第二層網域",
+      "D": "主機名稱"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "44.什麼是反向 DNS？",
+    "text": "42.DNS 可以將什麼轉換為 IP 地址？",
     "options": {
-      "A": "將 IP 地址轉換為網域名稱",
-      "B": "將網域名稱轉換為 IP 地址",
-      "C": "加密電子郵件",
-      "D": "防止 DNS 攻擊"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "52.DNS 服務的類型中，哪一種擁有網域的最終授權？",
-    "options": {
-      "A": "遞迴 DNS",
-      "B": "反向 DNS",
-      "C": "控制 DNS",
-      "D": "授權 DNS"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "24.DNS 查詢流程中，合法授權的 DNS 伺服器是指什麼？",
-    "options": {
-      "A": "已授權處理所有查詢的伺服器",
-      "B": "未經授權但可用於查詢的伺服器",
-      "C": "由 ISP 提供的伺服器",
-      "D": "網際網路上的任何伺服器"
+      "A": "網站名稱",
+      "B": "人名",
+      "C": "郵件地址",
+      "D": "電話號碼"
     },
     "answer": "A",
     "explanation": ""
@@ -1057,24 +733,12 @@
   },
   {
     "type": "單選題",
-    "text": "33. 下列何種協定可配合 DNS 及 Active Directory 在 IP 網路上使用，讓使用者免於指定及追蹤靜態的 IP 位址？",
+    "text": "59.DNS 的三個層次是什麼？",
     "options": {
-      "A": "BOOTP",
-      "B": "TCP/IP",
-      "C": "DHCP",
-      "D": "PPP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列何者屬於一種客戶端/伺服端通訊協定，它可以自動地為主機設定 TCP/IP環境，但在設定前必須取得客戶端的硬體位址，而且與 IP 的對應關係是靜態的",
-    "options": {
-      "A": "BOOTP",
-      "B": "NAT",
-      "C": "DHCP",
-      "D": "ARP"
+      "A": "遞歸解析器、根名稱伺服器、TLD 名稱伺服器",
+      "B": "用戶層、核心層、邊界層",
+      "C": "應用層、傳輸層、網路層",
+      "D": "本地層、中間層、全球層"
     },
     "answer": "A",
     "explanation": ""
@@ -1093,48 +757,36 @@
   },
   {
     "type": "單選題",
-    "text": "31. 用來將主機名稱(文字)轉譯成 IP(數字)的伺服器是",
+    "text": "19.DNS 可以解析哪種類型的 IP 地址？",
     "options": {
-      "A": "DHCP",
-      "B": "Proxy",
-      "C": "WebServer",
-      "D": "DNS"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "30. 有關DNS，下列何者有誤？",
-    "options": {
-      "A": "基於TCP協定工作",
-      "B": "封包格式：僅有查詢與回答2種封包格式",
-      "C": "查詢方式：提供遞迴查詢及反覆運算查詢等方式",
-      "D": "DNS伺服器中，MX Record表示與郵件交換有關"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "57.DNS 是什麼協議？",
-    "options": {
-      "A": "電子郵件協議",
-      "B": "傳輸控制協議",
-      "C": "域名網絡系統",
-      "D": "超文本傳輸協議"
+      "A": "IPv4",
+      "B": "IPv6",
+      "C": "IPv4 和 IPv6",
+      "D": "IPv6 和 IPv7"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "12.DNS 最重要的功能是什麼？",
+    "text": "39.DNS 協定通常使用哪個端口進行查詢？",
     "options": {
-      "A": "將 IP 解析為主機名稱",
-      "B": "將主機名稱解析為 IP",
-      "C": "傳輸電子郵件",
-      "D": "傳輸檔案"
+      "A": "21",
+      "B": "53",
+      "C": "80",
+      "D": "443"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "40.DNS 的全稱是什麼？",
+    "options": {
+      "A": "Digital Network Service",
+      "B": "Domain Name System",
+      "C": "Data Naming System",
+      "D": "Distributed Network Server"
     },
     "answer": "B",
     "explanation": ""
@@ -1153,12 +805,360 @@
   },
   {
     "type": "單選題",
+    "text": "25.DNS 查詢流程中，Zone 是指什麼？",
+    "options": {
+      "A": "處於特定地理區域的 DNS 伺服器",
+      "B": "DNS 資料庫的特定區域",
+      "C": "DNS 查詢的區域",
+      "D": "DNS 查詢的層級"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "43.控制 DNS 服務的作用是什麼？",
+    "options": {
+      "A": "提供遞迴 DNS 伺服器 IP 地址資訊",
+      "B": "將網域名稱轉譯為 IP 地址",
+      "C": "擁有網域的最終授權",
+      "D": "提供電子郵件服務"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "20.在中國設置電腦的 DNS 伺服器時，為什麼建議使用 Google 提供的 DNS 伺服器而不是本地的電信機房提供的 DNS 伺服器？",
+    "options": {
+      "A": "Google 提供的 DNS 伺服器速度更快",
+      "B": "Google 提供的 DNS 伺服器位址更容易記憶",
+      "C": "本地電信機房提供的 DNS 伺服器可能設定錯誤",
+      "D": "本地電信機房提供的 DNS 伺服器受到政府管制"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "2.FQDN由主機名稱加上網域名稱及『.』所組成，最後『.』代表",
+    "options": {
+      "A": "根網域",
+      "B": "頂層網域",
+      "C": "第二層網域",
+      "D": "主機名稱"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "57.DNS 是什麼協議？",
+    "options": {
+      "A": "電子郵件協議",
+      "B": "傳輸控制協議",
+      "C": "域名網絡系統",
+      "D": "超文本傳輸協議"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "8.網域『.yahoo.com.tw.』、『.google.com.tw.』均同屬於",
+    "options": {
+      "A": "根網域",
+      "B": "頂層網域",
+      "C": "第二層網域",
+      "D": "主機名稱"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
     "text": "14.DNS 可以將什麼轉換為 IP 地址？",
     "options": {
       "A": "電子郵件地址",
       "B": "網址",
       "C": "用戶名稱",
       "D": "文件名稱"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "37.遞迴 DNS 服務的作用類似於哪個角色？",
+    "options": {
+      "A": "醫生",
+      "B": "飯店門房",
+      "C": "教師",
+      "D": "商人"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "12.DNS 最重要的功能是什麼？",
+    "options": {
+      "A": "將 IP 解析為主機名稱",
+      "B": "將主機名稱解析為 IP",
+      "C": "傳輸電子郵件",
+      "D": "傳輸檔案"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "30. 有關DNS，下列何者有誤？",
+    "options": {
+      "A": "基於TCP協定工作",
+      "B": "封包格式：僅有查詢與回答2種封包格式",
+      "C": "查詢方式：提供遞迴查詢及反覆運算查詢等方式",
+      "D": "DNS伺服器中，MX Record表示與郵件交換有關"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "55.DNS 使用什麼第 4 層協議？",
+    "options": {
+      "A": "TCP",
+      "B": "UDP",
+      "C": "IP",
+      "D": "ICMP"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "29. DNS 查詢流程中，正解查詢是指什麼？",
+    "options": {
+      "A": "根據 IP 尋找主機名稱",
+      "B": "根據主機名稱尋找 IP",
+      "C": "查找反向 DNS 記錄",
+      "D": "查找 DNS 資料庫中的所有記錄"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "34.DNS 是什麼？",
+    "options": {
+      "A": "網域名稱系統",
+      "B": "網路安全協議",
+      "C": "網路設備型號",
+      "D": "網路檔案分享工具"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "27. DNS 系統採用哪種結構來管理主機名稱？",
+    "options": {
+      "A": "線性結構",
+      "B": "樹狀結構",
+      "C": "圓形結構",
+      "D": "網格結構"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "23.DNS 查詢流程中，反解查詢是指什麼？",
+    "options": {
+      "A": "根據 IP 尋找主機名稱",
+      "B": "根據主機名稱尋找 IP",
+      "C": "查找反向 DNS 記錄",
+      "D": "查找 DNS 資料庫中的所有記錄"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "53.DNS 可以將 IP 地址轉換為哪個？",
+    "options": {
+      "A": "郵件地址",
+      "B": "網站名稱",
+      "C": "電話號碼",
+      "D": "身分證字號"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "45.DNS 如何運作的最後一步是什麼？",
+    "options": {
+      "A": "將查詢結果回應給客戶端",
+      "B": "詢問有關本網域內的主機名稱",
+      "C": "檢查快取記憶體中的相關資料",
+      "D": "將查詢傳遞給一或多個授權 DNS 伺服器"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "7.acc.topic.com其中的acc稱為",
+    "options": {
+      "A": "根網域",
+      "B": "頂層網域",
+      "C": "第二層網域",
+      "D": "主機名稱"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "13.DNS 系統是針對什麼構建的？",
+    "options": {
+      "A": "傳輸協議",
+      "B": "網路安全",
+      "C": "域名解析",
+      "D": "電子郵件服務"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "24.DNS 查詢流程中，合法授權的 DNS 伺服器是指什麼？",
+    "options": {
+      "A": "已授權處理所有查詢的伺服器",
+      "B": "未經授權但可用於查詢的伺服器",
+      "C": "由 ISP 提供的伺服器",
+      "D": "網際網路上的任何伺服器"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "17.DNS 可以將主機名稱管理分配到哪裡？",
+    "options": {
+      "A": "不同層級的 DNS 伺服器",
+      "B": "使用者的電腦",
+      "C": "瀏覽器",
+      "D": "互聯網提供商的伺服器"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "22.DNS 查詢流程中，正解查詢是指什麼？",
+    "options": {
+      "A": "根據 IP 尋找主機名稱",
+      "B": "根據主機名稱尋找 IP",
+      "C": "查找反向 DNS 記錄",
+      "D": "查找 DNS 資料庫中的所有記錄"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "35.DNS 的作用是什麼？",
+    "options": {
+      "A": "將 IP 地址轉換為網域名稱",
+      "B": "將網域名稱轉換為 IP 地址",
+      "C": "加密網路流量",
+      "D": "提供電子郵件服務"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "46.DNS 的全稱是什麼？",
+    "options": {
+      "A": "Digital Network Service",
+      "B": "Domain Name System",
+      "C": "Data Naming System",
+      "D": "Distributed Network Server"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "31. 用來將主機名稱(文字)轉譯成 IP(數字)的伺服器是",
+    "options": {
+      "A": "DHCP",
+      "B": "Proxy",
+      "C": "WebServer",
+      "D": "DNS"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "51.DNS 的作用類似於以下哪種工具？",
+    "options": {
+      "A": "網路火牆",
+      "B": "GPS 導航系統",
+      "C": "電子郵件客戶端",
+      "D": "文件壓縮工具"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "48.以下哪個描述最能描述 DNS 的功能？",
+    "options": {
+      "A": "將檔案傳輸到遠端伺服器",
+      "B": "將網域名稱轉換為 IP 地址",
+      "C": "加密網路通訊",
+      "D": "提供網頁設計服務"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "56.nslookup 位於 OSI 的哪一層？",
+    "options": {
+      "A": "第 3 層",
+      "B": "第 4 層",
+      "C": "第 5 層",
+      "D": "第 7 層"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "49.DNS 可以將以下哪個轉換為 IP 地址？",
+    "options": {
+      "A": "電子郵件地址",
+      "B": "身分證字號",
+      "C": "網站名稱",
+      "D": "電話號碼"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "58.DNS 的三個層次結構的 4 個級別是什麼？",
+    "options": {
+      "A": "遞歸解析器、根名稱伺服器、主要名稱伺服器、權威名稱伺服器",
+      "B": "根名稱伺服器、TLD 名稱伺服器、授權 DNS 伺服器、遞迴 DNS 伺服器",
+      "C": "應用層、傳輸層、網路層、數據鏈路層",
+      "D": "遞歸解析器、緩存伺服器、主名稱伺服器、次名稱伺服器"
     },
     "answer": "B",
     "explanation": ""
@@ -1177,14 +1177,26 @@
   },
   {
     "type": "單選題",
-    "text": "2.FQDN由主機名稱加上網域名稱及『.』所組成，最後『.』代表",
+    "text": "11.什麼是 DNS？",
     "options": {
-      "A": "根網域",
-      "B": "頂層網域",
-      "C": "第二層網域",
-      "D": "主機名稱"
+      "A": "一種網路協定",
+      "B": "一種數據儲存格式",
+      "C": "域名系統 (Domain Name System) 的縮寫",
+      "D": "一種網路瀏覽器"
     },
-    "answer": "A",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "28. DNS 協定通常使用哪個端口來執行查詢？",
+    "options": {
+      "A": "21",
+      "B": "53",
+      "C": "80",
+      "D": "443"
+    },
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -1201,7 +1213,19 @@
   },
   {
     "type": "單選題",
-    "text": "38.控制最終使用者在 Web 瀏覽器中輸入網域名稱時要連接的伺服器的是哪種 DNS 服務？",
+    "text": "1.當客戶輸入一個 FQDN後，會向DNS伺服器送出要求查詢此FQDN的IP位址稱為",
+    "options": {
+      "A": "NAT",
+      "B": "前向名稱查詢",
+      "C": "反向名稱查詢",
+      "D": "DHCP"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "52.DNS 服務的類型中，哪一種擁有網域的最終授權？",
     "options": {
       "A": "遞迴 DNS",
       "B": "反向 DNS",
@@ -1213,36 +1237,36 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP的主要功能之一是什麼？",
+    "text": "10.當客戶端主機送出DNS查詢訊息時，就會先送至",
     "options": {
-      "A": "靜態分配IP地址",
-      "B": "動態分配IP地址",
-      "C": "分配MAC地址",
-      "D": "管理DNS伺服器"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "當租用時間超過租約期限的",
-    "options": {
-      "A": "0.2",
-      "B": "0.3",
-      "C": "0.4",
-      "D": "0.5 時，客戶端必須送出DHCPREQUEST訊息向DHCP伺服器要求更新租約"
+      "A": "根DNS伺服器",
+      "B": "頂層網域DNS伺服器",
+      "C": "官方DNS伺服器",
+      "D": "本地DNS伺服器"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP提供了多少種IP定位方式？",
+    "text": "4.頂層網域是以組織性質來區分稱為",
     "options": {
-      "A": "一種",
-      "B": "兩種",
-      "C": "四種",
-      "D": "三種"
+      "A": "gTLD",
+      "B": "ccTLD",
+      "C": "sTLD",
+      "D": "bTLD"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "38.控制最終使用者在 Web 瀏覽器中輸入網域名稱時要連接的伺服器的是哪種 DNS 服務？",
+    "options": {
+      "A": "遞迴 DNS",
+      "B": "反向 DNS",
+      "C": "控制 DNS",
+      "D": "授權 DNS"
     },
     "answer": "D",
     "explanation": ""
@@ -1261,38 +1285,26 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP協議中，用於確認IP租約的封包是？",
+    "text": "DHCP協議通常運行在OSI模型的哪一層？",
     "options": {
-      "A": "DHCP DISCOVER",
-      "B": "DHCP OFFER",
-      "C": "DHCP REQUEST",
-      "D": "DHCP ACK"
+      "A": "物理層",
+      "B": "數據鏈路層",
+      "C": "網路層",
+      "D": "應用層"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP伺服器收到DHCPREQUEST息時，若同意客戶端的要求後，會向客戶端發送出一個回應訊息稱為",
+    "text": "DHCP RELEASE命令的作用是？",
     "options": {
-      "A": "DHCPACK",
-      "B": "DHCPOFFER",
-      "C": "DHCPREQUEST",
-      "D": "DHCPDECLINE。"
+      "A": "釋放IP地址",
+      "B": "確認IP租約",
+      "C": "更新IP地址",
+      "D": "建立IP連接"
     },
     "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在DHCP中，當伺服器回覆客戶要求的IP不能被分配時，這個回覆被稱作什麼？",
-    "options": {
-      "A": "DHCP ACK",
-      "B": "DHCP NAK",
-      "C": "DHCP OFFER",
-      "D": "DHCP DISCOVER"
-    },
-    "answer": "B",
     "explanation": ""
   },
   {
@@ -1309,50 +1321,62 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP協議最初的前身是什麼？",
+    "text": "DHCP中的\"NAK\"代表什麼意思？",
     "options": {
-      "A": "DNS",
-      "B": "HTTP",
-      "C": "FTP",
-      "D": "BOOTP"
+      "A": "拒絕接受",
+      "B": "無效地址",
+      "C": "無可用伺服器",
+      "D": "網路錯誤"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP提供（OFFER）訊息是通過什麼方式發送的？",
+    "text": "DHCP的工作原理中，客戶端發送的第一個訊息是？",
     "options": {
-      "A": "單播",
-      "B": "廣播",
-      "C": "組播",
-      "D": "無連接傳輸"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP發現訊息的目的地址通常是什麼？",
-    "options": {
-      "A": "0.0.0.0",
-      "B": "127.0.0.1",
-      "C": "255.255.255.255",
-      "D": "192.168.1.1"
+      "A": "DHCP提供",
+      "B": "DHCP確認",
+      "C": "DHCP發現",
+      "D": "DHCP NAK"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP的動態分配方式下，IP租約的特點是？",
+    "text": "DHCP協議中，用於確認IP租約的封包是？",
     "options": {
-      "A": "會在一段時間後過期",
-      "B": "一旦獲得就永久有效",
-      "C": "需要手動釋放",
-      "D": "不受時間限制"
+      "A": "DHCP DISCOVER",
+      "B": "DHCP OFFER",
+      "C": "DHCP REQUEST",
+      "D": "DHCP ACK"
     },
-    "answer": "A",
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP的基本工作原理，共分成",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4個步驟"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "當租用時間超過租約期限的",
+    "options": {
+      "A": "0.2",
+      "B": "0.3",
+      "C": "0.4",
+      "D": "0.5 時，客戶端必須送出DHCPREQUEST訊息向DHCP伺服器要求更新租約"
+    },
+    "answer": "D",
     "explanation": ""
   },
   {
@@ -1369,72 +1393,48 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP REQUEST封包中包含了什麼信息？",
+    "text": "DHCP提供（OFFER）訊息是通過什麼方式發送的？",
     "options": {
-      "A": "伺服器的IP地址",
-      "B": "網絡的子網掩碼",
-      "C": "客戶端接受的IP地址",
-      "D": "DHCP租約的期限"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP中的\"NAK\"代表什麼意思？",
-    "options": {
-      "A": "拒絕接受",
-      "B": "無效地址",
-      "C": "無可用伺服器",
-      "D": "網路錯誤"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP的IP地址分配採用的是哪種協議？",
-    "options": {
-      "A": "TCP",
-      "B": "HTTP",
-      "C": "SMTP",
-      "D": "UDP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP中的哪個階段包括發送DHCP ACK訊息給客戶端？",
-    "options": {
-      "A": "DHCP發現",
-      "B": "DHCP提供",
-      "C": "DHCP請求",
-      "D": "DHCP確認"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP的全名是什麼？",
-    "options": {
-      "A": "Dynamic Hardware Configuration Protocol",
-      "B": "Dynamic Host Configuration Protocol",
-      "C": "Dynamic Home Connection Protocol",
-      "D": "Direct Hardware Control Protocol"
+      "A": "單播",
+      "B": "廣播",
+      "C": "組播",
+      "D": "無連接傳輸"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP中的租約是指什麼？",
+    "text": "DHCP請求（REQUEST）訊息中包含什麼信息？",
     "options": {
-      "A": "IP地址的購買費用",
-      "B": "IP地址的有效期",
-      "C": "IP地址的歸屬權",
-      "D": "IP地址的子網掩碼"
+      "A": "客戶端的MAC地址和IP地址",
+      "B": "客戶端的MAC地址和子網掩碼",
+      "C": "客戶端的MAC地址和租期",
+      "D": "提供租約的伺服器的IP地址"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP協議使用哪種協議來傳輸信息？",
+    "options": {
+      "A": "TCP",
+      "B": "HTTP",
+      "C": "UDP",
+      "D": "FTP"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "每一部DHCP伺服器收到DHCPDISCOVER廣播訊息會回應何種訊息稱為",
+    "options": {
+      "A": "DHCPDISCOVER",
+      "B": "DHCPOFFER",
+      "C": "DHCPREQUEST",
+      "D": "DHCPACK"
     },
     "answer": "B",
     "explanation": ""
@@ -1453,14 +1453,14 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP中的\"Dynamic Allocation\"是指什麼？",
+    "text": "DHCP提供了多少種IP定位方式？",
     "options": {
-      "A": "管理員手動分配IP地址",
-      "B": "自動分配IP地址",
-      "C": "動態分配IP地址",
-      "D": "靜態分配IP地址"
+      "A": "一種",
+      "B": "兩種",
+      "C": "四種",
+      "D": "三種"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": ""
   },
   {
@@ -1477,14 +1477,50 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP協議中，DHCP REQUEST封包的作用是？",
+    "text": "DHCP的IP地址分配採用的是哪種協議？",
     "options": {
-      "A": "客戶端向伺服器確認IP租約",
-      "B": "伺服器向客戶端提供IP租約",
-      "C": "伺服器確認IP租約",
-      "D": "客戶端釋放IP地址"
+      "A": "TCP",
+      "B": "HTTP",
+      "C": "SMTP",
+      "D": "UDP"
     },
-    "answer": "A",
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在DHCP中，當伺服器回覆客戶要求的IP不能被分配時，這個回覆被稱作什麼？",
+    "options": {
+      "A": "DHCP ACK",
+      "B": "DHCP NAK",
+      "C": "DHCP OFFER",
+      "D": "DHCP DISCOVER"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP REQUEST封包中包含了什麼信息？",
+    "options": {
+      "A": "伺服器的IP地址",
+      "B": "客戶端要求接受的IP地址",
+      "C": "網絡的子網掩碼",
+      "D": "DHCP租約的期限"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "T2代表最終更新時間rebinding time value其值為",
+    "options": {
+      "A": "0.5",
+      "B": "0.65",
+      "C": "0.875",
+      "D": "0.95"
+    },
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -1501,50 +1537,14 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP請求（REQUEST）訊息中包含什麼信息？",
+    "text": "DHCP中的租約是指什麼？",
     "options": {
-      "A": "客戶端的MAC地址和IP地址",
-      "B": "客戶端的MAC地址和子網掩碼",
-      "C": "客戶端的MAC地址和租期",
-      "D": "提供租約的伺服器的IP地址"
+      "A": "IP地址的購買費用",
+      "B": "IP地址的有效期",
+      "C": "IP地址的歸屬權",
+      "D": "IP地址的子網掩碼"
     },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP協議通常運行在OSI模型的哪一層？",
-    "options": {
-      "A": "物理層",
-      "B": "數據鏈路層",
-      "C": "網路層",
-      "D": "應用層"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP的主要功能之一是什麼？",
-    "options": {
-      "A": "可以動態分配IP地址給客戶端",
-      "B": "靜態分配IP地址給客戶端",
-      "C": "動態分配IP地址給伺服器端",
-      "D": "自動分配IP地址給客戶端"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP的工作原理中，客戶端在獲取IP地址之後通常會發送什麼請求來避免IP地址衝突？",
-    "options": {
-      "A": "ARP請求",
-      "B": "ICMP請求",
-      "C": "DNS請求",
-      "D": "HTTP請求"
-    },
-    "answer": "A",
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -1561,30 +1561,6 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP的工作原理中，客戶端發送的第一個訊息是？",
-    "options": {
-      "A": "DHCP提供",
-      "B": "DHCP確認",
-      "C": "DHCP發現",
-      "D": "DHCP NAK"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP釋放協定中，客戶端向DHCP伺服器傳送一個請求以釋放DHCP資源，並註銷其IP位址。請問DHCP釋放的傳送是否代管？",
-    "options": {
-      "A": "是",
-      "B": "否",
-      "C": "不確定",
-      "D": "以上皆非"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
     "text": "DHCP協議使用哪種協議進行通信？",
     "options": {
       "A": "TCP",
@@ -1597,12 +1573,36 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP OFFER封包中通常包含什麼信息？",
+    "text": "DHCP中的\"Dynamic Allocation\"是指什麼？",
     "options": {
-      "A": "分配給客戶端的IP地址",
-      "B": "客戶端的MAC地址",
-      "C": "伺服器的IP地址",
-      "D": "網絡的子網掩碼"
+      "A": "管理員手動分配IP地址",
+      "B": "自動分配IP地址",
+      "C": "動態分配IP地址",
+      "D": "靜態分配IP地址"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP發現訊息的目的地址通常是什麼？",
+    "options": {
+      "A": "0.0.0.0",
+      "B": "127.0.0.1",
+      "C": "255.255.255.255",
+      "D": "192.168.1.1"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列何者屬於一種客戶端/伺服端通訊協定，它可以自動地為主機設定TCP/IP環境，但在設定前必須取得客戶端的硬體位址，而且與IP的對應關係是靜態的",
+    "options": {
+      "A": "BOOTP",
+      "B": "NAT",
+      "C": "DHCP",
+      "D": "ARP"
     },
     "answer": "A",
     "explanation": ""
@@ -1621,98 +1621,38 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP中的\"ACK\"代表什麼意思？",
+    "text": "DHCP戶端只會回應",
     "options": {
-      "A": "申請",
-      "B": "確認",
-      "C": "驗證",
-      "D": "拒絕"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP客戶端不接受DHCPOFFER訊息所提供的資訊就會廣播一個訊息告知伺服器稱為",
-    "options": {
-      "A": "DHCPACK",
-      "B": "DHCPNACK",
-      "C": "DHCPREQUEST",
-      "D": "DHCPDECLINE。"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP協議中，DHCP OFFER封包在工作過程中的什麼時候被發送？",
-    "options": {
-      "A": "客戶端發送DHCP DISCOVER後",
-      "B": "伺服器接受到DHCP REQUEST後",
-      "C": "客戶端接受到DHCP ACK後",
-      "D": "客戶端發送DHCP DISCOVER後"
+      "A": "最早",
+      "B": "最後",
+      "C": "第2個",
+      "D": "第3個 所收到的DHCPOFFER訊息"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP 協議中，DHCP OFFER 封包在工作過程中的什麼時候被發送？",
+    "text": "DHCP協議最初的前身是什麼？",
     "options": {
-      "A": "客戶端發送 DHCP RELEASE 後",
-      "B": "伺服器接受到 DHCP REQUEST 後",
-      "C": "客戶端接受到 DHCP ACK 後",
-      "D": "客戶端發送 DHCP DISCOVER 後"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP REQUEST封包中包含了什麼信息？",
-    "options": {
-      "A": "伺服器的IP地址",
-      "B": "客戶端要求接受的IP地址",
-      "C": "網絡的子網掩碼",
-      "D": "DHCP租約的期限"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP協議使用哪種協議來傳輸信息？",
-    "options": {
-      "A": "TCP",
+      "A": "DNS",
       "B": "HTTP",
-      "C": "UDP",
-      "D": "FTP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "T2代表最終更新時間rebinding time value其值為",
-    "options": {
-      "A": "0.5",
-      "B": "0.65",
-      "C": "0.875",
-      "D": "0.95"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "DHCP RELEASE命令的作用是？",
-    "options": {
-      "A": "確認IP租約",
-      "B": "更新IP地址",
-      "C": "建立IP連接",
-      "D": "釋放IP地址"
+      "C": "FTP",
+      "D": "BOOTP"
     },
     "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP的工作原理中，客戶端在獲取IP地址之後通常會發送什麼請求來避免IP地址衝突？",
+    "options": {
+      "A": "ARP請求",
+      "B": "ICMP請求",
+      "C": "DNS請求",
+      "D": "HTTP請求"
+    },
+    "answer": "A",
     "explanation": ""
   },
   {
@@ -1729,38 +1669,242 @@
   },
   {
     "type": "單選題",
-    "text": "DHCP戶端只會回應",
+    "text": "DHCP協議中，DHCP REQUEST封包的作用是？",
     "options": {
-      "A": "最早",
-      "B": "最後",
-      "C": "第2個",
-      "D": "第3個 所收到的DHCPOFFER訊息"
+      "A": "客戶端向伺服器確認IP租約",
+      "B": "伺服器向客戶端提供IP租約",
+      "C": "伺服器確認IP租約",
+      "D": "客戶端釋放IP地址"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "每一部DHCP伺服器收到DHCPDISCOVER廣播訊息會回應何種訊息稱為",
+    "text": "DHCP的主要功能之一是什麼？",
     "options": {
-      "A": "DHCPDISCOVER",
-      "B": "DHCPOFFER",
-      "C": "DHCPREQUEST",
-      "D": "DHCPACK"
+      "A": "可以動態分配IP地址給客戶端",
+      "B": "靜態分配IP地址給客戶端",
+      "C": "動態分配IP地址給伺服器端",
+      "D": "自動分配IP地址給客戶端"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP的主要功能之一是什麼？",
+    "options": {
+      "A": "靜態分配IP地址",
+      "B": "動態分配IP地址",
+      "C": "分配MAC地址",
+      "D": "管理DNS伺服器"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "DHCP RELEASE命令的作用是？",
+    "text": "DHCP中的\"ACK\"代表什麼意思？",
     "options": {
-      "A": "釋放IP地址",
-      "B": "確認IP租約",
-      "C": "更新IP地址",
-      "D": "建立IP連接"
+      "A": "申請",
+      "B": "確認",
+      "C": "驗證",
+      "D": "拒絕"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP中的哪個階段包括發送DHCP ACK訊息給客戶端？",
+    "options": {
+      "A": "DHCP發現",
+      "B": "DHCP提供",
+      "C": "DHCP請求",
+      "D": "DHCP確認"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP客戶端不接受DHCPOFFER訊息所提供的資訊就會廣播一個訊息告知伺服器稱為",
+    "options": {
+      "A": "DHCPACK",
+      "B": "DHCPNACK",
+      "C": "DHCPREQUEST",
+      "D": "DHCPDECLINE。"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP協議的工作過程中，下列哪個步驟是第一個？",
+    "options": {
+      "A": "客戶端發送DHCP DISCOVER封包",
+      "B": "伺服器發送DHCP OFFER封包",
+      "C": "客戶端接受IP租約",
+      "D": "伺服器確認IP租約"
     },
     "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP OFFER封包中通常包含什麼信息？",
+    "options": {
+      "A": "分配給客戶端的IP地址",
+      "B": "客戶端的MAC地址",
+      "C": "伺服器的IP地址",
+      "D": "網絡的子網掩碼"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP協議中，DHCP OFFER封包在工作過程中的什麼時候被發送？",
+    "options": {
+      "A": "客戶端發送 DHCP RELEASE 後",
+      "B": "伺服器接受到DHCP REQUEST後",
+      "C": "客戶端接受到DHCP ACK後",
+      "D": "客戶端發送DHCP DISCOVER後"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP協議使用哪種協議進行通信？",
+    "options": {
+      "A": "UDP",
+      "B": "TCP",
+      "C": "HTTP",
+      "D": "IP"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP釋放協定中，客戶端向DHCP伺服器傳送一個請求以釋放DHCP資源，並註銷其IP位址。請問DHCP釋放的傳送是否代管？",
+    "options": {
+      "A": "是",
+      "B": "否",
+      "C": "不確定",
+      "D": "以上皆非"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP的全名是什麼？",
+    "options": {
+      "A": "Dynamic Hardware Configuration Protocol",
+      "B": "Dynamic Host Configuration Protocol",
+      "C": "Dynamic Home Connection Protocol",
+      "D": "Direct Hardware Control Protocol"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP伺服器收到DHCPREQUEST息時，若同意客戶端的要求後，會向客戶端發送出一個回應訊息稱為",
+    "options": {
+      "A": "DHCPACK",
+      "B": "DHCPOFFER",
+      "C": "DHCPREQUEST",
+      "D": "DHCPDECLINE。"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP的動態分配方式下，IP租約的特點是？",
+    "options": {
+      "A": "會在一段時間後過期",
+      "B": "一旦獲得就永久有效",
+      "C": "需要手動釋放",
+      "D": "不受時間限制"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DHCP REQUEST封包中包含了什麼信息？",
+    "options": {
+      "A": "伺服器的IP地址",
+      "B": "網絡的子網掩碼",
+      "C": "客戶端接受的IP地址",
+      "D": "DHCP租約的期限"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP是否需要後續處理檔案？ 回答錯誤",
+    "options": {
+      "A": "是",
+      "B": "否",
+      "C": "可能",
+      "D": "取決於檔案類型"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP協定通常使用哪兩個埠進行通信？",
+    "options": {
+      "A": "22和23",
+      "B": "20和21",
+      "C": "25和26",
+      "D": "80和81"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪個不是FTP反彈攻擊的特徵？",
+    "options": {
+      "A": "伺服器連接到攻擊者的系統",
+      "B": "伺服器被攻擊",
+      "C": "攻擊者利用FTP協定來發動攻擊",
+      "D": "攻擊者對伺服器的系統進行暴力破解"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的運作方式屬於哪種架構？",
+    "options": {
+      "A": "點對點",
+      "B": "主從式",
+      "C": "同級式",
+      "D": "分散式"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP協定的主要目標之一是什麼？",
+    "options": {
+      "A": "提供最高速度的檔案傳輸",
+      "B": "限制使用者存取的檔案數量",
+      "C": "促進檔案的共享",
+      "D": "減少網路流量"
+    },
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -1777,12 +1921,252 @@
   },
   {
     "type": "單選題",
+    "text": "FTP的控制連線是以何種方式來傳送控制資訊？",
+    "options": {
+      "A": "頻帶內",
+      "B": "頻帶中",
+      "C": "頻帶外",
+      "D": "不一定"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的主動模式中，伺服器是否主動核准資料的請求？",
+    "options": {
+      "A": "是",
+      "B": "否",
+      "C": "可能是",
+      "D": "不一定"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的主動模式和被動模式的主要區別是什麼？",
+    "options": {
+      "A": "建立連接的方式",
+      "B": "傳輸速度",
+      "C": "支援的檔案類型",
+      "D": "安全性水平"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "大多數常見的網頁瀏覽器如何處理FTP格式的URL？",
+    "options": {
+      "A": "不支援",
+      "B": "顯示Web檔案目錄",
+      "C": "自動下載檔案",
+      "D": "無法解譯"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP URL的格式是什麼？",
+    "options": {
+      "A": "ftp://[user[:password]@]host[:port]/url-path",
+      "B": "http://[user[:password]@]host[:port]/url-path",
+      "C": "ftps://[user[:password]@]host[:port]/url-path",
+      "D": "ssh://[user[:password]@]host[:port]/url-path"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
     "text": "FTP協定的原始規範是在哪一年發布的？",
     "options": {
       "A": "1969",
       "B": "1980",
       "C": "1971",
       "D": "1994"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的被動模式是為了解決什麼問題而引入的？",
+    "options": {
+      "A": "連接速度過快",
+      "B": "安全性問題",
+      "C": "傳輸效率問題",
+      "D": "通過防火牆的連接問題"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的規範是由哪個RFC定義的？",
+    "options": {
+      "A": "RFC 959",
+      "B": "RFC 114",
+      "C": "RFC 765",
+      "D": "RFC 1579"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP伺服器以哪個埠號建立TCP控制連線？",
+    "options": {
+      "A": "20",
+      "B": "21",
+      "C": "25",
+      "D": "53"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的被動模式通常用於解決什麼問題？",
+    "options": {
+      "A": "傳輸速度過慢",
+      "B": "連接失敗",
+      "C": "通過防火牆的連接問題",
+      "D": "安全性問題"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的被動模式是為了解決什麼樣的問題而引入的？",
+    "options": {
+      "A": "連接速度過慢",
+      "B": "通過防火牆的連接問題",
+      "C": "安全性問題",
+      "D": "傳輸效率問題"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "瀏覽器對FTP的支援可能會受到哪些因素的影響？",
+    "options": {
+      "A": "作業系統",
+      "B": "瀏覽器版本",
+      "C": "使用的協定",
+      "D": "以上皆是"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP協定是用於哪一層？",
+    "options": {
+      "A": "應用層",
+      "B": "傳輸層",
+      "C": "用戶端和伺服器間",
+      "D": "應用程式層"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP Server的作用是什麼？",
+    "options": {
+      "A": "專門用來接收HTTP連線的電腦位置",
+      "B": "專門用來接收SSH連線的電腦位置",
+      "C": "接收FTP連線，進行檔案的取得與放置",
+      "D": "進行網頁伺服器的託管"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP屬於哪種運作模式？",
+    "options": {
+      "A": "區域模式",
+      "B": "主動和被動模式",
+      "C": "獨立模式",
+      "D": "雙向模式"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP用戶端常用的命令GET用來做什麼？",
+    "options": {
+      "A": "下載檔案",
+      "B": "上傳檔案",
+      "C": "刪除檔案",
+      "D": "重命名檔案"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP服務一般執行在哪兩個埠？",
+    "options": {
+      "A": "22和23",
+      "B": "20和21",
+      "C": "25和26",
+      "D": "80和81"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "被動模式的FTP連接建立過程中，Server是否主動維持連線？",
+    "options": {
+      "A": "是",
+      "B": "否",
+      "C": "可能是",
+      "D": "不一定"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的安全擴充是由哪個RFC提出的？",
+    "options": {
+      "A": "RFC 959",
+      "B": "RFC 2228",
+      "C": "RFC 765",
+      "D": "RFC 1579"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP URL的格式是什麼？",
+    "options": {
+      "A": "ftp://[user[:password]@]host[:port]/url-path",
+      "B": "ftp://[host[:port]/user[:password]/url-path",
+      "C": "ftp://[host[:port]/url-path[:user[:password]]",
+      "D": "ftp://[user[:password]@]url-path[:host[:port]]"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的控制流和資料流是使用哪兩個埠進行傳輸的？",
+    "options": {
+      "A": "20和21",
+      "B": "22和23",
+      "C": "25和26",
+      "D": "80和81"
     },
     "answer": "A",
     "explanation": ""
@@ -1797,6 +2181,186 @@
       "D": "32位元"
     },
     "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的命令通常使用哪個TCP埠？",
+    "options": {
+      "A": "20",
+      "B": "21",
+      "C": "22",
+      "D": "23"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP反彈攻擊是指什麼？",
+    "options": {
+      "A": "FTP反向連接到攻擊者的伺服器",
+      "B": "FTP伺服器拒絕所有連接",
+      "C": "FTP用戶端對伺服器進行暴力破解",
+      "D": "FTP伺服器對用戶端發起攻擊"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪一個不是FTP的運作模式？",
+    "options": {
+      "A": "主動模式",
+      "B": "被動模式",
+      "C": "獨立模式",
+      "D": "動態模式"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的安全性相對較低，因為它的傳輸通常是：",
+    "options": {
+      "A": "加密的",
+      "B": "壓縮的",
+      "C": "明文的",
+      "D": "混合的"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的被動模式通常使用哪種方式來建立資料連接？ 回答錯誤",
+    "options": {
+      "A": "用戶端和伺服器同時打開埠",
+      "B": "伺服器端打開埠，用戶端監聽",
+      "C": "用戶端和伺服器都監聽同一個埠",
+      "D": "用戶端向伺服器發送連接請求"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的控制流和資料流分別使用哪些TCP埠？",
+    "options": {
+      "A": "控制流：21 資料流：20",
+      "B": "控制流：20 資料流：21",
+      "C": "控制流：22 資料流：23",
+      "D": "控制流：23 資料流：22"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP伺服器返回碼的第一個數字代表什麼意義？ 回答錯誤",
+    "options": {
+      "A": "失敗",
+      "B": "錯誤",
+      "C": "不完整的回覆",
+      "D": "成功"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的匿名服務中，使用者名稱通常是什麼？",
+    "options": {
+      "A": "anonymous",
+      "B": "guest",
+      "C": "user",
+      "D": "ftpuser"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP協定的安全性問題主要是因為什麼？",
+    "options": {
+      "A": "加密機制的不足",
+      "B": "資料傳輸不加密",
+      "C": "防火牆設置錯誤",
+      "D": "使用者身份驗證問題"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的命令通道用於什麼？",
+    "options": {
+      "A": "控制流量傳輸、啟動指令並攜帶資訊",
+      "B": "傳送檔案",
+      "C": "加密資料傳輸",
+      "D": "處理用戶端身份驗證"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP主要用於哪種檔案傳輸？",
+    "options": {
+      "A": "用戶端與伺服器之間的檔案傳輸",
+      "B": "用戶端之間的檔案傳輸",
+      "C": "伺服器之間的檔案傳輸",
+      "D": "客戶端與服務端之間的檔案傳輸"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP命令中，用於下載檔案的常見命令是？ 回答錯誤",
+    "options": {
+      "A": "GET",
+      "B": "RETR",
+      "C": "FETCH",
+      "D": "DOWNLOAD"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的安全擴充是由哪個RFC提出的？",
+    "options": {
+      "A": "RFC 2228",
+      "B": "RFC 765",
+      "C": "RFC 1579",
+      "D": "RFC 2428"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP的資料通道用於什麼？",
+    "options": {
+      "A": "傳送控制流量",
+      "B": "用戶端與伺服器之間傳輸資料",
+      "C": "建立連接",
+      "D": "執行命令"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FTP協定的擴展FTPS是什麼意思？",
+    "options": {
+      "A": "FTP over SSL/TLS",
+      "B": "FTP over UDP",
+      "C": "FTP over SSH",
+      "D": "FTP over HTTP"
+    },
+    "answer": "A",
     "explanation": ""
   },
   {
@@ -1825,186 +2389,6 @@
   },
   {
     "type": "單選題",
-    "text": "FTP的安全擴充是由哪個RFC提出的？",
-    "options": {
-      "A": "RFC 959",
-      "B": "RFC 2228",
-      "C": "RFC 765",
-      "D": "RFC 1579"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的控制流和資料流是使用哪兩個埠進行傳輸的？",
-    "options": {
-      "A": "20和21",
-      "B": "22和23",
-      "C": "25和26",
-      "D": "80和81"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP用戶端常用的命令GET用來做什麼？",
-    "options": {
-      "A": "下載檔案",
-      "B": "上傳檔案",
-      "C": "刪除檔案",
-      "D": "重命名檔案"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的安全性相對較低，因為它的傳輸通常是：",
-    "options": {
-      "A": "加密的",
-      "B": "壓縮的",
-      "C": "明文的",
-      "D": "混合的"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的命令通常使用哪個TCP埠？",
-    "options": {
-      "A": "20",
-      "B": "21",
-      "C": "22",
-      "D": "23"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的被動模式是為了解決什麼樣的問題而引入的？",
-    "options": {
-      "A": "連接速度過慢",
-      "B": "通過防火牆的連接問題",
-      "C": "安全性問題",
-      "D": "傳輸效率問題"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "被動模式的 FTP 連接建立過程中，Server 是否主動維持連線？",
-    "options": {
-      "A": "是",
-      "B": "否",
-      "C": "可能是",
-      "D": "不一定"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP協定的主要目標之一是什麼？",
-    "options": {
-      "A": "提供最高速度的檔案傳輸",
-      "B": "限制使用者存取的檔案數量",
-      "C": "促進檔案的共享",
-      "D": "減少網路流量"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "瀏覽器對FTP的支援可能會受到哪些因素的影響？",
-    "options": {
-      "A": "作業系統",
-      "B": "瀏覽器版本",
-      "C": "使用的協定",
-      "D": "以上皆是"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP命令中，用於下載檔案的常見命令是？",
-    "options": {
-      "A": "GET",
-      "B": "RETR",
-      "C": "FETCH",
-      "D": "DOWNLOAD"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的控制流和資料流分別使用哪些TCP埠？",
-    "options": {
-      "A": "控制流：21 資料流：20",
-      "B": "控制流：20 資料流：21",
-      "C": "控制流：22 資料流：23",
-      "D": "控制流：23 資料流：22"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP URL的格式是什麼？",
-    "options": {
-      "A": "ftp://[user[:password]@]host[:port]/url-path",
-      "B": "http://[user[:password]@]host[:port]/url-path",
-      "C": "ftps://[user[:password]@]host[:port]/url-path",
-      "D": "ssh://[user[:password]@]host[:port]/url-path"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的安全擴充是由哪個RFC提出的？",
-    "options": {
-      "A": "RFC 2228",
-      "B": "RFC 765",
-      "C": "RFC 1579",
-      "D": "RFC 2428"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP Server的作用是什麼？",
-    "options": {
-      "A": "專門用來接收HTTP連線的電腦位置",
-      "B": "專門用來接收SSH連線的電腦位置",
-      "C": "接收FTP連線，進行檔案的取得與放置",
-      "D": "進行網頁伺服器的託管"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP協定的擴展FTPS是什麼意思？",
-    "options": {
-      "A": "FTP over SSL/TLS",
-      "B": "FTP over UDP",
-      "C": "FTP over SSH",
-      "D": "FTP over HTTP"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
     "text": "FTP在網路上進行資料的傳輸是在何種架構下進行？",
     "options": {
       "A": "Peer to Peer",
@@ -2013,138 +2397,6 @@
       "D": "不一定"
     },
     "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的資料通道用於什麼？",
-    "options": {
-      "A": "傳送控制流量",
-      "B": "用戶端與伺服器之間傳輸資料",
-      "C": "建立連接",
-      "D": "執行命令"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP服務一般執行在哪兩個埠？",
-    "options": {
-      "A": "22和23",
-      "B": "20和21",
-      "C": "25和26",
-      "D": "80和81"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP伺服器以哪個埠號建立TCP控制連線？",
-    "options": {
-      "A": "20",
-      "B": "21",
-      "C": "25",
-      "D": "53"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的規範是由哪個RFC定義的？",
-    "options": {
-      "A": "RFC 959",
-      "B": "RFC 114",
-      "C": "RFC 765",
-      "D": "RFC 1579"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的被動模式通常用於解決什麼問題？",
-    "options": {
-      "A": "傳輸速度過慢",
-      "B": "連接失敗",
-      "C": "通過防火牆的連接問題",
-      "D": "安全性問題"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的命令通道用於什麼？",
-    "options": {
-      "A": "控制流量傳輸、啟動指令並攜帶資訊",
-      "B": "傳送檔案",
-      "C": "加密資料傳輸",
-      "D": "處理用戶端身份驗證"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的匿名服務中，使用者通常使用什麼名稱進行登入？",
-    "options": {
-      "A": "anonymous",
-      "B": "guest",
-      "C": "root",
-      "D": "admin"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "大多數常見的網頁瀏覽器如何處理FTP格式的URL？",
-    "options": {
-      "A": "不支援",
-      "B": "顯示Web檔案目錄",
-      "C": "自動下載檔案",
-      "D": "無法解譯"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的運作方式屬於哪種架構？",
-    "options": {
-      "A": "點對點",
-      "B": "主從式",
-      "C": "同級式",
-      "D": "分散式"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP命令的回覆代碼是多少位數值？",
-    "options": {
-      "A": "1位",
-      "B": "2位",
-      "C": "3位",
-      "D": "4位"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP協定通常使用哪兩個埠進行通信？",
-    "options": {
-      "A": "22和23",
-      "B": "20和21",
-      "C": "25和26",
-      "D": "80和81"
-    },
-    "answer": "B",
     "explanation": ""
   },
   {
@@ -2161,175 +2413,67 @@
   },
   {
     "type": "單選題",
-    "text": "FTP反彈攻擊是指什麼？",
+    "text": "PPP協議的多連接協定可以在什麼情況下提供額外的頻寬？",
     "options": {
-      "A": "FTP反向連接到攻擊者的伺服器",
-      "B": "FTP伺服器拒絕所有連接",
-      "C": "FTP用戶端對伺服器進行暴力破解",
-      "D": "FTP伺服器對用戶端發起攻擊"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP伺服器返回碼的第一個數字代表什麼意義？",
-    "options": {
-      "A": "失敗",
-      "B": "錯誤",
-      "C": "不完整的回覆",
-      "D": "成功"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP主要用於哪種檔案傳輸？",
-    "options": {
-      "A": "用戶端與伺服器之間的檔案傳輸",
-      "B": "用戶端之間的檔案傳輸",
-      "C": "伺服器之間的檔案傳輸",
-      "D": "客戶端與服務端之間的檔案傳輸"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的被動模式是為了解決什麼問題而引入的？",
-    "options": {
-      "A": "連接速度過快",
-      "B": "安全性問題",
-      "C": "傳輸效率問題",
-      "D": "通過防火牆的連接問題"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP是否需要後續處理檔案？",
-    "options": {
-      "A": "是",
-      "B": "否",
-      "C": "可能",
-      "D": "取決於檔案類型"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP屬於哪種運作模式？",
-    "options": {
-      "A": "區域模式",
-      "B": "主動和被動模式",
-      "C": "獨立模式",
-      "D": "雙向模式"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP協定是用於哪一層？",
-    "options": {
-      "A": "應用層",
-      "B": "傳輸層",
-      "C": "用戶端和伺服器間",
-      "D": "應用程式層"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的主動模式中，伺服器是否主動核准資料的請求？",
-    "options": {
-      "A": "是",
-      "B": "否",
-      "C": "可能是",
-      "D": "不一定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP URL的格式是什麼？",
-    "options": {
-      "A": "ftp://[user[:password]@]host[:port]/url-path",
-      "B": "ftp://[host[:port]/user[:password]/url-path",
-      "C": "ftp://[host[:port]/url-path[:user[:password]]",
-      "D": "ftp://[user[:password]@]url-path[:host[:port]]"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的控制連線是以何種方式來傳送控制資訊？",
-    "options": {
-      "A": "頻帶內",
-      "B": "頻帶中",
-      "C": "頻帶外",
-      "D": "不一定"
+      "A": "無線網路連接",
+      "B": "行動電話網絡",
+      "C": "遠程訪問資源",
+      "D": "光纖連接"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "以下哪個不是FTP反彈攻擊的特徵？",
+    "text": "PPP協定中提供勾點以自動組態網路介面和身分鑑別是指？",
     "options": {
-      "A": "伺服器連接到攻擊者的系統",
-      "B": "伺服器被攻擊",
-      "C": "攻擊者利用FTP協定來發動攻擊",
-      "D": "攻擊者對伺服器的系統進行暴力破解"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FTP的匿名服務中，使用者名稱通常是什麼？",
-    "options": {
-      "A": "anonymous",
-      "B": "guest",
-      "C": "user",
-      "D": "ftpuser"
+      "A": "LCP",
+      "B": "UDP",
+      "C": "IP",
+      "D": "TCP"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "以下哪一個不是FTP的運作模式？",
+    "text": "PPP的兩個衍生協議是什麼？",
     "options": {
-      "A": "主動模式",
-      "B": "被動模式",
-      "C": "獨立模式",
-      "D": "動態模式"
+      "A": "PPPoE 和 PPPoA",
+      "B": "SMTP 和 POP3",
+      "C": "TCP 和 UDP",
+      "D": "FTP 和 HTTP"
     },
-    "answer": "D",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協議的鏈路控制協定（LCP）用於什麼目的？",
+    "text": "PPP協議提供哪些功能？",
     "options": {
-      "A": "資料傳輸加密",
-      "B": "錯誤校驗",
-      "C": "連接分割",
-      "D": "檢測鏈路迴路"
+      "A": "連接認證、傳輸加密和壓縮",
+      "B": "連接認證、錯誤校驗和連接分割",
+      "C": "傳輸加密、多路徑路由和分散式識別",
+      "D": "壓縮、多路徑路由和連接分割"
     },
-    "answer": "D",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP 協議中的多重連接協定是什麼的延伸？",
+    "text": "PPP協定中的多連接協定可以在哪種情況下提供額外頻寬？",
+    "options": {
+      "A": "進行遠端資源訪問時",
+      "B": "進行本地資源訪問時",
+      "C": "進行網際網路訪問時",
+      "D": "進行區域網路訪問時"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議中的多重連接協定是什麼的延伸？",
     "options": {
       "A": "PPPoE",
       "B": "PPPoA",
@@ -2341,50 +2485,14 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協議最初是在哪個RFC文件中詳細描述的？",
+    "text": "PPP協議中的CHAP是什麼的縮寫？",
     "options": {
-      "A": "RFC 1994",
-      "B": "RFC 2516",
-      "C": "RFC 1661",
-      "D": "RFC 2364"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定中使用的錯誤校驗序列是？",
-    "options": {
-      "A": "FCS",
-      "B": "CRC",
-      "C": "HMAC",
-      "D": "SSL"
+      "A": "Challenge Handshake Authentication Protocol",
+      "B": "Certificate Handling Authentication Protocol",
+      "C": "Connection Handling Authentication Protocol",
+      "D": "Configuration Handshake Authentication Protocol"
     },
     "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "以下哪個不是PPP常見的使用場景？",
-    "options": {
-      "A": "計算機之間的直接連接",
-      "B": "行動電話",
-      "C": "光纖鏈路",
-      "D": "電視機之間的連接"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協議中的RFC 2516描述了哪個衍生協議？",
-    "options": {
-      "A": "PPPoA",
-      "B": "PPPoE",
-      "C": "CHAP",
-      "D": "LCP"
-    },
-    "answer": "B",
     "explanation": ""
   },
   {
@@ -2401,36 +2509,60 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協議中的LCP使用什麼標誌來檢測鏈路迴路？",
+    "text": "PPP協定中的多通道協定是指？",
     "options": {
-      "A": "特殊位元組序列",
-      "B": "特殊數字標識",
-      "C": "奇偶檢查碼",
-      "D": "訊框校驗序列"
+      "A": "SMTP",
+      "B": "MLPPP",
+      "C": "HTTP",
+      "D": "FTP"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協議的多連接協定可以在什麼情況下提供額外的頻寬？",
+    "text": "以下哪個是PPP協議的一部分？",
     "options": {
-      "A": "無線網路連接",
-      "B": "行動電話網絡",
-      "C": "遠程訪問資源",
-      "D": "光纖連接"
+      "A": "TCP",
+      "B": "IP",
+      "C": "UDP",
+      "D": "LCP"
     },
-    "answer": "C",
+    "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協定中的多重連接協定的延伸是指？",
+    "text": "PPP協定的工作層級是在哪裡？",
     "options": {
-      "A": "TCP",
-      "B": "HTTP",
-      "C": "IP",
-      "D": "Multiclass PPP"
+      "A": "網路層",
+      "B": "運輸層",
+      "C": "連結層",
+      "D": "資料鏈路層"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在PPP協議中，CHAP是什麼的縮寫？",
+    "options": {
+      "A": "挑戰握手協定",
+      "B": "連接控制協定",
+      "C": "網路控制協定",
+      "D": "鏈路控制協定"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "MRU(Maximum Receive Unit)其預設為？",
+    "options": {
+      "A": "1100 bytes",
+      "B": "1200 bytes",
+      "C": "1300 bytes",
+      "D": "1500 bytes"
     },
     "answer": "D",
     "explanation": ""
@@ -2449,24 +2581,12 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協議使用什麼來檢查每個單獨的封包是否發生錯誤？",
+    "text": "PPP協議提供了哪個功能來減少介面上的錯誤？",
     "options": {
-      "A": "UDP",
-      "B": "TCP",
-      "C": "ICMP",
-      "D": "FCS (Frame Check Sequence)"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列哪個協定用於在乙太網路上傳輸PPP資料？",
-    "options": {
-      "A": "PPPoE",
-      "B": "SMTP",
-      "C": "PPPoA",
-      "D": "PPPoATM"
+      "A": "鏈路迴環檢查",
+      "B": "PAP",
+      "C": "CHAP",
+      "D": "TCP"
     },
     "answer": "A",
     "explanation": ""
@@ -2485,36 +2605,132 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協定中提供勾點以自動組態網路介面和身分鑑別是指？",
+    "text": "PPP協議中的RFC 1661涵蓋了哪方面的詳細描述？",
     "options": {
-      "A": "LCP",
-      "B": "UDP",
-      "C": "IP",
-      "D": "TCP"
+      "A": "PPPoE",
+      "B": "PPP協議",
+      "C": "挑戰握手協定",
+      "D": "PPPoA"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協定中的挑戰握手協定是指？",
+    "text": "PPP協議最初是在哪個RFC文件中詳細描述的？",
     "options": {
-      "A": "UDP",
-      "B": "SMTP",
-      "C": "CHAP",
-      "D": "HTTP"
+      "A": "RFC 1994",
+      "B": "RFC 2516",
+      "C": "RFC 1661",
+      "D": "RFC 2364"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "在PPP協議中，CHAP是什麼的縮寫？",
+    "text": "PPP協定中的PAP是指什麼？",
     "options": {
-      "A": "挑戰握手協定",
-      "B": "連接控制協定",
-      "C": "網路控制協定",
-      "D": "鏈路控制協定"
+      "A": "密碼驗證協議",
+      "B": "連線建立協議",
+      "C": "資料傳輸協議",
+      "D": "網路控制協議"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議的衍生物PPPoA通常用於哪種物理媒介上？",
+    "options": {
+      "A": "光纖鏈路",
+      "B": "ATM配接器五層",
+      "C": "行動電話",
+      "D": "序列埠線"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列哪個協定用於在乙太網路上傳輸PPP資料？",
+    "options": {
+      "A": "PPPoE",
+      "B": "SMTP",
+      "C": "PPPoA",
+      "D": "PPPoATM"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在PPP協議中，FCS用於做什麼？",
+    "options": {
+      "A": "身份驗證",
+      "B": "加密數據",
+      "C": "檢查錯誤",
+      "D": "壓縮數據"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議中的LCP是指什麼？",
+    "options": {
+      "A": "連接協議控制",
+      "B": "資料封包控制",
+      "C": "鏈路封包控制",
+      "D": "鏈路控制協議"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議使用哪種方法來檢查每個單獨的訊框是否發生錯誤？",
+    "options": {
+      "A": "訊框校驗序列FCS",
+      "B": "錯誤檢測碼EDC",
+      "C": "奇偶檢查位",
+      "D": "訊框標記"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP的連線管理由何者來掌控？",
+    "options": {
+      "A": "CCP",
+      "B": "SLIP",
+      "C": "IPCP",
+      "D": "LCP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列何種協定是當兩端點所使用的參數經磋商出來，一旦沒問題就開始傳送封包？",
+    "options": {
+      "A": "CCP",
+      "B": "SLIP",
+      "C": "IPCP",
+      "D": "LCP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP中用於對端建立連接時的挑戰握手協定是？",
+    "options": {
+      "A": "CHAP",
+      "B": "PAP",
+      "C": "SMTP",
+      "D": "HTTP"
     },
     "answer": "A",
     "explanation": ""
@@ -2545,33 +2761,33 @@
   },
   {
     "type": "單選題",
-    "text": "在PPP協議中，FCS用於做什麼？",
+    "text": "PPP協定中使用的錯誤校驗序列是？",
     "options": {
-      "A": "身份驗證",
-      "B": "加密數據",
-      "C": "檢查錯誤",
-      "D": "壓縮數據"
+      "A": "FCS",
+      "B": "CRC",
+      "C": "HMAC",
+      "D": "SSL"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "下列何種協定是當兩端點所使用的參數經磋商出來，一旦沒問題就開始傳送封包？",
+    "text": "PPP協議的鏈路控制協定（LCP）用於什麼目的？",
     "options": {
-      "A": "CCP",
-      "B": "SLIP",
-      "C": "IPCP",
-      "D": "LCP"
+      "A": "資料傳輸加密",
+      "B": "錯誤校驗",
+      "C": "連接分割",
+      "D": "檢測鏈路迴路"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協議提供了哪個功能來減少介面上的錯誤？",
+    "text": "PPP協議提供了哪種功能以自動配置網路介面和身份驗證？",
     "options": {
-      "A": "鏈路迴環檢查",
+      "A": "勾點",
       "B": "PAP",
       "C": "CHAP",
       "D": "TCP"
@@ -2581,60 +2797,72 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協議中的LCP是指什麼？",
-    "options": {
-      "A": "連接協議控制",
-      "B": "資料封包控制",
-      "C": "鏈路封包控制",
-      "D": "鏈路控制協議"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP的設計者將哪個協定作為基礎？",
-    "options": {
-      "A": "HDLC",
-      "B": "TCP",
-      "C": "UDP",
-      "D": "IP"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定中的鏈路迴環檢查是利用什麼來發現迴路？",
+    "text": "PPP協定中的鏈路控制協定是指？",
     "options": {
       "A": "IP",
-      "B": "UDP",
-      "C": "TCP",
-      "D": "LCP"
+      "B": "TCP",
+      "C": "LCP",
+      "D": "UDP"
     },
-    "answer": "D",
+    "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP利用哪一個來進行兩端點之間的參數磋商？",
+    "text": "PPPoE協議通常用於哪種類型的網路連接？",
     "options": {
-      "A": "CCP",
-      "B": "SLIP",
-      "C": "IPCP",
-      "D": "LCP"
+      "A": "電話線",
+      "B": "光纖鏈路",
+      "C": "DSL",
+      "D": "行動電話"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議使用什麼來檢查每個單獨的封包是否發生錯誤？",
+    "options": {
+      "A": "UDP",
+      "B": "TCP",
+      "C": "ICMP",
+      "D": "FCS (Frame Check Sequence)"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP中用於對端建立連接時的挑戰握手協定是？",
+    "text": "RFC 2364描述了哪個PPP協議的運作方式？",
     "options": {
       "A": "CHAP",
-      "B": "PAP",
-      "C": "SMTP",
-      "D": "HTTP"
+      "B": "LCP",
+      "C": "PPPoA",
+      "D": "PPPoE"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議中的LCP使用什麼標誌來檢測鏈路迴路？",
+    "options": {
+      "A": "特殊位元組序列",
+      "B": "特殊數字標識",
+      "C": "奇偶檢查碼",
+      "D": "訊框校驗序列"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP協議中的LCP是什麼的縮寫？",
+    "options": {
+      "A": "Link Control Protocol",
+      "B": "Local Control Protocol",
+      "C": "Line Configuration Protocol",
+      "D": "Layer Control Protocol"
     },
     "answer": "A",
     "explanation": ""
@@ -2653,6 +2881,42 @@
   },
   {
     "type": "單選題",
+    "text": "PPP利用哪一個來進行兩端點之間的參數磋商？",
+    "options": {
+      "A": "CCP",
+      "B": "SLIP",
+      "C": "IPCP",
+      "D": "LCP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪個不是PPP常見的使用場景？ 回答錯誤",
+    "options": {
+      "A": "計算機之間的直接連接",
+      "B": "行動電話",
+      "C": "光纖鏈路",
+      "D": "電視機之間的連接"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "PPP的設計者將哪個協定作為基礎？",
+    "options": {
+      "A": "HDLC",
+      "B": "TCP",
+      "C": "UDP",
+      "D": "IP"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
     "text": "PPP協定中的錯誤校驗序列是用來做什麼的？",
     "options": {
       "A": "檢查網路連線是否正常",
@@ -2665,110 +2929,26 @@
   },
   {
     "type": "單選題",
-    "text": "PPP協議中的RFC 1661涵蓋了哪方面的詳細描述？",
+    "text": "PPP協定中的鏈路迴環檢查是利用什麼來發現迴路？",
     "options": {
-      "A": "PPPoE",
-      "B": "PPP協議",
-      "C": "挑戰握手協定",
-      "D": "PPPoA"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定中的多連接協定可以在哪種情況下提供額外頻寬？",
-    "options": {
-      "A": "進行遠端資源訪問時",
-      "B": "進行本地資源訪問時",
-      "C": "進行網際網路訪問時",
-      "D": "進行區域網路訪問時"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協議的衍生物PPPoA通常用於哪種物理媒介上？",
-    "options": {
-      "A": "光纖鏈路",
-      "B": "ATM配接器五層",
-      "C": "行動電話",
-      "D": "序列埠線"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協議使用哪種方法來檢查每個單獨的訊框是否發生錯誤？",
-    "options": {
-      "A": "訊框校驗序列FCS",
-      "B": "錯誤檢測碼EDC",
-      "C": "奇偶檢查位",
-      "D": "訊框標記"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協議中的LCP是什麼的縮寫？",
-    "options": {
-      "A": "Link Control Protocol",
-      "B": "Local Control Protocol",
-      "C": "Line Configuration Protocol",
-      "D": "Layer Control Protocol"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定的工作層級是在哪裡？",
-    "options": {
-      "A": "網路層",
-      "B": "運輸層",
-      "C": "連結層",
-      "D": "資料鏈路層"
+      "A": "IP",
+      "B": "UDP",
+      "C": "TCP",
+      "D": "LCP"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP的封包格式中的Flag欄位值固定為？",
+    "text": "在PPP協議中，下列哪個是用於在乙太網路上傳輸PPP資料的協議？",
     "options": {
-      "A": "01111111",
-      "B": "01111110",
-      "C": "11111111",
-      "D": "11111110"
+      "A": "TCP",
+      "B": "SMTP",
+      "C": "PPPoE",
+      "D": "HTTP"
     },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定中的PAP是指什麼？",
-    "options": {
-      "A": "密碼驗證協議",
-      "B": "連線建立協議",
-      "C": "資料傳輸協議",
-      "D": "網路控制協議"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協議中的CHAP是什麼的縮寫？",
-    "options": {
-      "A": "Challenge Handshake Authentication Protocol",
-      "B": "Certificate Handling Authentication Protocol",
-      "C": "Connection Handling Authentication Protocol",
-      "D": "Configuration Handshake Authentication Protocol"
-    },
-    "answer": "A",
+    "answer": "C",
     "explanation": ""
   },
   {
@@ -2785,204 +2965,48 @@
   },
   {
     "type": "單選題",
-    "text": "以下哪個是PPP協議的一部分？",
+    "text": "PPP協議中的RFC 2516描述了哪個衍生協議？",
     "options": {
-      "A": "TCP",
-      "B": "IP",
-      "C": "UDP",
+      "A": "PPPoA",
+      "B": "PPPoE",
+      "C": "CHAP",
       "D": "LCP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP的兩個衍生協議是什麼？",
-    "options": {
-      "A": "PPPoE 和 PPPoA",
-      "B": "SMTP 和 POP3",
-      "C": "TCP 和 UDP",
-      "D": "FTP 和 HTTP"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPPoE協議通常用於哪種類型的網路連接？",
-    "options": {
-      "A": "電話線",
-      "B": "光纖鏈路",
-      "C": "DSL",
-      "D": "行動電話"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP的連線管理由何者來掌控？",
-    "options": {
-      "A": "CCP",
-      "B": "SLIP",
-      "C": "IPCP",
-      "D": "LCP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "PPP協定中的多通道協定是指？",
-    "options": {
-      "A": "SMTP",
-      "B": "MLPPP",
-      "C": "HTTP",
-      "D": "FTP"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協定中的鏈路控制協定是指？",
+    "text": "PPP的封包格式中的Flag欄位值固定為？",
     "options": {
-      "A": "IP",
-      "B": "TCP",
-      "C": "LCP",
-      "D": "UDP"
+      "A": "01111111",
+      "B": "01111110",
+      "C": "11111111",
+      "D": "11111110"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "PPP協議提供了哪種功能以自動配置網路介面和身份驗證？",
+    "text": "HTTP PUT方法的作用是什麼？",
     "options": {
-      "A": "勾點",
-      "B": "PAP",
-      "C": "CHAP",
-      "D": "TCP"
+      "A": "向伺服器發出指定資源的請求",
+      "B": "向指定資源位置上傳其最新內容",
+      "C": "回顯伺服器收到的請求，用於測試或診斷",
+      "D": "請求伺服器刪除指定資源"
     },
-    "answer": "A",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "下列哪個版本的HTTP協定已過時，僅接受GET請求方法，且不支援請求頭？",
-    "options": {
-      "A": "HTTP/1.0",
-      "B": "HTTP/1.1",
-      "C": "HTTP/2",
-      "D": "HTTP/0.9"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP協定屬於哪一層？",
-    "options": {
-      "A": "表現層",
-      "B": "交談層",
-      "C": "應用層",
-      "D": "傳輸層"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "哪一個HTTP請求方法不應該用於產生副作用的操作中？",
-    "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "PUT",
-      "D": "DELETE"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP HEAD方法與哪個方法類似，但不會傳回資源的本文部份？",
+    "text": "HTTP HEAD方法與哪個方法類似，但不會傳回資源的本文部份？ 回答錯誤",
     "options": {
       "A": "GET",
       "B": "POST",
       "C": "HEAD",
       "D": "OPTIONS"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列何者稱為超文件傳輸協定？",
-    "options": {
-      "A": "PPP",
-      "B": "FTP",
-      "C": "TCP",
-      "D": "HTTP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/1.1其下層使用何種協定？",
-    "options": {
-      "A": "LCP",
-      "B": "PPP",
-      "C": "TCP",
-      "D": "UDP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在HTTP/1.1協定中，預設採用何種連接方式？",
-    "options": {
-      "A": "Connection: close",
-      "B": "Connection: keep-alive",
-      "C": "Connection: open",
-      "D": "Connection: persist"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP OPTIONS方法的主要作用是什麼？",
-    "options": {
-      "A": "傳回資源的部份內容",
-      "B": "向伺服器發出指定資源的請求",
-      "C": "回顯伺服器收到的請求，用於測試或診斷",
-      "D": "傳回該資源所支援的所有HTTP請求方法"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/1.1協定與HTTP/1.0相比，主要有哪一項新增功能？",
-    "options": {
-      "A": "快取處理",
-      "B": "錯誤通知的管理",
-      "C": "支援以管道方式在同時傳送多個請求",
-      "D": "網際網路位址的維護"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "一個物件指的就是多少個檔案？",
-    "options": {
-      "A": "1",
-      "B": "2",
-      "C": "3",
-      "D": "4"
     },
     "answer": "A",
     "explanation": ""
@@ -3001,168 +3025,12 @@
   },
   {
     "type": "單選題",
-    "text": "HTTP/1.1協定的主要區別於HTTP/1.0體現在哪些方面？",
+    "text": "HTTP協定最初的目的是為了提供一種發布和接收哪種類型的資訊？",
     "options": {
-      "A": "錯誤通知的管理",
-      "B": "訊息在網路中的傳送",
-      "C": "快取處理、頻寬最佳化及網路連接的使用、安全性及完整性等方面",
-      "D": "網際網路位址的維護"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP的標準制定由哪兩個組織進行協調？",
-    "options": {
-      "A": "W3C和ISO",
-      "B": "W3C和IETF",
-      "C": "IETF和IEEE",
-      "D": "ISO和IETF"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "200 OK代表什麼？",
-    "options": {
-      "A": "狀態碼",
-      "B": "要求碼",
-      "C": "標頭碼",
-      "D": "回覆碼"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP DELETE方法的作用是什麼？",
-    "options": {
-      "A": "向伺服器發出指定資源的請求",
-      "B": "請求伺服器刪除指定資源",
-      "C": "回顯伺服器收到的請求，用於測試或診斷",
-      "D": "傳回該資源所支援的所有HTTP請求方法"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP CONNECT方法的主要作用是什麼？",
-    "options": {
-      "A": "向伺服器發出指定資源的請求",
-      "B": "用於測試或診斷",
-      "C": "進行處理",
-      "D": "預留給能夠將連接改為隧道方式的代理伺服器"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP客戶端與HTTP伺服器之間實際的溝通時，客戶端的工具程式是採用Windows XP內建的哪個程式？",
-    "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "HEAD",
-      "D": "Telnet 程式"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/1.1協定最早由誰在哪年提出？",
-    "options": {
-      "A": "提姆·柏內茲-李，1989年",
-      "B": "亞倫·斯沃茨，1995年",
-      "C": "馬克·安德森，1991年",
-      "D": "保羅·霍蘭德，1983年"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP CONNECT方法的主要作用是什麼？",
-    "options": {
-      "A": "向伺服器發出指定資源的請求",
-      "B": "用於測試或診斷",
-      "C": "進行處理",
-      "D": "預留給能夠將連接改為隧道方式的代理伺服器"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP的標準制定由哪兩個組織進行協調？",
-    "options": {
-      "A": "W3C和ISO",
-      "B": "W3C和IETF",
-      "C": "IETF和IEEE",
-      "D": "ISO和IETF"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在HTTP協定中，哪個方法用於向伺服器發出指定資源的請求並傳回資源的部份內容？",
-    "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "PUT",
-      "D": "DELETE"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP的標準制定由哪兩個組織進行協調？",
-    "options": {
-      "A": "W3C和ISO",
-      "B": "W3C和IETF",
-      "C": "IETF和IEEE",
-      "D": "ISO和IETF"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/1.1協定使用哪個TCP埠號？",
-    "options": {
-      "A": "21",
-      "B": "25",
-      "C": "80",
-      "D": "443"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在HTTP中，安全的方法包括哪些？",
-    "options": {
-      "A": "POST和PUT",
-      "B": "GET和HEAD",
-      "C": "DELETE和OPTIONS",
-      "D": "CONNECT和PATCH"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP的標準制定由哪兩個組織進行協調？",
-    "options": {
-      "A": "W3C和IETF",
-      "B": "W3C和ISO",
-      "C": "IETF和IEEE",
-      "D": "ISO和IETF"
+      "A": "HTML頁面",
+      "B": "影片檔案",
+      "C": "音訊檔案",
+      "D": "圖片檔案"
     },
     "answer": "A",
     "explanation": ""
@@ -3181,84 +3049,108 @@
   },
   {
     "type": "單選題",
-    "text": "HTTP協定可由埠號識別出來，埠號是？",
+    "text": "HTTP TRACE方法的主要作用是什麼？",
     "options": {
-      "A": "25",
-      "B": "53",
-      "C": "80",
-      "D": "110"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP中的哪個方法用於向指定資源發出「顯示」請求？",
-    "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "PUT",
-      "D": "DELETE"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP伺服器至少應該實作哪兩種方法？",
-    "options": {
-      "A": "POST和GET",
-      "B": "DELETE和PUT",
-      "C": "GET和HEAD",
-      "D": "OPTIONS和TRACE"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP PUT方法的作用是什麼？",
-    "options": {
-      "A": "向伺服器發出指定資源的請求",
-      "B": "向指定資源位置上傳其最新內容",
-      "C": "回顯伺服器收到的請求，用於測試或診斷",
+      "A": "回顯伺服器收到的請求，用於測試或診斷",
+      "B": "向伺服器發出指定資源的請求",
+      "C": "向伺服器提交資料",
       "D": "請求伺服器刪除指定資源"
     },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在HTTP協定中，哪個方法用於向伺服器發出指定資源的請求並傳回資源的部份內容？",
-    "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "PUT",
-      "D": "DELETE"
-    },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "在HTTP協定中，哪個方法用於請求伺服器刪除Request-URI所標識的資源？",
+    "text": "HTTP CONNECT方法的主要作用是什麼？",
     "options": {
-      "A": "GET",
-      "B": "POST",
-      "C": "PUT",
-      "D": "DELETE"
+      "A": "向伺服器發出指定資源的請求",
+      "B": "用於測試或診斷",
+      "C": "進行處理",
+      "D": "預留給能夠將連接改為隧道方式的代理伺服器"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "網址開頭的 https 係指 http 協定加上：",
+    "text": "在HTTP/1.1中，透過哪個方法可以向指定資源發送資料並要求伺服器進行處理？",
     "options": {
-      "A": "SMTP",
-      "B": "SSL",
-      "C": "SNMP",
-      "D": "Web service"
+      "A": "DELETE",
+      "B": "HEAD",
+      "C": "POST",
+      "D": "CONNECT"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/1.1協定的主要區別於HTTP/1.0體現在哪些方面？",
+    "options": {
+      "A": "錯誤通知的管理",
+      "B": "訊息在網路中的傳送",
+      "C": "快取處理、頻寬最佳化及網路連接的使用、安全性及完整性等方面",
+      "D": "網際網路位址的維護"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/2標準於哪一年被批准？",
+    "options": {
+      "A": "2010年",
+      "B": "2013年",
+      "C": "2015年",
+      "D": "2018年"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/3協定拋棄了使用TCP，改為透過什麼來承載應用層資料？",
+    "options": {
+      "A": "UDP",
+      "B": "HTTP/2",
+      "C": "HTTP/1.1",
+      "D": "QUIC"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP協定屬於哪一層？",
+    "options": {
+      "A": "表現層",
+      "B": "交談層",
+      "C": "應用層",
+      "D": "傳輸層"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP DELETE方法的作用是什麼？",
+    "options": {
+      "A": "向伺服器發出指定資源的請求",
+      "B": "請求伺服器刪除指定資源",
+      "C": "回顯伺服器收到的請求，用於測試或診斷",
+      "D": "傳回該資源所支援的所有HTTP請求方法"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP的標準制定由哪兩個組織進行協調？",
+    "options": {
+      "A": "W3C和ISO",
+      "B": "W3C和IETF",
+      "C": "IETF和IEEE",
+      "D": "ISO和IETF"
     },
     "answer": "B",
     "explanation": ""
@@ -3277,12 +3169,228 @@
   },
   {
     "type": "單選題",
-    "text": "HTTP協定最初的目的是為了提供一種發布和接收哪種類型的資訊？",
+    "text": "HTTP/1.1協定中定義了幾種方法來操作指定的資源？ 回答錯誤",
     "options": {
-      "A": "HTML頁面",
-      "B": "影片檔案",
-      "C": "音訊檔案",
-      "D": "圖片檔案"
+      "A": "4",
+      "B": "6",
+      "C": "8",
+      "D": "10"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/1.1協定使用哪個TCP埠號？",
+    "options": {
+      "A": "21",
+      "B": "25",
+      "C": "80",
+      "D": "443"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/1.1其下層使用何種協定？",
+    "options": {
+      "A": "LCP",
+      "B": "PPP",
+      "C": "TCP",
+      "D": "UDP"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP中的哪個方法用於向指定資源發出「顯示」請求？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP的標準制定由哪兩個組織進行協調？",
+    "options": {
+      "A": "W3C和ISO",
+      "B": "W3C和IETF",
+      "C": "IETF和IEEE",
+      "D": "ISO和IETF"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP CONNECT方法的主要作用是什麼？",
+    "options": {
+      "A": "向伺服器發出指定資源的請求",
+      "B": "用於測試或診斷",
+      "C": "進行處理",
+      "D": "預留給能夠將連接改為隧道方式的代理伺服器"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "一封包從客戶端至伺服器再回到客戶端所花掉的時間為？ 回答錯誤",
+    "options": {
+      "A": "1 RTT",
+      "B": "2 RTT",
+      "C": "3 RTT",
+      "D": "4 RTT"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP PUT方法的作用是什麼？",
+    "options": {
+      "A": "向伺服器發出指定資源的請求",
+      "B": "向指定資源位置上傳其最新內容",
+      "C": "回顯伺服器收到的請求，用於測試或診斷",
+      "D": "請求伺服器刪除指定資源"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "哪一個HTTP請求方法不應該用於產生副作用的操作中？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP的標準制定由哪兩個組織進行協調？",
+    "options": {
+      "A": "W3C和IETF",
+      "B": "W3C和ISO",
+      "C": "IETF和IEEE",
+      "D": "ISO和IETF"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列哪個版本的HTTP協定已過時，僅接受GET請求方法，且不支援請求頭？",
+    "options": {
+      "A": "HTTP/1.0",
+      "B": "HTTP/1.1",
+      "C": "HTTP/2",
+      "D": "HTTP/0.9"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列何者稱為超文件傳輸協定？",
+    "options": {
+      "A": "PPP",
+      "B": "FTP",
+      "C": "TCP",
+      "D": "HTTP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在HTTP/1.1協定中，預設採用何種連接方式？",
+    "options": {
+      "A": "Connection: close",
+      "B": "Connection: keep-alive",
+      "C": "Connection: open",
+      "D": "Connection: persist"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP伺服器至少應該實作哪兩種方法？",
+    "options": {
+      "A": "POST和GET",
+      "B": "DELETE和PUT",
+      "C": "GET和HEAD",
+      "D": "OPTIONS和TRACE"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "200 OK代表什麼？",
+    "options": {
+      "A": "狀態碼",
+      "B": "要求碼",
+      "C": "標頭碼",
+      "D": "回覆碼"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "GET指令屬於HTTP的哪一部分？",
+    "options": {
+      "A": "標頭列",
+      "B": "要求列",
+      "C": "狀態列",
+      "D": "回覆列"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "一個物件指的就是多少個檔案？",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "3",
+      "D": "4"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP HEAD方法與哪個方法類似，但不會傳回資源的本文部份？ 回答錯誤",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "HEAD",
+      "D": "OPTIONS"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在HTTP協定中，哪個方法用於向伺服器發出指定資源的請求並傳回資源的部份內容？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
     },
     "answer": "A",
     "explanation": ""
@@ -3301,6 +3409,102 @@
   },
   {
     "type": "單選題",
+    "text": "在HTTP協定中，哪個方法用於向伺服器發出指定資源的請求並傳回資源的部份內容？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/1.1協定最早由誰在哪年提出？",
+    "options": {
+      "A": "提姆·柏內茲-李，1989年",
+      "B": "亞倫·斯沃茨，1995年",
+      "C": "馬克·安德森，1991年",
+      "D": "保羅·霍蘭德，1983年"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網址開頭的 https 係指 http 協定加上：",
+    "options": {
+      "A": "SMTP",
+      "B": "SSL",
+      "C": "SNMP",
+      "D": "Web service"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP協定可由埠號識別出來，埠號是？",
+    "options": {
+      "A": "25",
+      "B": "53",
+      "C": "80",
+      "D": "110"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP客戶端與HTTP伺服器之間實際的溝通時，客戶端的工具程式是採用Windows XP內建的哪個程式？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "HEAD",
+      "D": "Telnet 程式"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在HTTP協定中，哪個方法用於請求伺服器刪除Request-URI所標識的資源？",
+    "options": {
+      "A": "GET",
+      "B": "POST",
+      "C": "PUT",
+      "D": "DELETE"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在HTTP中，安全的方法包括哪些？",
+    "options": {
+      "A": "POST和PUT",
+      "B": "GET和HEAD",
+      "C": "DELETE和OPTIONS",
+      "D": "CONNECT和PATCH"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "HTTP/1.1協定與HTTP/1.0相比，主要有哪一項新增功能？",
+    "options": {
+      "A": "快取處理",
+      "B": "錯誤通知的管理",
+      "C": "支援以管道方式在同時傳送多個請求",
+      "D": "網際網路位址的維護"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
     "text": "HTTP/2標準於哪一年以RFC 7540正式發表？",
     "options": {
       "A": "2010年",
@@ -3313,86 +3517,38 @@
   },
   {
     "type": "單選題",
-    "text": "HTTP/3協定拋棄了使用TCP，改為透過什麼來承載應用層資料？",
+    "text": "HTTP OPTIONS方法的主要作用是什麼？",
     "options": {
-      "A": "UDP",
-      "B": "HTTP/2",
-      "C": "HTTP/1.1",
-      "D": "QUIC"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "GET指令屬於HTTP的哪一部分？",
-    "options": {
-      "A": "標頭列",
-      "B": "要求列",
-      "C": "狀態列",
-      "D": "回覆列"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP TRACE方法的主要作用是什麼？",
-    "options": {
-      "A": "回顯伺服器收到的請求，用於測試或診斷",
+      "A": "傳回資源的部份內容",
       "B": "向伺服器發出指定資源的請求",
-      "C": "向伺服器提交資料",
-      "D": "請求伺服器刪除指定資源"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "一封包從客戶端至伺服器再回到客戶端所花掉的時間為？",
-    "options": {
-      "A": "1 RTT",
-      "B": "2 RTT",
-      "C": "3 RTT",
-      "D": "4 RTT"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/2標準於哪一年被批准？",
-    "options": {
-      "A": "2010年",
-      "B": "2013年",
-      "C": "2015年",
-      "D": "2018年"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在HTTP/1.1中，透過哪個方法可以向指定資源發送資料並要求伺服器進行處理？",
-    "options": {
-      "A": "DELETE",
-      "B": "HEAD",
-      "C": "POST",
-      "D": "CONNECT"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "HTTP/1.1協定中定義了幾種方法來操作指定的資源？",
-    "options": {
-      "A": "4",
-      "B": "6",
-      "C": "8",
-      "D": "10"
+      "C": "回顯伺服器收到的請求，用於測試或診斷",
+      "D": "傳回該資源所支援的所有HTTP請求方法"
     },
     "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "電子郵件的傳送通常使用哪種協定？",
+    "options": {
+      "A": "SMTP",
+      "B": "HTTP",
+      "C": "FTP",
+      "D": "IMAP"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在POP3協議中，郵件是如何從郵件伺服器下載到客戶端的？ 回答錯誤",
+    "options": {
+      "A": "使用TCP協議",
+      "B": "使用UDP協議",
+      "C": "使用HTTP協議",
+      "D": "使用FTP協議"
+    },
+    "answer": "A",
     "explanation": ""
   },
   {
@@ -3409,74 +3565,38 @@
   },
   {
     "type": "單選題",
-    "text": "IMAP協定的全名是什麼？",
+    "text": "IMAP的安全性問題是什麼？",
     "options": {
-      "A": "Internet Mail Access Protocol",
-      "B": "Internet Message Access Protocol",
-      "C": "Interchange Mail Access Protocol",
-      "D": "Interchange Message Access Protocol"
+      "A": "登入速度較慢",
+      "B": "電子郵件無法離線存取",
+      "C": "登入資訊以純文字形式傳輸",
+      "D": "不支援加密傳輸"
     },
-    "answer": "B",
+    "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "在使用IMAP協定時，如何通知伺服器要退出對話？",
+    "text": "IMAP與POP3的主要區別之一是什麼？ 回答錯誤",
     "options": {
-      "A": "quit",
-      "B": "dele",
-      "C": "noop",
-      "D": "rset"
+      "A": "使用者的電子郵件是否儲存在本地",
+      "B": "使用的傳輸協定",
+      "C": "是否允許從任何裝置存取電子郵件",
+      "D": "是否允許離線存取電子郵件"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "以下哪個選項最能描述IMAP協議的特點？",
+    "text": "POP3協定的作用是什麼？ 回答錯誤",
     "options": {
-      "A": "郵件僅儲存在客戶端裝置上",
-      "B": "使用者無法同時登入多個裝置",
-      "C": "郵件同步處理只在客戶端執行",
-      "D": "郵件儲存在遠端伺服器中並可同步處理"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "大明想從郵件伺服器內部之郵箱取出該郵件可使用哪個協定？",
-    "options": {
-      "A": "SMTP",
-      "B": "NAT",
-      "C": "POP3",
-      "D": "DHCP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用IMAP協定，電子郵件通常儲存在哪裡？",
-    "options": {
-      "A": "用戶端",
-      "B": "伺服器",
-      "C": "電子郵件伺服器和用戶端之間",
-      "D": "本地硬碟"
+      "A": "傳送郵件",
+      "B": "接收郵件",
+      "C": "存儲郵件",
+      "D": "刪除郵件"
     },
     "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "以下哪個通訊協定是用於接收電子郵件的？",
-    "options": {
-      "A": "SMTP",
-      "B": "IMAP",
-      "C": "POP3",
-      "D": "TCP"
-    },
-    "answer": "C",
     "explanation": ""
   },
   {
@@ -3493,19 +3613,55 @@
   },
   {
     "type": "單選題",
-    "text": "POP3協定與使用者的電腦之間建立了怎樣的連線？",
+    "text": "使用IMAP時，哪個陳述最能描述對於已刪除郵件的處理？ 回答錯誤",
     "options": {
-      "A": "UDP",
-      "B": "TCP",
-      "C": "HTTP",
-      "D": "FTP"
+      "A": "郵件立即從所有裝置上移除",
+      "B": "郵件僅在一個裝置上刪除",
+      "C": "郵件會在伺服器上保留，直到使用者永久刪除",
+      "D": "郵件被刪除後無法恢復"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "小英想送郵件給大明，可使用哪個協定傳送出去？",
+    "options": {
+      "A": "BOOTP",
+      "B": "NAT",
+      "C": "DCHP",
+      "D": "SMTP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪個陳述最能描述POP3協議的特點？",
+    "options": {
+      "A": "郵件儲存在遠端伺服器中",
+      "B": "使用者可在多個裝置上同步處理郵件",
+      "C": "電子郵件僅存儲在客戶端裝置上",
+      "D": "電子郵件同步處理的速度較快"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "SMTP協定的全名是什麼？ 回答錯誤",
+    "options": {
+      "A": "Simple Transfer Mail Protocol",
+      "B": "Simple Mail Transfer Protocol",
+      "C": "Secure Mail Transfer Protocol",
+      "D": "Server Mail Transfer Protocol"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "使用POP3時，郵件何時從伺服器上移除？",
+    "text": "使用POP3時，郵件何時從伺服器上移除？ 回答錯誤",
     "options": {
       "A": "郵件傳送至客戶端時",
       "B": "郵件被標示為已讀取時",
@@ -3517,67 +3673,7 @@
   },
   {
     "type": "單選題",
-    "text": "在POP3協議中，郵件是如何從郵件伺服器下載到客戶端的？",
-    "options": {
-      "A": "使用TCP協議",
-      "B": "使用UDP協議",
-      "C": "使用HTTP協議",
-      "D": "使用FTP協議"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用IMAP協議時，用戶如何存取電子郵件？",
-    "options": {
-      "A": "通過本地存儲",
-      "B": "通過FTP下載",
-      "C": "通過HTTP訪問",
-      "D": "通過網路訪問"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP執行哪種動作？",
-    "options": {
-      "A": "push",
-      "B": "upload",
-      "C": "download",
-      "D": "pull"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用SMTP協定，郵件如何從寄件人的電腦傳送到郵件伺服器？",
-    "options": {
-      "A": "透過SMTP協定",
-      "B": "透過HTTP協定",
-      "C": "透過IMAP協定",
-      "D": "透過FTP協定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP最大的安全問題之一是什麼？",
-    "options": {
-      "A": "電子郵件傳輸速度較慢",
-      "B": "登入資訊以純文字形式傳輸",
-      "C": "不支援多重要素驗證",
-      "D": "電子郵件無法離線存取"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP協定通常使用哪個端口號進行通信？",
+    "text": "IMAP協定通常使用哪個端口號進行通信？ 回答錯誤",
     "options": {
       "A": "110",
       "B": "143",
@@ -3589,60 +3685,12 @@
   },
   {
     "type": "單選題",
-    "text": "IMAP或POP3執行哪種動作？",
+    "text": "使用IMAP協定，電子郵件通常儲存在哪裡？",
     "options": {
-      "A": "push",
-      "B": "upload",
-      "C": "download",
-      "D": "pull"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP協議中，郵件通常儲存在哪裡？",
-    "options": {
-      "A": "客戶端",
+      "A": "用戶端",
       "B": "伺服器",
-      "C": "路由器",
-      "D": "郵件伺服器和客戶端之間"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用POP3協定時，如何標記伺服器上的郵件為刪除？",
-    "options": {
-      "A": "dele",
-      "B": "rset",
-      "C": "quit",
-      "D": "top"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP協定是負責哪一項任務？",
-    "options": {
-      "A": "送信",
-      "B": "接收信",
-      "C": "儲存信件",
-      "D": "刪除信件"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP協議中，郵件是如何從寄件人的郵件伺服器發送到收件人的郵件伺服器的？",
-    "options": {
-      "A": "使用UDP協議",
-      "B": "使用TCP協議",
-      "C": "使用HTTP協議",
-      "D": "使用FTP協議"
+      "C": "電子郵件伺服器和用戶端之間",
+      "D": "本地硬碟"
     },
     "answer": "B",
     "explanation": ""
@@ -3661,6 +3709,210 @@
   },
   {
     "type": "單選題",
+    "text": "SMTP協議中，郵件是如何從寄件人的郵件伺服器發送到收件人的郵件伺服器的？",
+    "options": {
+      "A": "使用UDP協議",
+      "B": "使用TCP協議",
+      "C": "使用HTTP協議",
+      "D": "使用FTP協議"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪個通訊協定是用於接收電子郵件的？",
+    "options": {
+      "A": "SMTP",
+      "B": "IMAP",
+      "C": "POP3",
+      "D": "TCP"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "電子郵件用戶端如何擷取郵件的內容？ 回答錯誤",
+    "options": {
+      "A": "使用SMTP",
+      "B": "使用IMAP",
+      "C": "使用POP3",
+      "D": "使用FTP"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "使用IMAP協議時，用戶如何存取電子郵件？",
+    "options": {
+      "A": "通過本地存儲",
+      "B": "通過FTP下載",
+      "C": "通過HTTP訪問",
+      "D": "通過網路訪問"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在SMTP中，郵件如何傳送到收件人的郵件伺服器？",
+    "options": {
+      "A": "使用FTP",
+      "B": "使用UDP",
+      "C": "使用IMAP",
+      "D": "使用TCP"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在使用IMAP協定時，如何通知伺服器要退出對話？",
+    "options": {
+      "A": "quit",
+      "B": "dele",
+      "C": "noop",
+      "D": "rset"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "POP3協定與使用者的電腦之間建立了怎樣的連線？",
+    "options": {
+      "A": "UDP",
+      "B": "TCP",
+      "C": "HTTP",
+      "D": "FTP"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "使用POP3時，電子郵件何時從郵件伺服器中刪除？ 回答錯誤",
+    "options": {
+      "A": "電子郵件下載到用戶端後",
+      "B": "電子郵件傳送到用戶端後",
+      "C": "電子郵件被閱讀後",
+      "D": "電子郵件傳送到用戶端後並被閱讀後"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "IMAP協議與POP3協議的主要區別之一是什麼？ 回答錯誤",
+    "options": {
+      "A": "IMAP支持離線模式",
+      "B": "POP3支持離線模式",
+      "C": "IMAP只能在本地儲存電子郵件",
+      "D": "POP3只能在伺服器上儲存電子郵件"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "使用IMAP時，哪個陳述最能描述郵件的存儲位置？ 回答錯誤",
+    "options": {
+      "A": "僅在電腦上儲存",
+      "B": "僅在伺服器上儲存",
+      "C": "僅在手機上儲存",
+      "D": "儲存在遠端伺服器中"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "SMTP為應用層協定並使用哪種傳輸服務？",
+    "options": {
+      "A": "IP",
+      "B": "TCP",
+      "C": "UDP",
+      "D": "DHCP"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在SMTP協議中，郵件是如何傳送到郵件伺服器的？ 回答錯誤",
+    "options": {
+      "A": "預先壓縮的二進制格式",
+      "B": "壓縮的文字格式",
+      "C": "未經壓縮的文字格式",
+      "D": "預先壓縮的文字格式"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "IMAP或POP3執行哪種動作？",
+    "options": {
+      "A": "push",
+      "B": "upload",
+      "C": "download",
+      "D": "pull"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "POP3協議與IMAP協議的主要不同之處在於：",
+    "options": {
+      "A": "電子郵件同步處理的方式",
+      "B": "帳戶登入的安全性",
+      "C": "伺服器連線的速度",
+      "D": "郵件發送的格式"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "IMAP協定的全名是什麼？",
+    "options": {
+      "A": "Internet Mail Access Protocol",
+      "B": "Internet Message Access Protocol",
+      "C": "Interchange Mail Access Protocol",
+      "D": "Interchange Message Access Protocol"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "使用SMTP協定時，郵件如何從郵件伺服器傳送到收件人的電腦？ 回答錯誤",
+    "options": {
+      "A": "使用POP3協定",
+      "B": "使用UDP協定",
+      "C": "使用TCP協定",
+      "D": "使用HTTP協定"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "使用POP3協定時，如何標記伺服器上的郵件為刪除？ 回答錯誤",
+    "options": {
+      "A": "dele",
+      "B": "rset",
+      "C": "quit",
+      "D": "top"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
     "text": "SMTP和POP3之間的主要區別是什麼？",
     "options": {
       "A": "負責收信和寄信的協定",
@@ -3673,12 +3925,48 @@
   },
   {
     "type": "單選題",
-    "text": "POP3協定的全名是什麼？",
+    "text": "大明想從郵件伺服器內部之郵箱取出該郵件可使用哪個協定？",
     "options": {
-      "A": "Post Office Protocol - Version 3",
-      "B": "Personal Online Protocol - Version 3",
-      "C": "Public Online Protocol - Version 3",
-      "D": "Private Office Protocol - Version 3"
+      "A": "SMTP",
+      "B": "NAT",
+      "C": "POP3",
+      "D": "DHCP"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "IMAP協議中，郵件通常儲存在哪裡？",
+    "options": {
+      "A": "客戶端",
+      "B": "伺服器",
+      "C": "路由器",
+      "D": "郵件伺服器和客戶端之間"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "POP3協定通常用於哪個動作？",
+    "options": {
+      "A": "送信",
+      "B": "刪除信件",
+      "C": "接收信",
+      "D": "編輯郵件"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "SMTP執行哪種動作？",
+    "options": {
+      "A": "push",
+      "B": "upload",
+      "C": "download",
+      "D": "pull"
     },
     "answer": "A",
     "explanation": ""
@@ -3697,158 +3985,62 @@
   },
   {
     "type": "單選題",
-    "text": "POP3協議與IMAP協議的主要不同之處在於：",
+    "text": "POP3協定的全名是什麼？",
     "options": {
-      "A": "電子郵件同步處理的方式",
-      "B": "帳戶登入的安全性",
-      "C": "伺服器連線的速度",
-      "D": "郵件發送的格式"
+      "A": "Post Office Protocol - Version 3",
+      "B": "Personal Online Protocol - Version 3",
+      "C": "Public Online Protocol - Version 3",
+      "D": "Private Office Protocol - Version 3"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "IMAP協議中，使用者如何從伺服器下載郵件？",
+    "text": "IMAP最大的安全問題之一是什麼？",
     "options": {
-      "A": "使用FTP協議",
-      "B": "使用UDP協議",
-      "C": "使用TCP/IP協議",
-      "D": "使用HTTP協議"
+      "A": "電子郵件傳輸速度較慢",
+      "B": "登入資訊以純文字形式傳輸",
+      "C": "不支援多重要素驗證",
+      "D": "電子郵件無法離線存取"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "在SMTP中，郵件如何傳送到收件人的郵件伺服器？",
+    "text": "在使用POP3協定時，郵件如何從郵件伺服器下載到客戶端？ 回答錯誤",
     "options": {
-      "A": "使用FTP",
-      "B": "使用UDP",
-      "C": "使用IMAP",
-      "D": "使用TCP"
+      "A": "使用UDP協議",
+      "B": "使用TCP/IP協議",
+      "C": "使用HTTP協議",
+      "D": "使用POP3協議"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "IMAP的安全性問題是什麼？",
+    "text": "SMTP協定是負責哪一項任務？",
     "options": {
-      "A": "登入速度較慢",
-      "B": "電子郵件無法離線存取",
-      "C": "登入資訊以純文字形式傳輸",
-      "D": "不支援加密傳輸"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "電子郵件的傳送通常使用哪種協定？",
-    "options": {
-      "A": "SMTP",
-      "B": "HTTP",
-      "C": "FTP",
-      "D": "IMAP"
+      "A": "送信",
+      "B": "接收信",
+      "C": "儲存信件",
+      "D": "刪除信件"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "以下哪個陳述最能描述POP3協議的特點？",
+    "text": "以下哪個選項最能描述IMAP協議的特點？",
     "options": {
-      "A": "郵件儲存在遠端伺服器中",
-      "B": "使用者可在多個裝置上同步處理郵件",
-      "C": "電子郵件僅存儲在客戶端裝置上",
-      "D": "電子郵件同步處理的速度較快"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在SMTP協議中，郵件是如何傳送到郵件伺服器的？",
-    "options": {
-      "A": "預先壓縮的二進制格式",
-      "B": "壓縮的文字格式",
-      "C": "未經壓縮的文字格式",
-      "D": "預先壓縮的文字格式"
+      "A": "郵件僅儲存在客戶端裝置上",
+      "B": "使用者無法同時登入多個裝置",
+      "C": "郵件同步處理只在客戶端執行",
+      "D": "郵件儲存在遠端伺服器中並可同步處理"
     },
     "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP採用哪種方式和持續性連接？",
-    "options": {
-      "A": "內頻方式和持續性連接",
-      "B": "外頻方式和持續性連接",
-      "C": "外頻方式和非持續性連接",
-      "D": "內頻方式和非持續性連接"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP與POP3的主要區別之一是什麼？",
-    "options": {
-      "A": "使用的端口號",
-      "B": "是否允許多裝置同時存取電子郵件",
-      "C": "是否允許離線存取電子郵件",
-      "D": "是否允許郵件儲存在郵件伺服器上"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "電子郵件通常使用哪種端口進行傳輸？",
-    "options": {
-      "A": "21",
-      "B": "25",
-      "C": "80",
-      "D": "443"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "POP3協定的作用是什麼？",
-    "options": {
-      "A": "傳送郵件",
-      "B": "接收郵件",
-      "C": "存儲郵件",
-      "D": "刪除郵件"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP協議與POP3協議的主要區別之一是什麼？",
-    "options": {
-      "A": "IMAP支持離線模式",
-      "B": "POP3支持離線模式",
-      "C": "IMAP只能在本地儲存電子郵件",
-      "D": "POP3只能在伺服器上儲存電子郵件"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP為應用層協定並使用哪種傳輸服務？",
-    "options": {
-      "A": "IP",
-      "B": "TCP",
-      "C": "UDP",
-      "D": "DHCP"
-    },
-    "answer": "B",
     "explanation": ""
   },
   {
@@ -3865,216 +4057,72 @@
   },
   {
     "type": "單選題",
-    "text": "在使用POP3協定時，郵件如何從郵件伺服器下載到客戶端？",
+    "text": "使用POP3時，多個裝置之間無法實現以下哪項功能？ 回答錯誤",
     "options": {
-      "A": "使用UDP協議",
-      "B": "使用TCP/IP協議",
-      "C": "使用HTTP協議",
-      "D": "使用POP3協議"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SNMP的延伸規格為？",
-    "options": {
-      "A": "MIB I",
-      "B": "RMON",
-      "C": "CMIP",
-      "D": "MIB II"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列哪個不是網絡管理資料通常收集的機制？",
-    "options": {
-      "A": "太陽能電池",
-      "B": "軟體代理程式",
-      "C": "監視機制",
-      "D": "活動紀錄檔機制"
+      "A": "將訊息標示為已讀取",
+      "B": "傳送項目",
+      "C": "推送新郵件到裝置上",
+      "D": "建立特殊資料夾或完成設定"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "網路管理面臨的挑戰之一是什麼？",
+    "text": "SMTP採用哪種方式和持續性連接？",
     "options": {
-      "A": "網路穩定性",
-      "B": "網路複雜性",
-      "C": "網路速度",
-      "D": "網路擴展性"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FCAPS 模型可以被視為哪個業務流程框架的前身？",
-    "options": {
-      "A": "ISO 9001",
-      "B": "eTOM",
-      "C": "BPMN",
-      "D": "PERT"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在雲端型網路管理中，AIOps的目標是什麼？",
-    "options": {
-      "A": "提高雲端資源的可用性",
-      "B": "自動化網絡管理任務以提高效率",
-      "C": "增加雲端服務的安全性",
-      "D": "優化雲端託管成本"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "雲端型網路管理的一個主要優勢是什麼？",
-    "options": {
-      "A": "單點控制",
-      "B": "資料主權",
-      "C": "內部控制",
-      "D": "高層級控制"
+      "A": "內頻方式和持續性連接",
+      "B": "外頻方式和持續性連接",
+      "C": "外頻方式和非持續性連接",
+      "D": "內頻方式和非持續性連接"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "網絡管理模型的 \"P\" 代表什麼？",
+    "text": "使用SMTP協定，郵件如何從寄件人的電腦傳送到郵件伺服器？",
     "options": {
-      "A": "策略",
-      "B": "效能",
-      "C": "連接",
-      "D": "保證"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列哪個是FCAPS模型中的一部分？",
-    "options": {
-      "A": "PASS",
-      "B": "SCOPE",
-      "C": "METRIC",
-      "D": "Accounting"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "哪個領域是網路管理中的 \"S\" 意義所在？",
-    "options": {
-      "A": "安全性",
-      "B": "故障管理",
-      "C": "效能管理",
-      "D": "配置管理"
+      "A": "透過SMTP協定",
+      "B": "透過HTTP協定",
+      "C": "透過IMAP協定",
+      "D": "透過FTP協定"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "內部部署網路管理解決方案通常需要更多的什麼？",
+    "text": "電子郵件通常使用哪種端口進行傳輸？",
     "options": {
-      "A": "使用者授權",
-      "B": "前期投資和內部 IT 團隊的持續維護",
-      "C": "硬體更新",
-      "D": "高速網路連接"
+      "A": "21",
+      "B": "25",
+      "C": "80",
+      "D": "443"
     },
     "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "雲端型與內部部署網路管理模型的對比中，內部部署網路管理解決方案有哪種優勢？",
+    "text": "IMAP協議中，使用者如何從伺服器下載郵件？",
     "options": {
-      "A": "單點控制",
-      "B": "彈性",
-      "C": "內部控制",
-      "D": "AIOps 和分析"
+      "A": "使用FTP協議",
+      "B": "使用UDP協議",
+      "C": "使用TCP/IP協議",
+      "D": "使用HTTP協議"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "FCAPS模型中的 \"C\" 代表什麼？",
+    "text": "IMAP與POP3的主要區別之一是什麼？",
     "options": {
-      "A": "資訊",
-      "B": "通訊",
-      "C": "連接",
-      "D": "配置"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "彈性消費的網路管理解決方案通常支援哪種訂購型授權模式？",
-    "options": {
-      "A": "固定授權",
-      "B": "彈性授權",
-      "C": "年度授權",
-      "D": "月度授權"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FCAPS 模型涵蓋了網絡管理的哪些方面？",
-    "options": {
-      "A": "故障、配置、審計、性能、安全",
-      "B": "編程、設計、測試、部署、維護",
-      "C": "授權、認證、記錄、評估、分析",
-      "D": "儲存、處理、傳輸、呈現、分析"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "現有的網路管理協定中常見的包括哪些？",
-    "options": {
-      "A": "XML",
-      "B": "SNMP、CMIP",
-      "C": "HTTP、FTP",
-      "D": "TCP、IP"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SNMP屬於第幾層協定？",
-    "options": {
-      "A": "應用層協定",
-      "B": "TCP層協定",
-      "C": "IP層協定",
-      "D": "MAC層協定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "現今網絡管理工作的主要內容是什麼？",
-    "options": {
-      "A": "建築設計",
-      "B": "音樂製作",
-      "C": "國際貿易",
-      "D": "效能管理、監視裝置是否執行良好"
+      "A": "使用的端口號",
+      "B": "是否允許多裝置同時存取電子郵件",
+      "C": "是否允許離線存取電子郵件",
+      "D": "是否允許郵件儲存在郵件伺服器上"
     },
     "answer": "D",
     "explanation": ""
@@ -4105,228 +4153,36 @@
   },
   {
     "type": "單選題",
-    "text": "FCAPS 模型中的 \"A\" 代表什麼？",
+    "text": "SNMP屬於第幾層協定？",
     "options": {
-      "A": "網絡診斷",
-      "B": "管理（administration）",
-      "C": "審計（accounting）",
-      "D": "安全（security）"
+      "A": "應用層協定",
+      "B": "TCP層協定",
+      "C": "IP層協定",
+      "D": "MAC層協定"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "FCAPS模型中的 \"S\" 代表什麼？",
+    "text": "在雲端型網路管理中，AIOps的目標是什麼？",
     "options": {
-      "A": "治理",
-      "B": "協作",
-      "C": "安全",
-      "D": "分析"
+      "A": "提高雲端資源的可用性",
+      "B": "自動化網絡管理任務以提高效率",
+      "C": "增加雲端服務的安全性",
+      "D": "優化雲端託管成本"
     },
-    "answer": "C",
+    "answer": "B",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "網路管理是指對大規模電腦網路和電信網路進行的什麼？",
+    "text": "FCAPS模型是哪個組織定義的？",
     "options": {
-      "A": "服務提供",
-      "B": "硬體更新",
-      "C": "電源管理",
-      "D": "維護和管理"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網絡管理模型的五個功能領域是由哪個組織定義的？",
-    "options": {
-      "A": "國際標準化組織 (ISO)",
+      "A": "美國國防部",
       "B": "聯合國",
-      "C": "世界銀行",
-      "D": "歐盟"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "下列哪個是FCAPS模型中的一部分？",
-    "options": {
-      "A": "FIN",
-      "B": "Configuration",
-      "C": "RES",
-      "D": "PRO"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "何種領域是創新的關鍵領域，可以協助企業應對網路管理的挑戰？",
-    "options": {
-      "A": "AIOps 和自動化",
-      "B": "傳統的網路管理方法",
-      "C": "資料庫管理技術",
-      "D": "伺服器管理工具"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FCAPS 是哪個領域的縮寫詞？",
-    "options": {
-      "A": "財務管理",
-      "B": "ISO電信管理網絡模型和網絡管理框架",
-      "C": "電腦編程技術",
-      "D": "科學研究"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "雲端型網路管理的一個主要優勢是什麼？",
-    "options": {
-      "A": "單點控制",
-      "B": "資料主權",
-      "C": "內部控制",
-      "D": "高層級控制"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路管理資料通常是通過哪些機制來收集的？",
-    "options": {
-      "A": "軟體代理程式、監視機制、活動紀錄檔機制、網路嗅探器等",
-      "B": "電子郵件、社交媒體",
-      "C": "舞台表演、展覽會",
-      "D": "電話、傳真"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網絡管理模型的五個功能領域中的 \"C\" 代表什麼？",
-    "options": {
-      "A": "溝通",
-      "B": "控制",
-      "C": "審計",
-      "D": "連接"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路管理中的效能管理通常涉及監控和分析哪些指標？",
-    "options": {
-      "A": "回應時間、封包遺失率、頻寬使用率",
-      "B": "IP位址分配、DNS解析速度、網絡延遲",
-      "C": "硬碟使用率、CPU負載、記憶體使用量",
-      "D": "應用程式啟動時間、網站訪問次數、電子郵件傳遞速度"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路管理的哪一個協定提供了一個基於Web的管理介面？",
-    "options": {
-      "A": "SNMP",
-      "B": "CMIP",
-      "C": "Java管理擴充",
-      "D": "netconf"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SNMP 網路管理的元件可分成幾類？",
-    "options": {
-      "A": "3",
-      "B": "4",
-      "C": "5",
-      "D": "6"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "哪些是保護主要實體的常見技術？",
-    "options": {
-      "A": "新世代防火牆、DNS 過濾、惡意軟體防護",
-      "B": "電子郵件安全解決方案、網路加密、VPN",
-      "C": "網路安全架構、威脅管理系統、緊急應變計劃",
-      "D": "新世代防火牆、惡意軟體防護、社交工程防禦"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "為了防止網路釣魚攻擊，應該採取哪些措施？",
-    "options": {
-      "A": "避免開啟未知的電子郵件附件",
-      "B": "提高網路速度",
-      "C": "定期備份資料",
-      "D": "定期更改密碼"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "以下哪項是防止勒索軟體蔓延的方法？",
-    "options": {
-      "A": "更新防火牆軟體",
-      "B": "加強電子郵件加密",
-      "C": "定期備份資料",
-      "D": "供社交工程培訓"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路管理的功能模型區分成幾種？",
-    "options": {
-      "A": "3",
-      "B": "4",
-      "C": "5",
-      "D": "6"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網絡管理的基本方案包括哪些？",
-    "options": {
-      "A": "帶內網路管理、帶外網路管理、同時使用帶內和帶外網路管理",
-      "B": "家庭網路管理、學校網路管理、企業網路管理",
-      "C": "電話網路管理、郵件網路管理、短訊網路管理",
-      "D": "公共網路管理、私人網路管理、社群網路管理"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "何謂自攜裝置和物聯網安全？",
-    "options": {
-      "A": "只限於外部網路",
-      "B": "只涉及內部網路",
-      "C": "有助於解決自攜裝置和物聯網固有的可見性和安全性挑戰",
-      "D": "對內部網路沒有影響"
+      "C": "ISO",
+      "D": "WTO"
     },
     "answer": "C",
     "explanation": ""
@@ -4345,62 +4201,14 @@
   },
   {
     "type": "單選題",
-    "text": "網路管理的效能管理涉及分析哪些指標？",
+    "text": "網路管理是指對大規模電腦網路和電信網路進行的什麼？",
     "options": {
-      "A": "成本管理",
-      "B": "回應時間、封包遺失、輸送量",
-      "C": "效能設置",
-      "D": "伺服器負載"
+      "A": "服務提供",
+      "B": "硬體更新",
+      "C": "電源管理",
+      "D": "維護和管理"
     },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網絡管理模型的 \"A\" 代表什麼？",
-    "options": {
-      "A": "運輸",
-      "B": "審計",
-      "C": "故障",
-      "D": "分析"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網絡管理模型的 \"F\" 代表什麼？",
-    "options": {
-      "A": "故障",
-      "B": "快速",
-      "C": "朋友",
-      "D": "自由"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "private MIB的基本OID開頭為？",
-    "options": {
-      "A": "1.3.6.1.2.1",
-      "B": "1.3.6.1.3.1",
-      "C": "1.3.6.1.4.1",
-      "D": "1.3.6.1.5.1"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "FCAPS模型是哪個組織定義的？",
-    "options": {
-      "A": "美國國防部",
-      "B": "聯合國",
-      "C": "ISO",
-      "D": "WTO"
-    },
-    "answer": "C",
+    "answer": "D",
     "explanation": ""
   },
   {
@@ -4417,14 +4225,110 @@
   },
   {
     "type": "單選題",
-    "text": "現今網路管理工作的主要內容包括什麼？",
+    "text": "FCAPS模型中的 \"S\" 代表什麼？",
     "options": {
-      "A": "智慧家居設備管理",
-      "B": "基因編輯技術",
-      "C": "銷售業績分析",
-      "D": "效能管理、監視裝置是否執行良好"
+      "A": "治理",
+      "B": "協作",
+      "C": "安全",
+      "D": "分析"
     },
-    "answer": "D",
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "SNMP網路管理的元件可分成幾類？ 回答錯誤",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FCAPS 是哪個領域的縮寫詞？",
+    "options": {
+      "A": "財務管理",
+      "B": "ISO電信管理網絡模型和網絡管理框架",
+      "C": "電腦編程技術",
+      "D": "科學研究"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "彈性消費的網路管理解決方案通常支援哪種訂購型授權模式？",
+    "options": {
+      "A": "固定授權",
+      "B": "彈性授權",
+      "C": "年度授權",
+      "D": "月度授權"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "現有的網路管理協定中常見的包括哪些？",
+    "options": {
+      "A": "XML",
+      "B": "SNMP、CMIP",
+      "C": "HTTP、FTP",
+      "D": "TCP、IP"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FCAPS 模型涵蓋了網絡管理的哪些方面？",
+    "options": {
+      "A": "故障、配置、審計、性能、安全",
+      "B": "編程、設計、測試、部署、維護",
+      "C": "授權、認證、記錄、評估、分析",
+      "D": "儲存、處理、傳輸、呈現、分析"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網絡管理模型的五個功能領域中的 \"C\" 代表什麼？",
+    "options": {
+      "A": "溝通",
+      "B": "控制",
+      "C": "審計",
+      "D": "連接"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "雲端型網路管理的一個主要優勢是什麼？",
+    "options": {
+      "A": "單點控制",
+      "B": "資料主權",
+      "C": "內部控制",
+      "D": "高層級控制"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列哪個是FCAPS模型中的一部分？",
+    "options": {
+      "A": "FIN",
+      "B": "Configuration",
+      "C": "RES",
+      "D": "PRO"
+    },
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -4441,14 +4345,218 @@
   },
   {
     "type": "單選題",
-    "text": "故障管理通常也稱為什麼？",
+    "text": "雲端型網路管理的一個主要優勢是什麼？",
     "options": {
-      "A": "MRT (監控、報告和疑難排解)",
-      "B": "MTTR (平均解決時間)",
-      "C": "TCP (傳輸控制協定)",
-      "D": "IP (網際網路協定)"
+      "A": "單點控制",
+      "B": "資料主權",
+      "C": "內部控制",
+      "D": "高層級控制"
     },
     "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網絡管理模型的 \"A\" 代表什麼？",
+    "options": {
+      "A": "運輸",
+      "B": "審計",
+      "C": "故障",
+      "D": "分析"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "現今網路管理工作的主要內容包括什麼？",
+    "options": {
+      "A": "智慧家居設備管理",
+      "B": "基因編輯技術",
+      "C": "銷售業績分析",
+      "D": "效能管理、監視裝置是否執行良好"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "何種領域是創新的關鍵領域，可以協助企業應對網路管理的挑戰？",
+    "options": {
+      "A": "AIOps 和自動化",
+      "B": "傳統的網路管理方法",
+      "C": "資料庫管理技術",
+      "D": "伺服器管理工具"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "SNMP的延伸規格為？",
+    "options": {
+      "A": "MIB I",
+      "B": "RMON",
+      "C": "CMIP",
+      "D": "MIB II"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路管理中的效能管理通常涉及監控和分析哪些指標？",
+    "options": {
+      "A": "回應時間、封包遺失率、頻寬使用率",
+      "B": "IP位址分配、DNS解析速度、網絡延遲",
+      "C": "硬碟使用率、CPU負載、記憶體使用量",
+      "D": "應用程式啟動時間、網站訪問次數、電子郵件傳遞速度"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路管理面臨的挑戰之一是什麼？",
+    "options": {
+      "A": "網路穩定性",
+      "B": "網路複雜性",
+      "C": "網路速度",
+      "D": "網路擴展性"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "雲端型網路管理解決方案的部署模式通常採用什麼方式？",
+    "options": {
+      "A": "內部部署",
+      "B": "私有雲部署",
+      "C": "雲端託管",
+      "D": "混合部署"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "private MIB的基本OID開頭為？",
+    "options": {
+      "A": "1.3.6.1.2.1",
+      "B": "1.3.6.1.3.1",
+      "C": "1.3.6.1.4.1",
+      "D": "1.3.6.1.5.1"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網絡管理模型的 \"P\" 代表什麼？",
+    "options": {
+      "A": "策略",
+      "B": "效能",
+      "C": "連接",
+      "D": "保證"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網絡管理的基本方案包括哪些？",
+    "options": {
+      "A": "帶內網路管理、帶外網路管理、同時使用帶內和帶外網路管理",
+      "B": "家庭網路管理、學校網路管理、企業網路管理",
+      "C": "電話網路管理、郵件網路管理、短訊網路管理",
+      "D": "公共網路管理、私人網路管理、社群網路管理"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "雲端型與內部部署網路管理模型的對比中，內部部署網路管理解決方案有哪種優勢？",
+    "options": {
+      "A": "單點控制",
+      "B": "彈性",
+      "C": "內部控制",
+      "D": "AIOps 和分析"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路管理的哪一個協定提供了一個基於Web的管理介面？",
+    "options": {
+      "A": "SNMP",
+      "B": "CMIP",
+      "C": "Java管理擴充",
+      "D": "netconf"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列哪個是FCAPS模型中的一部分？",
+    "options": {
+      "A": "PASS",
+      "B": "SCOPE",
+      "C": "METRIC",
+      "D": "Accounting"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "哪個領域是網路管理中的 \"S\" 意義所在？",
+    "options": {
+      "A": "安全性",
+      "B": "故障管理",
+      "C": "效能管理",
+      "D": "配置管理"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是網路管理？",
+    "options": {
+      "A": "一組用於佈建、配置、監控、營運和維護網路的流程和功能。",
+      "B": "一組用於佈建、配置、監控、營運和維護伺服器的流程和功能。",
+      "C": "一組用於佈建、配置、監控、營運和維護應用程式的流程和功能。",
+      "D": "一組用於佈建、配置、監控、營運和維護資料庫的流程和功能。"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "內部部署網路管理解決方案通常需要更多的什麼？",
+    "options": {
+      "A": "使用者授權",
+      "B": "前期投資和內部 IT 團隊的持續維護",
+      "C": "硬體更新",
+      "D": "高速網路連接"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "FCAPS 模型可以被視為哪個業務流程框架的前身？",
+    "options": {
+      "A": "ISO 9001",
+      "B": "eTOM",
+      "C": "BPMN",
+      "D": "PERT"
+    },
+    "answer": "B",
     "explanation": ""
   },
   {
@@ -4465,487 +4573,127 @@
   },
   {
     "type": "單選題",
-    "text": "電子郵件用戶端如何擷取郵件的內容？",
+    "text": "網路管理資料通常是通過哪些機制來收集的？",
     "options": {
-      "A": "使用SMTP",
-      "B": "使用IMAP",
-      "C": "使用POP3",
-      "D": "使用FTP"
+      "A": "軟體代理程式、監視機制、活動紀錄檔機制、網路嗅探器等",
+      "B": "電子郵件、社交媒體",
+      "C": "舞台表演、展覽會",
+      "D": "電話、傳真"
     },
-    "answer": "C",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "SMTP為應用層協定並使用哪種傳輸服務？",
+    "text": "網絡管理模型的五個功能領域是由哪個組織定義的？",
     "options": {
-      "A": "IP",
-      "B": "TCP",
-      "C": "UDP",
-      "D": "DHCP"
+      "A": "國際標準化組織 (ISO)",
+      "B": "聯合國",
+      "C": "世界銀行",
+      "D": "歐盟"
     },
-    "answer": "B",
+    "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "IMAP協議中，郵件通常儲存在哪裡？",
+    "text": "FCAPS模型中的 \"C\" 代表什麼？",
     "options": {
-      "A": "客戶端",
-      "B": "伺服器",
-      "C": "路由器",
-      "D": "郵件伺服器和客戶端之間"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用IMAP時，哪個陳述最能描述郵件的存儲位置？",
-    "options": {
-      "A": "僅在電腦上儲存",
-      "B": "僅在伺服器上儲存",
-      "C": "僅在手機上儲存",
-      "D": "儲存在遠端伺服器中"
+      "A": "資訊",
+      "B": "通訊",
+      "C": "連接",
+      "D": "配置"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "SMTP協定的全名是什麼？",
+    "text": "下列哪個不是網絡管理資料通常收集的機制？",
     "options": {
-      "A": "Simple Transfer Mail Protocol",
-      "B": "Simple Mail Transfer Protocol",
-      "C": "Secure Mail Transfer Protocol",
-      "D": "Server Mail Transfer Protocol"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "POP3協定的全名是什麼？",
-    "options": {
-      "A": "Post Office Protocol - Version 3",
-      "B": "Personal Online Protocol - Version 3",
-      "C": "Public Online Protocol - Version 3",
-      "D": "Private Office Protocol - Version 3"
+      "A": "太陽能電池",
+      "B": "軟體代理程式",
+      "C": "監視機制",
+      "D": "活動紀錄檔機制"
     },
     "answer": "A",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "使用IMAP時，郵件的變更會在多個裝置之間如何處理？",
+    "text": "故障管理通常也稱為什麼？",
     "options": {
-      "A": "變更僅在當前裝置生效",
-      "B": "變更僅在伺服器上生效",
-      "C": "變更會在所有裝置上同步處理",
-      "D": "變更僅在電腦上同步處理"
+      "A": "MRT (監控、報告和疑難排解)",
+      "B": "MTTR (平均解決時間)",
+      "C": "TCP (傳輸控制協定)",
+      "D": "IP (網際網路協定)"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網絡管理模型的 \"F\" 代表什麼？",
+    "options": {
+      "A": "故障",
+      "B": "快速",
+      "C": "朋友",
+      "D": "自由"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路管理的功能模型區分成幾種？",
+    "options": {
+      "A": "3",
+      "B": "4",
+      "C": "5",
+      "D": "6"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "POP3協定通常用於哪個動作？",
+    "text": "現今網絡管理工作的主要內容是什麼？",
     "options": {
-      "A": "送信",
-      "B": "刪除信件",
-      "C": "接收信",
-      "D": "編輯郵件"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP執行哪種動作？",
-    "options": {
-      "A": "push",
-      "B": "upload",
-      "C": "download",
-      "D": "pull"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用POP3和IMAP的主要區別在於：",
-    "options": {
-      "A": "電子郵件的加密方式",
-      "B": "資料傳輸的埠號",
-      "C": "郵件的同步處理方式",
-      "D": "郵件的傳送速度"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "以下哪個陳述最能描述POP3協議的特點？",
-    "options": {
-      "A": "郵件儲存在遠端伺服器中",
-      "B": "使用者可在多個裝置上同步處理郵件",
-      "C": "電子郵件僅存儲在客戶端裝置上",
-      "D": "電子郵件同步處理的速度較快"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP協定的全名是什麼？",
-    "options": {
-      "A": "Internet Mail Access Protocol",
-      "B": "Internet Message Access Protocol",
-      "C": "Interchange Mail Access Protocol",
-      "D": "Interchange Message Access Protocol"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在電子郵件傳送中，使用SMTP協議時，郵件是如何傳送到收件人的電腦的？",
-    "options": {
-      "A": "通過POP3協議",
-      "B": "通過HTTP協議",
-      "C": "通過TCP/IP協議",
-      "D": "通過FTP協議"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP協議中，郵件是如何從寄件人的郵件伺服器發送到收件人的郵件伺服器的？",
-    "options": {
-      "A": "使用UDP協議",
-      "B": "使用TCP協議",
-      "C": "使用HTTP協議",
-      "D": "使用FTP協議"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用POP3時，多個裝置之間無法實現以下哪項功能？",
-    "options": {
-      "A": "將訊息標示為已讀取",
-      "B": "傳送項目",
-      "C": "推送新郵件到裝置上",
-      "D": "建立特殊資料夾或完成設定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP協定是負責哪一項任務？",
-    "options": {
-      "A": "送信",
-      "B": "接收信",
-      "C": "儲存信件",
-      "D": "刪除信件"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP與POP3的主要區別之一是什麼？",
-    "options": {
-      "A": "使用者的電子郵件是否儲存在本地",
-      "B": "使用的傳輸協定",
-      "C": "是否允許從任何裝置存取電子郵件",
-      "D": "是否允許離線存取電子郵件"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用SMTP協定時，郵件如何從郵件伺服器傳送到收件人的電腦？",
-    "options": {
-      "A": "使用POP3協定",
-      "B": "使用UDP協定",
-      "C": "使用TCP協定",
-      "D": "使用HTTP協定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP或POP3執行哪種動作？",
-    "options": {
-      "A": "push",
-      "B": "upload",
-      "C": "download",
-      "D": "pull"
+      "A": "建築設計",
+      "B": "音樂製作",
+      "C": "國際貿易",
+      "D": "效能管理、監視裝置是否執行良好"
     },
     "answer": "D",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "電子郵件的傳送通常使用哪種協定？",
+    "text": "何謂自攜裝置和物聯網安全？",
     "options": {
-      "A": "SMTP",
-      "B": "HTTP",
-      "C": "FTP",
-      "D": "IMAP"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用POP3時，電子郵件何時從郵件伺服器中刪除？",
-    "options": {
-      "A": "電子郵件下載到用戶端後",
-      "B": "電子郵件傳送到用戶端後",
-      "C": "電子郵件被閱讀後",
-      "D": "電子郵件傳送到用戶端後並被閱讀後"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "以下哪個選項最能描述IMAP協議的特點？",
-    "options": {
-      "A": "郵件僅儲存在客戶端裝置上",
-      "B": "使用者無法同時登入多個裝置",
-      "C": "郵件同步處理只在客戶端執行",
-      "D": "郵件儲存在遠端伺服器中並可同步處理"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用IMAP協定，電子郵件通常儲存在哪裡？",
-    "options": {
-      "A": "用戶端",
-      "B": "伺服器",
-      "C": "電子郵件伺服器和用戶端之間",
-      "D": "本地硬碟"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用POP3時，郵件何時從伺服器上移除？",
-    "options": {
-      "A": "郵件傳送至客戶端時",
-      "B": "郵件被標示為已讀取時",
-      "C": "郵件永久刪除後",
-      "D": "郵件被打開後"
+      "A": "只限於外部網路",
+      "B": "只涉及內部網路",
+      "C": "有助於解決自攜裝置和物聯網固有的可見性和安全性挑戰",
+      "D": "對內部網路沒有影響"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "電子郵件通常使用哪種端口進行傳輸？",
+    "text": "在網路安全中，防火牆的作用是什麼？",
     "options": {
-      "A": "21",
-      "B": "25",
-      "C": "80",
-      "D": "443"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在使用POP3協定時，郵件如何從郵件伺服器下載到客戶端？",
-    "options": {
-      "A": "使用UDP協議",
-      "B": "使用TCP/IP協議",
-      "C": "使用HTTP協議",
-      "D": "使用POP3協議"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP採用哪種方式和持續性連接？",
-    "options": {
-      "A": "內頻方式和持續性連接",
-      "B": "外頻方式和持續性連接",
-      "C": "外頻方式和非持續性連接",
-      "D": "內頻方式和非持續性連接"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP的安全性問題是什麼？",
-    "options": {
-      "A": "登入速度較慢",
-      "B": "電子郵件無法離線存取",
-      "C": "登入資訊以純文字形式傳輸",
-      "D": "不支援加密傳輸"
+      "A": "加速網路連接",
+      "B": "提供安全的遠端訪問",
+      "C": "監視和控制流入和流出的流量",
+      "D": "優化網路流量"
     },
     "answer": "C",
     "explanation": ""
   },
   {
     "type": "單選題",
-    "text": "使用IMAP時，哪個陳述最能描述對於已刪除郵件的處理？",
-    "options": {
-      "A": "郵件立即從所有裝置上移除",
-      "B": "郵件僅在一個裝置上刪除",
-      "C": "郵件會在伺服器上保留，直到使用者永久刪除",
-      "D": "郵件被刪除後無法恢復"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在POP3通訊中，如果要求伺服器發回關於電子信箱的統計資料，應該使用哪個命令？",
-    "options": {
-      "A": "stat",
-      "B": "uidl",
-      "C": "list",
-      "D": "retr"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在SMTP中，郵件如何傳送到收件人的郵件伺服器？",
-    "options": {
-      "A": "使用FTP",
-      "B": "使用UDP",
-      "C": "使用IMAP",
-      "D": "使用TCP"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用SMTP協定，郵件如何從寄件人的電腦傳送到郵件伺服器？",
-    "options": {
-      "A": "透過SMTP協定",
-      "B": "透過HTTP協定",
-      "C": "透過IMAP協定",
-      "D": "透過FTP協定"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "使用IMAP協議時，用戶如何存取電子郵件？",
-    "options": {
-      "A": "通過本地存儲",
-      "B": "通過FTP下載",
-      "C": "通過HTTP訪問",
-      "D": "通過網路訪問"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "在SMTP協議中，郵件是如何傳送到郵件伺服器的？",
-    "options": {
-      "A": "預先壓縮的二進制格式",
-      "B": "壓縮的文字格式",
-      "C": "未經壓縮的文字格式",
-      "D": "預先壓縮的文字格式"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "SMTP和POP3之間的主要區別是什麼？",
-    "options": {
-      "A": "負責收信和寄信的協定",
-      "B": "是否允許從任何裝置存取電子郵件",
-      "C": "是否允許離線存取電子郵件",
-      "D": "用於郵件伺服器與郵件伺服器間的通訊 vs 用於收信的通訊協定"
-    },
-    "answer": "D",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP協定主要是用於什麼目的？",
-    "options": {
-      "A": "接收電子郵件",
-      "B": "傳送電子郵件",
-      "C": "刪除電子郵件",
-      "D": "查看郵件標題"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "POP3協定與使用者的電腦之間建立了怎樣的連線？",
-    "options": {
-      "A": "UDP",
-      "B": "TCP",
-      "C": "HTTP",
-      "D": "FTP"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "大明想從郵件伺服器內部之郵箱取出該郵件可使用哪個協定？",
-    "options": {
-      "A": "SMTP",
-      "B": "NAT",
-      "C": "POP3",
-      "D": "DHCP"
-    },
-    "answer": "C",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "IMAP最大的安全問題之一是什麼？",
-    "options": {
-      "A": "電子郵件傳輸速度較慢",
-      "B": "登入資訊以純文字形式傳輸",
-      "C": "不支援多重要素驗證",
-      "D": "電子郵件無法離線存取"
-    },
-    "answer": "B",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路安全的三大要素是什麼？",
-    "options": {
-      "A": "保密性、完整性、可用性",
-      "B": "速度、效能、穩定性",
-      "C": "資料庫、網路、電腦",
-      "D": "防火牆、防毒軟體、VPN"
-    },
-    "answer": "A",
-    "explanation": ""
-  },
-  {
-    "type": "單選題",
-    "text": "網路安全的三大要素是什麼？",
+    "text": "網路安全的三大要素是什麼？ 回答錯誤",
     "options": {
       "A": "速度、效能、穩定性",
       "B": "保密性、完整性、可用性",
@@ -4957,7 +4705,295 @@
   },
   {
     "type": "單選題",
-    "text": "如何防止社交工程攻擊？",
+    "text": "針對網路釣魚攻擊的防護措施包括什麼？",
+    "options": {
+      "A": "定期更改密碼",
+      "B": "增加網路速度",
+      "C": "定期備份資料",
+      "D": "過濾惡意電子郵件"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是網路安全的主要目標？",
+    "options": {
+      "A": "保護電腦和網路免受惡意攻擊",
+      "B": "增加網路速度",
+      "C": "提高網路連接的可用性",
+      "D": "優化網路流量"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在組織中，成功的網路安全方法需要哪些因素相互補足？ 回答錯誤",
+    "options": {
+      "A": "技術和流程",
+      "B": "人員、流程和技術",
+      "C": "人員和技術",
+      "D": "流程和技術"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "哪種攻擊是一種被動攻擊，旨在監視和記錄數據流量？",
+    "options": {
+      "A": "DDoS攻擊",
+      "B": "網路竊聽",
+      "C": "社交工程攻擊",
+      "D": "惡意軟體攻擊"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是中間人攻擊的特點？",
+    "options": {
+      "A": "使用大量虛假請求",
+      "B": "擁有高階存取權限",
+      "C": "傳送惡意電子郵件",
+      "D": "在資料交換期間進行未經授權存取"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全的目標是什麼？",
+    "options": {
+      "A": "保護電腦和網路免受惡意攻擊",
+      "B": "增加網路速度",
+      "C": "提高網路連接的可用性",
+      "D": "優化網路流量"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪項是社交工程的特徵？",
+    "options": {
+      "A": "欺騙揭露敏感資訊",
+      "B": "直接攻擊網路設施",
+      "C": "阻斷網路流量",
+      "D": "發送大量垃圾郵件"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "封包過濾技術採用的機制主要針對",
+    "options": {
+      "A": "實體層和MAC層",
+      "B": "MAC層和網路層",
+      "C": "網路層和傳輸層",
+      "D": "傳輸層和應用層 上的數據為監控對象"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "為什麼網路安全如此重要？",
+    "options": {
+      "A": "保護個人和組織免受網路攻擊",
+      "B": "提高網路速度和連接性",
+      "C": "優化網路流量和資料傳輸",
+      "D": "加強組織的社交工程防禦能力"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是 VPN 的作用？",
+    "options": {
+      "A": "優化網路流量",
+      "B": "提高網路連接的可用性",
+      "C": "增加網路速度",
+      "D": "提供安全的遠端訪問和加密通信"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是勒索軟體攻擊？",
+    "options": {
+      "A": "一種惡意軟體，旨在封鎖檔案或系統存取權限以勒索金錢",
+      "B": "使用社交工程技術欺騙用戶洩露敏感信息",
+      "C": "一種主動攻擊，試圖盜取個人資訊",
+      "D": "一種被動攻擊，監視和記錄數據流量"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是社交工程攻擊？",
+    "options": {
+      "A": "一種主動攻擊，試圖盜取個人資訊",
+      "B": "在網路上進行魚類養殖的行為",
+      "C": "使用欺騙手段誘導人員揭露機密信息的攻擊",
+      "D": "使用惡意程式碼入侵系統的攻擊"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是內部威脅？",
+    "options": {
+      "A": "外部駭客入侵網路",
+      "B": "勒索軟體攻擊",
+      "C": "公司內部人員的惡意行為",
+      "D": "社交工程攻擊"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "為了防止網路釣魚攻擊，應該採取哪些措施？ 回答錯誤",
+    "options": {
+      "A": "避免開啟未知的電子郵件附件",
+      "B": "提高網路速度",
+      "C": "定期備份資料",
+      "D": "定期更改密碼"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是網路安全的三大要素？",
+    "options": {
+      "A": "保密性、完整性、可用性",
+      "B": "速度、效能、穩定性",
+      "C": "資料庫、網路、電腦",
+      "D": "防火牆、防毒軟體、VPN"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "如何緩解內部威脅？",
+    "options": {
+      "A": "實施數位防禦",
+      "B": "提供社交工程培訓",
+      "C": "更新防火牆軟體",
+      "D": "增加網路速度"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全中，密碼管理的最佳實踐是什麼？",
+    "options": {
+      "A": "使用高強度密碼並定期更換",
+      "B": "將密碼寫在易於查找的地方",
+      "C": "將相同的密碼用於多個帳戶",
+      "D": "使用容易被猜測的密碼"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪項是防止勒索軟體蔓延的方法？",
+    "options": {
+      "A": "更新防火牆軟體",
+      "B": "加強電子郵件加密",
+      "C": "定期備份資料",
+      "D": "提供社交工程培訓"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "內部威脅是指什麼？",
+    "options": {
+      "A": "外部駭客入侵網路",
+      "B": "勒索軟體攻擊",
+      "C": "公司內部人員的惡意行為",
+      "D": "社交工程攻擊"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "以下哪項是網路安全專業人員的責任？",
+    "options": {
+      "A": "提高網路速度",
+      "B": "增加資料儲存容量",
+      "C": "識別風險",
+      "D": "減少硬體和軟體"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "下列何者是惡意程式碼的範例？ 回答錯誤",
+    "options": {
+      "A": "間諜軟體",
+      "B": "網路釣魚",
+      "C": "DDoS攻擊",
+      "D": "特洛伊木馬"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "若LAN中的兩部電腦要建立IPSec連線並使用傳輸模式時，發送端與接收端",
+    "options": {
+      "A": "其中一端",
+      "B": "兩端",
+      "C": "都不需要",
+      "D": "不一定"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全專業人員應該採取哪些步驟來保護系統免受攻擊？ 回答錯誤",
+    "options": {
+      "A": "避免開啟未知的電子郵件附件",
+      "B": "定期備份資料",
+      "C": "審查和更新安全策略",
+      "D": "提高網路速度"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是 DDoS 攻擊？ 回答錯誤",
+    "options": {
+      "A": "使用社交工程技術欺騙用戶洩露敏感信息",
+      "B": "一種協同作業，透過傳送大量虛假請求來使伺服器超負荷",
+      "C": "外部駭客入侵網路",
+      "D": "公司內部人員的惡意行為"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "如何防止社交工程攻擊？ 回答錯誤",
     "options": {
       "A": "定期更新防火牆軟體",
       "B": "提高員工對社交工程攻擊的警覺性",
@@ -4969,12 +5005,240 @@
   },
   {
     "type": "單選題",
-    "text": "在組織中，成功的網路安全方法需要哪些因素相互補足？",
+    "text": "分散式拒絕服務攻擊（DDoS）的目標是什麼？",
     "options": {
-      "A": "技術和流程",
-      "B": "人員、流程和技術",
-      "C": "人員和技術",
-      "D": "流程和技術"
+      "A": "竊取敏感資訊",
+      "B": "使伺服器超負荷",
+      "C": "釣魚用戶",
+      "D": "中斷電子郵件服務"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "在網路安全中，什麼是惡意軟體防護的作用？",
+    "options": {
+      "A": "加速網路連接",
+      "B": "提供安全的遠端訪問",
+      "C": "監控和阻止惡意軟體的安裝和執行",
+      "D": "優化網路流量"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全的三大要素是什麼？ 回答錯誤",
+    "options": {
+      "A": "保密性、完整性、可用性",
+      "B": "速度、效能、穩定性",
+      "C": "資料庫、網路、電腦",
+      "D": "防火牆、防毒軟體、VPN"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是惡意程式碼？",
+    "options": {
+      "A": "一種被動攻擊，旨在監視和記錄數據流量",
+      "B": "詐騙電子郵件，用於竊取敏感資訊",
+      "C": "一種惡意軟體，用於勒索金錢",
+      "D": "專門用來取得未授權存取或對電腦造成損害的軟體"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全專業人員應該採取哪些步驟來保護系統免受攻擊？",
+    "options": {
+      "A": "避免開啟未知的電子郵件附件",
+      "B": "定期備份資料",
+      "C": "審查和更新安全策略",
+      "D": "提高網路速度"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是網路竊聽攻擊？",
+    "options": {
+      "A": "主動攻擊，試圖盜取個人資訊",
+      "B": "被動攻擊，監視和記錄數據流量",
+      "C": "使用惡意軟體封鎖檔案或系統存取權限",
+      "D": "通過社交工程技術欺騙用戶洩露敏感信息"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全中，防火牆通常用於做什麼？",
+    "options": {
+      "A": "加速網路連接",
+      "B": "監視和控制流入和流出的流量",
+      "C": "提供安全的遠端訪問",
+      "D": "阻止未經授權的訪問和不必要的流量"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "勒索軟體攻擊的目的是什麼？",
+    "options": {
+      "A": "竊取敏感資訊",
+      "B": "中斷網路服務",
+      "C": "勒索金錢",
+      "D": "滲透電腦系統"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "為了提高網路安全，員工應該如何處理密碼？",
+    "options": {
+      "A": "將密碼寫在易於查找的地方",
+      "B": "選擇高強度的密碼並定期更換",
+      "C": "將相同的密碼用於多個帳戶",
+      "D": "將密碼設置為簡單易記的組合"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "代理防火牆工作在第幾層，因此它可以實現在更高等級的數據封包之偵測",
+    "options": {
+      "A": "MAC層",
+      "B": "網路層",
+      "C": "傳輸層",
+      "D": "應用層"
+    },
+    "answer": "D",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "對稱式金鑰密碼系統加密與解密兩端都使用相同幾把金鑰",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "不一定"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "什麼是 DDoS 攻擊？",
+    "options": {
+      "A": "使用社交工程技術欺騙用戶洩露敏感信息",
+      "B": "一種協同作業，透過傳送大量虛假請求來使伺服器超負荷",
+      "C": "外部駭客入侵網路",
+      "D": "公司內部人員的惡意行為"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "成功的網路安全方法應該具有多層防護，分佈在哪些區域？",
+    "options": {
+      "A": "電腦和網路",
+      "B": "電腦、網路、程式或資料",
+      "C": "電腦和程式",
+      "D": "網路和資料庫"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "哪種攻擊最常見，利用社會工程技術誘騙使用者洩露敏感資訊？",
+    "options": {
+      "A": "惡意程式碼攻擊",
+      "B": "網路釣魚攻擊",
+      "C": "勒索軟體攻擊",
+      "D": "DDoS攻擊"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "哪些是保護主要實體的常見技術？ 回答錯誤",
+    "options": {
+      "A": "新世代防火牆、DNS過濾、惡意軟體防護",
+      "B": "電子郵件安全解決方案、網路加密、VPN",
+      "C": "網路安全架構、威脅管理系統、緊急應變計劃",
+      "D": "新世代防火牆、惡意軟體防護、社交工程防禦"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "對稱式加密處理與非對稱式加密技術在速度上比較",
+    "options": {
+      "A": "前者較快",
+      "B": "後者較快",
+      "C": "相同",
+      "D": "不一定"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "DES演算法使用56位元的對稱金鑰和",
+    "options": {
+      "A": "48位元",
+      "B": "56位元",
+      "C": "64位元",
+      "D": "128位元 的明文加密"
+    },
+    "answer": "C",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "網路安全的目標是什麼？",
+    "options": {
+      "A": "保護電腦和網路免受惡意攻擊",
+      "B": "增加網路速度",
+      "C": "提高網路連接的可用性",
+      "D": "優化網路流量"
+    },
+    "answer": "A",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "成功的網路安全計劃需要哪些元素？",
+    "options": {
+      "A": "人員和流程",
+      "B": "多層保護和自動化防禦",
+      "C": "優化流量和連接性",
+      "D": "增加硬體和軟體"
+    },
+    "answer": "B",
+    "explanation": ""
+  },
+  {
+    "type": "單選題",
+    "text": "非對稱式金鑰密碼系統送收兩方分別使用幾把不同之金鑰來進行資訊加密與解密",
+    "options": {
+      "A": "1",
+      "B": "2",
+      "C": "4",
+      "D": "不一定"
     },
     "answer": "B",
     "explanation": ""
